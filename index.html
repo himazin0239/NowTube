@@ -208,6 +208,28 @@
         }
     </script>
 
+    <script>
+        (async function () {
+            const promo = document.getElementById('login-promo');
+            if (!promo) return;
+
+            try {
+                const response = await fetch('/api/me', {
+                    cache: 'no-store'
+                });
+
+                if (!response.ok) return;
+
+                const data = await response.json();
+
+                if (data.user) {
+                    promo.style.display = 'none';
+                }
+            } catch (error) {
+                console.error('ログイン状態の確認に失敗しました。', error);
+            }
+        })();
+    </script>
 
 </head>
 
@@ -231,8 +253,7 @@
 
                 <div id="masthead-sections">
                     <a href="/web/20111110192655/http://www.youtube.com/videos?feature=mh">ランキング </a><a
-                        href="./upload.html"
-                        class="split end ">アップロード</a><span class="valign-fix"></span>
+                        href="./upload.html" class="split end ">アップロード</a><span class="valign-fix"></span>
                     <a class="start"
                         href="/web/20111110192655/http://www.youtube.com/signup?next=%2Findex%3Fhl%3Dja">アカウントを作成</a> <a
                         class="end"
@@ -297,7 +318,12 @@
                     <div id="iyt-login-suggest-box">
                         <div class="yt-alert yt-alert-promo yt-rounded ">
                             <div class="yt-alert-content">
-                                <div id="signup-promo-message">あなたの日常を世界へ! NowTubeで動画コミュニティに参加しよう!</div>
+                                <div id="signup-promo-message">
+                                    <div id="login-promo">
+                                        <h2>ログインしたらあなたの日常を世界へ!</h2>
+                                        <p>NowTubeで動画コミュニティに参加しよう!</p>
+                                    </div>
+                                </div>
                                 <div id="signup-promo-links">
                                     <button href="/signup?feature=idx_promo_std&amp;next=" type="button"
                                         class=" yt-uix-button"
@@ -1042,7 +1068,7 @@
         allow="autoplay 'self'; fullscreen 'self'"
         style="left: 247px; top: 43px; width: 309px; height: 0px; visibility: hidden;"></iframe>
     <script src="./js/videos.js"></script>
-<script src="./js/nav-auth.js"></script>
+    <script src="./js/nav-auth.js"></script>
 </body>
 
 </html>
