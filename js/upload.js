@@ -1,4 +1,4 @@
-import { upload } from 'https://esm.sh/@vercel/blob/client@1.1.1?bundle';
+import { upload } from 'https://esm.sh/@vercel/blob@1.1.1/client?bundle';
 
 const form = document.getElementById('upload-form');
 const titleInput = document.getElementById('video-title');
