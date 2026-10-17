@@ -208,29 +208,6 @@
         }
     </script>
 
-    <script>
-        (async function () {
-            const promo = document.getElementById('login-promo');
-            if (!promo) return;
-
-            try {
-                const response = await fetch('/api/me', {
-                    cache: 'no-store'
-                });
-
-                if (!response.ok) return;
-
-                const data = await response.json();
-
-                if (data.user) {
-                    promo.style.display = 'none';
-                }
-            } catch (error) {
-                console.error('ログイン状態の確認に失敗しました。', error);
-            }
-        })();
-    </script>
-
 </head>
 
 <body id="" class="date-20111110 ja_JP ltr" dir="ltr">
@@ -315,28 +292,50 @@
 
                 <div id="homepage-main-content" class="ytg-4col homepage-non-interactive">
 
-                    <div id="iyt-login-suggest-box">
-                        <div class="yt-alert yt-alert-promo yt-rounded ">
-                            <div class="yt-alert-content">
-                                <div id="signup-promo-message">
-                                    <div id="login-promo">
+                    <script>
+                        (async function () {
+                            const promo = document.getElementById('login-promo');
+                            if (!promo) return;
+
+                            try {
+                                const response = await fetch('/api/me', {
+                                    cache: 'no-store'
+                                });
+
+                                if (!response.ok) return;
+
+                                const data = await response.json();
+
+                                if (data.user) {
+                                    promo.style.display = 'none';
+                                }
+                            } catch (error) {
+                                console.error('ログイン状態の確認に失敗しました。', error);
+                            }
+                        })();
+                    </script>
+                    <div id="login-promo">
+                        <div id="iyt-login-suggest-box">
+                            <div class="yt-alert yt-alert-promo yt-rounded ">
+                                <div class="yt-alert-content">
+                                    <div id="signup-promo-message">
                                         <h2>ログインしたらあなたの日常を世界へ!</h2>
                                         <p>NowTubeで動画コミュニティに参加しよう!</p>
                                     </div>
-                                </div>
-                                <div id="signup-promo-links">
-                                    <button href="/signup?feature=idx_promo_std&amp;next=" type="button"
-                                        class=" yt-uix-button"
-                                        onclick=";window.location.href=this.getAttribute('href');return false;"
-                                        role="button"><span class="yt-uix-button-content">アカウントを作成 ›</span></button>
-                                    <span id="signup-promo-have-account">アカウントをお持ちですか？</span>
-                                    <a
-                                        href="http://web.archive.org/web/20111110192655/https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26feature%3Dpromo_signin%26nomobiletemp%3D1%26hl%3Dja_JP%26next%3D&amp;hl=ja_JP&amp;ltmpl=sso">ログイン</a>
-                                </div>
+                                    <div id="signup-promo-links">
+                                        <button href="/signup?feature=idx_promo_std&amp;next=" type="button"
+                                            class=" yt-uix-button"
+                                            onclick=";window.location.href=this.getAttribute('href');return false;"
+                                            role="button"><span class="yt-uix-button-content">アカウントを作成 ›</span></button>
+                                        <span id="signup-promo-have-account">アカウントをお持ちですか？</span>
+                                        <a
+                                            href="http://web.archive.org/web/20111110192655/https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26feature%3Dpromo_signin%26nomobiletemp%3D1%26hl%3Dja_JP%26next%3D&amp;hl=ja_JP&amp;ltmpl=sso">ログイン</a>
+                                    </div>
 
+                                </div>
                             </div>
-                        </div>
 
+                        </div>
                     </div>
 
 
@@ -371,8 +370,8 @@
                                                         class="yt-uix-button-icon yt-uix-button-icon-addto"
                                                         src="./img/pixel.gif" alt=""><span
                                                         class="yt-uix-button-content"><span
-                                                            class="addto-label">追加先</span> </span><img
-                                                        class="yt-uix-button-arrow" src="./img/pixel.gif"
+                                                            class="addto-label">追加先</span>
+                                                    </span><img class="yt-uix-button-arrow" src="./img/pixel.gif"
                                                         alt=""></button></a>
                                             <div class="video-main-content video-title-one-line"
                                                 id="video-main-content-nvfejaHz-o0">
@@ -424,8 +423,8 @@
                                                         class="yt-uix-button-icon yt-uix-button-icon-addto"
                                                         src="./img/pixel.gif" alt=""><span
                                                         class="yt-uix-button-content"><span
-                                                            class="addto-label">追加先</span> </span><img
-                                                        class="yt-uix-button-arrow" src="./img/pixel.gif"
+                                                            class="addto-label">追加先</span>
+                                                    </span><img class="yt-uix-button-arrow" src="./img/pixel.gif"
                                                         alt=""></button></a>
                                             <div class="video-main-content video-title-one-line"
                                                 id="video-main-content-nvfejaHz-o0">
@@ -489,8 +488,8 @@
                                                         class="yt-uix-button-icon yt-uix-button-icon-addto"
                                                         src="./img/pixel.gif" alt=""><span
                                                         class="yt-uix-button-content"><span
-                                                            class="addto-label">追加先</span> </span><img
-                                                        class="yt-uix-button-arrow" src="./img/pixel.gif"
+                                                            class="addto-label">追加先</span>
+                                                    </span><img class="yt-uix-button-arrow" src="./img/pixel.gif"
                                                         alt=""></button></a>
                                             <div class="video-main-content video-title-one-line"
                                                 id="video-main-content-nvfejaHz-o0">
@@ -552,8 +551,8 @@
                                                         class="yt-uix-button-icon yt-uix-button-icon-addto"
                                                         src="./img/pixel.gif" alt=""><span
                                                         class="yt-uix-button-content"><span
-                                                            class="addto-label">追加先</span> </span><img
-                                                        class="yt-uix-button-arrow" src="./img/pixel.gif"
+                                                            class="addto-label">追加先</span>
+                                                    </span><img class="yt-uix-button-arrow" src="./img/pixel.gif"
                                                         alt=""></button></a>
                                             <div class="video-main-content video-title-one-line"
                                                 id="video-main-content-nvfejaHz-o0">
@@ -861,8 +860,9 @@
                                 class="yt-uix-tooltip yt-uix-tooltip-masked yt-uix-button-reverse flip yt-uix-button yt-uix-button-text"
                                 onclick=";return false;" data-button-menu-id="playlist-bar-options-menu"
                                 data-button-has-sibling-menu="true" role="button"><span
-                                    class="yt-uix-button-content">オプション </span><img class="yt-uix-button-arrow"
-                                    src="./img/pixel.gif" alt=""></button></span></span>
+                                    class="yt-uix-button-content">オプション
+                                </span><img class="yt-uix-button-arrow" src="./img/pixel.gif"
+                                    alt=""></button></span></span>
                 </div>
             </div>
 
