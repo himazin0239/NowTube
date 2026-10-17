@@ -23,6 +23,22 @@
         if (!video) throw new Error('動画が見つかりません。削除されたか、まだ登録されていない可能性があります。');
         var title = document.createElement('h1'); title.textContent = video.title; root.appendChild(title);
         var player = document.createElement('video'); player.id = 'player'; player.controls = true; player.playsInline = true; player.preload = 'metadata'; if (video.thumbnailUrl) player.poster = video.thumbnailUrl; player.src = video.url; root.appendChild(player);
+        var viewLine = document.createElement('p');
+        viewLine.id = 'watch-view-count';
+        viewLine.textContent = '再生回数: ' + Number(video.viewCount || 0).toLocaleString('ja-JP') + ' 回';
+        root.appendChild(viewLine);
+        // Count one view when the watch page is opened.
+        try {
+          var viewResponse = await fetch('/api/view', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ id: video.id })
+          });
+          if (viewResponse.ok) {
+            var viewData = await viewResponse.json();
+            viewLine.textContent = '再生回数: ' + Number(viewData.viewCount || 0).toLocaleString('ja-JP') + ' 回';
+          }
+        } catch (viewError) { console.warn('再生回数を更新できませんでした。', viewError); }
         var uploader = document.createElement('p'); uploader.textContent = '投稿者: ' + (video.uploader || 'NowTubeユーザー'); root.appendChild(uploader);
         if (video.description) { var desc = document.createElement('p'); desc.textContent = video.description; root.appendChild(desc); }
       } catch (error) { var message = document.createElement('p'); message.id = 'watch-error'; message.textContent = error.message || '動画を読み込めませんでした。'; root.replaceChildren(message); }

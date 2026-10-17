@@ -24,6 +24,11 @@ export async function ensureSchema(sql) {
     pathname TEXT NOT NULL,
     content_type TEXT NOT NULL DEFAULT '',
     size BIGINT,
+    duration DOUBLE PRECISION,
+    view_count BIGINT NOT NULL DEFAULT 0,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
   )`;
+  // Add columns safely to databases created before duration/view counts were introduced.
+  await sql`ALTER TABLE nowtube_videos ADD COLUMN IF NOT EXISTS duration DOUBLE PRECISION`;
+  await sql`ALTER TABLE nowtube_videos ADD COLUMN IF NOT EXISTS view_count BIGINT NOT NULL DEFAULT 0`;
 }
