@@ -1,6 +1,7 @@
 (function () {
   'use strict';
   var fallback = './img/default.jpg';
+  function thumb(video) { return video.thumbnailUrl || fallback; }
   function escapeHtml(value) {
     return String(value == null ? '' : value).replace(/[&<>"']/g, function (ch) {
       return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch];
@@ -10,12 +11,12 @@
   function card(video) {
     var href = videoUrl(video);
     return '<div class="ytg-box ytg-1col"><div class="video-cell" style="width:99.5%"><div class="video-entry">' +
-      '<a href="' + href + '" class="ux-thumb-wrap"><span class="video-thumb ux-thumb-128"><span class="clip"><img title="' + escapeHtml(video.title) + '" alt="サムネイル" src="' + fallback + '"></span></span><span class="video-time">動画</span></a>' +
+      '<a href="' + href + '" class="ux-thumb-wrap"><span class="video-thumb ux-thumb-128"><span class="clip"><img title="' + escapeHtml(video.title) + '" alt="サムネイル" src="' + escapeHtml(thumb(video)) + '"></span></span><span class="video-time">動画</span></a>' +
       '<div class="video-main-content video-title-one-line"><div dir="ltr" class="video-title"><div class="video-short-title"><a href="' + href + '" title="' + escapeHtml(video.title) + '">' + escapeHtml(video.title) + '</a></div></div>' +
       '<div class="video-description">' + escapeHtml(video.description || '') + '</div><div class="video-facets"><span class="video-username">作成者: ' + escapeHtml(video.uploader || 'NowTubeユーザー') + '</span></div></div><div class="video-clear-list-left"></div></div></div></div>';
   }
   function sidebarItem(video) {
-    return '<li class="video-list-item"><a href="' + videoUrl(video) + '" class="video-list-item-link"><span class="ux-thumb-wrap"><span class="video-thumb ux-thumb-110"><span class="clip"><img src="' + fallback + '" alt="サムネイル"></span></span></span><span class="title" title="' + escapeHtml(video.title) + '">' + escapeHtml(video.title) + '</span><span class="stat">ユーザー: ' + escapeHtml(video.uploader || 'NowTubeユーザー') + '</span><span class="stat view-count">再生回数 00,000 回</span></a></li>';
+    return '<li class="video-list-item"><a href="' + videoUrl(video) + '" class="video-list-item-link"><span class="ux-thumb-wrap"><span class="video-thumb ux-thumb-110"><span class="clip"><img src="' + escapeHtml(thumb(video)) + '" alt="サムネイル"></span></span></span><span class="title" title="' + escapeHtml(video.title) + '">' + escapeHtml(video.title) + '</span><span class="stat">ユーザー: ' + escapeHtml(video.uploader || 'NowTubeユーザー') + '</span><span class="stat view-count">再生回数 00,000 回</span></a></li>';
   }
   function loadVideos() {
     fetch('/api/videos', { cache: 'no-store' }).then(function (response) {

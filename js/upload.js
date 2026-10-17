@@ -1,40 +1,9 @@
 import { upload } from 'https://esm.sh/@vercel/blob@1.1.1/client?bundle';
-
-const form = document.getElementById('upload-form');
-const titleInput = document.getElementById('video-title');
-const descriptionInput = document.getElementById('video-description');
-const passwordInput = document.getElementById('upload-password');
-const fileInput = document.getElementById('video-file');
-const button = document.getElementById('upload-button');
-const status = document.getElementById('status');
-const MAX_SIZE = 100 * 1024 * 1024;
-const ALLOWED = ['video/mp4', 'video/webm', 'video/quicktime', 'video/x-m4v'];
-
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  const file = fileInput.files && fileInput.files[0];
-  const title = titleInput.value.trim();
-  if (!title) { status.textContent = 'タイトルを入力してください。'; return; }
-  if (!file) { status.textContent = '動画ファイルを選択してください。'; return; }
-  const ext = file.name.toLowerCase().split('.').pop();
-  if (!ALLOWED.includes(file.type) && !['mp4', 'webm', 'mov', 'm4v'].includes(ext)) {
-    status.textContent = 'MP4、WebM、MOV、M4Vの動画を選んでください。'; return;
-  }
-  if (file.size > MAX_SIZE) { status.textContent = 'ファイルが大きすぎます。100 MiB以下の動画を選んでください。'; return; }
-
-  button.disabled = true;
-  status.textContent = 'アップロードの準備中です…\nこのページを閉じずにお待ちください。';
-  try {
-    await upload(file.name, file, {
-      access: 'public',
-      handleUploadUrl: '/api/upload',
-      clientPayload: JSON.stringify({ title, description: descriptionInput.value.trim(), password: passwordInput.value })
-    });
-    status.textContent = 'アップロードが完了しました！ NowTubeのホームへ移動します…';
-    window.setTimeout(() => { window.location.href = './index.html'; }, 1200);
-  } catch (error) {
-    console.error(error);
-    status.textContent = 'アップロードに失敗しました。\n' + (error?.message || 'Vercel Blobの設定やネットワークを確認してください。');
-    button.disabled = false;
-  }
-});
+const form=document.getElementById('upload-form'),titleInput=document.getElementById('video-title'),descriptionInput=document.getElementById('video-description'),fileInput=document.getElementById('video-file'),button=document.getElementById('upload-button'),status=document.getElementById('status'),accountStatus=document.getElementById('account-status');
+const MAX_SIZE=100*1024*1024, ALLOWED=['video/mp4','video/webm','video/quicktime','video/x-m4v'];
+let loggedInUser=null;
+async function checkLogin(){try{const r=await fetch('/api/me',{cache:'no-store'});const d=await r.json();loggedInUser=d.user;if(!loggedInUser){accountStatus.innerHTML='投稿するには<a href="./login.html?next=./upload.html">ログイン</a>してください。';form.querySelectorAll('input,textarea,button').forEach(x=>x.disabled=true);}else accountStatus.textContent='ログイン中: '+loggedInUser.username;}catch{accountStatus.textContent='ログイン状態を確認できません。';}}
+async function makeThumbnail(file){return await new Promise((resolve,reject)=>{const video=document.createElement('video');const objectUrl=URL.createObjectURL(file);video.preload='metadata';video.muted=true;video.playsInline=true;video.onloadedmetadata=()=>{try{video.currentTime=Math.min(1,Math.max(0,(video.duration||1)*0.1));}catch(e){cleanup();reject(e);}};video.onseeked=()=>{try{const canvas=document.createElement('canvas');const scale=Math.min(1,640/video.videoWidth);canvas.width=Math.max(1,Math.round(video.videoWidth*scale));canvas.height=Math.max(1,Math.round(video.videoHeight*scale));const ctx=canvas.getContext('2d');ctx.drawImage(video,0,0,canvas.width,canvas.height);canvas.toBlob(blob=>{cleanup();if(blob)resolve(blob);else reject(new Error('サムネイル画像を生成できませんでした。'));},'image/jpeg',0.82);}catch(e){cleanup();reject(e);}};video.onerror=()=>{cleanup();reject(new Error('この動画形式からサムネイルを生成できません。MP4（H.264）を試してください。'));};function cleanup(){URL.revokeObjectURL(objectUrl);video.removeAttribute('src');video.load();}});}
+form.addEventListener('submit',async event=>{event.preventDefault();const file=fileInput.files&&fileInput.files[0],title=titleInput.value.trim();if(!loggedInUser){status.textContent='先にログインしてください。';return;}if(!title){status.textContent='タイトルを入力してください。';return;}if(!file){status.textContent='動画ファイルを選択してください。';return;}const ext=file.name.toLowerCase().split('.').pop();if(!ALLOWED.includes(file.type)&&!['mp4','webm','mov','m4v'].includes(ext)){status.textContent='MP4、WebM、MOV、M4Vの動画を選んでください。';return;}if(file.size>MAX_SIZE){status.textContent='ファイルが大きすぎます。100 MiB以下の動画を選んでください。';return;}
+ button.disabled=true;status.textContent='サムネイルを生成しています…';try{const thumb=await makeThumbnail(file);status.textContent='サムネイルをアップロードしています…';const thumbBlob=await upload('thumbnail.jpg',thumb,{access:'public',handleUploadUrl:'/api/thumbnail-upload'});status.textContent='動画をアップロードしています…\nこのページを閉じずにお待ちください。';await upload(file.name,file,{access:'public',handleUploadUrl:'/api/upload',clientPayload:JSON.stringify({title,description:descriptionInput.value.trim(),thumbnailUrl:thumbBlob.url})});status.textContent='アップロードが完了しました！ NowTubeのホームへ移動します…';window.setTimeout(()=>{window.location.href='./index.html';},1200);}catch(error){console.error(error);status.textContent='アップロードに失敗しました。\n'+(error?.message||'Vercel Blob・データベースの設定や動画形式を確認してください。');button.disabled=false;}});
+checkLogin();

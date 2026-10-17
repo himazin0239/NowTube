@@ -22,7 +22,7 @@
         var video = (data.videos || []).find(function (item) { return item.id === id; });
         if (!video) throw new Error('動画が見つかりません。削除されたか、まだ登録されていない可能性があります。');
         var title = document.createElement('h1'); title.textContent = video.title; root.appendChild(title);
-        var player = document.createElement('video'); player.id = 'player'; player.controls = true; player.playsInline = true; player.preload = 'metadata'; player.src = video.url; root.appendChild(player);
+        var player = document.createElement('video'); player.id = 'player'; player.controls = true; player.playsInline = true; player.preload = 'metadata'; if (video.thumbnailUrl) player.poster = video.thumbnailUrl; player.src = video.url; root.appendChild(player);
         var uploader = document.createElement('p'); uploader.textContent = '投稿者: ' + (video.uploader || 'NowTubeユーザー'); root.appendChild(uploader);
         if (video.description) { var desc = document.createElement('p'); desc.textContent = video.description; root.appendChild(desc); }
       } catch (error) { var message = document.createElement('p'); message.id = 'watch-error'; message.textContent = error.message || '動画を読み込めませんでした。'; root.replaceChildren(message); }
