@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html dir="ltr" style="--wm-toolbar-height: 1px;" lang="">
+
+<head>
+
+    <script>
+        var yt = yt || {}; yt.timing = yt.timing || {}; yt.timing.tick = function (label, opt_time) { var timer = yt.timing['timer'] || {}; if (opt_time) { timer[label] = opt_time; } else { timer[label] = new Date().getTime(); } yt.timing['timer'] = timer; }; yt.timing.info = function (label, value) { var info_args = yt.timing['info_args'] || {}; info_args[label] = value; yt.timing['info_args'] = info_args; }; yt.timing.info('e', '907605,915502,904441'); yt.timing.tick('start'); yt.timing.info('li', '0'); try { yt.timing['srt'] = window.gtbExternal && window.gtbExternal.pageT() || window.external && window.external.pageT; } catch (e) { } if (window.chrome && window.chrome.csi) { yt.timing['srt'] = Math.floor(window.chrome.csi().pageT); } if (window.msPerformance && window.msPerformance.timing) { yt.timing['srt'] = window.msPerformance.timing.responseStart - window.msPerformance.timing.navigationStart; }    </script>
+
+
+    <title>
+        NowTube - Shoot Your Life.
+    </title>
+
+    <link rel="search" type="application/opensearchdescription+xml"
+        href="http://web.archive.org/web/20111110192655/http://www.youtube.com/opensearch?locale=ja_JP"
+        title="YouTube 動画検索">
+
+    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="./index.html">
+
+    <meta name="description" content="NowTube では、動画を発見、再生、アップロード、共有することができます。">
+
+    <meta name="keywords"
+        content="動画, ビデオ, 無料, フリー, 簡単, 検索, 見つける, 発見, 再生, 視聴, 見る, 参加, 共有, 公開, アップロード, 娯楽, エンターテイメント, video, free, simple, search, find, discover, watch, engage, share, sharing, upload, entertainment">
+
+    <script>
+        if (window.yt.timing) {
+            yt.timing.tick('hpcss');
+        }
+    </script>
+
+    <meta property="fb:app_id" content="87741124305">
+    <link rel="publisher" href="https://plus.google.com/115229808208707341778">
+
+
+
+    <link id="www-core-css" rel="stylesheet" href="./css/www-core-vflDhoE5U.css">
+
+
+
+    <style>
+
+    </style>
+
+
+
+
+    <script id="www-core-js"
+        src="//web.archive.org/web/20111110192655js_/http://s.ytimg.com/yt/jsbin/www-core-vfluk7G1H.js"></script>
+
+
+
+    <script>
+        yt.setConfig({
+            'XSRF_TOKEN': 'bYCvBIGkncX33Bzn50DpkZOqGJB8MTMyMTAzOTYxNEAxMzIwOTUzMjE0',
+            'XSRF_FIELD_NAME': 'session_token'
+        });
+        yt.pubsub.subscribe('init', yt.www.xsrf.populateSessionToken);
+
+        yt.setConfig('XSRF_REDIRECT_TOKEN', '7aU3GbwB8wFzGxpCMoEiBdCoDrF8MTMyMTAzOTYxNUAxMzIwOTUzMjE1');
+
+        yt.setConfig('LOGGED_IN', false);
+        yt.setConfig('ENABLE_WATCH6', false);
+        yt.setConfig('I18N_PLURAL_RULES', function (n) { return 'other'; });
+
+        yt.setConfig('FEEDBACK_LOCALE_LANGUAGE', "ja");
+        yt.setConfig('FEEDBACK_LOCALE_EXTRAS', { "experiments": "907605,915502,904441", "accept_language": null });
+    </script>
+
+    <script>
+        if (window.yt.timing) {
+            yt.timing.tick('hpjs');
+        }
+    </script>
+
+
+    <script>
+        var masthead = new yt.www.home.ads.mastheadAd('1', false, '2', '8VfciKmOHPU', true, true, false)
+        yt.pubsub.subscribe('init', function () {
+            _showdiv('masthead-utility-menulink-short');
+            _hidediv('masthead-utility-menulink-long');
+        });
+    </script>
+
+    <script>
+        yt.net.ajax.setToken('subscription_ajax', "");
+        yt.pubsub.subscribe('init', yt.www.subscriptions.SubscriptionButton.init);
+    </script>
+
+
+    <script>
+        yt.net.ajax.setToken('channel_recommendations_token', '');
+        yt.setConfig('USERNAME', "");
+        yt.setConfig('SUBS_XSRF', "");
+
+
+        var moduleHelper = new yt.www.home.ModuleHelper('',
+            false, true);
+    </script>
+
+
+
+    <script>
+
+
+        yt.pubsub.subscribe('init', function () {
+            (function () {
+                var sessionToken = '';
+                var rootUrl = './index.html';
+                var locale = 'ja_JP';
+                var serviceInfo = null;
+                var isGaiaUser = false;
+                var facebookAppKey = '7ff82e59b6b2fbd316cca35309e95df3';
+                var tpDomain = 's.youtube-3rd-party.com';
+
+                var autoshare = new yt.sharing.AutoShare(sessionToken, rootUrl, locale, serviceInfo,
+                    isGaiaUser, facebookAppKey, tpDomain);
+
+                // Register Facebook connect button.
+                if (_gel('fb-login-btn')) {
+                    autoshare.registerConnectDialogLauncher(_gel('fb-login-btn'), 'facebook', true);
+                }
+
+                var gaiaChangedCallback = function (autoshare) {
+                    var isGaiaUser = autoshare.isGaiaUser();
+                    yt.style.setDisplayed('fb-promo-google-nag', !isGaiaUser);
+                    yt.style.setDisplayed('fb-promo-google-linked', isGaiaUser);
+
+                    if (isGaiaUser) {
+                        var link = _gel('fb-promo-google-linked-continue-to-fb');
+                        var fn = function () {
+                            autoshare.handleConnectService({ currentTarget: _gel('fb-login-btn') });
+                        }
+                        link.onclick = fn;
+                    }
+                }
+                autoshare.addGaiaChangedCallback(gaiaChangedCallback);
+
+                var canConnectCallback = function (autoshare) {
+                    var isGaiaUser = autoshare.isGaiaUser();
+                    yt.style.setDisplayed('fb-promo-google-nag', !isGaiaUser);
+                    yt.style.setDisplayed('fb-promo-google-linked', false);
+                    yt.style.setDisplayed('fb-promo-fb-linked', false);
+                    return isGaiaUser;
+                }
+                autoshare.addCanConnectCallback(canConnectCallback);
+
+                var serviceChangedCallback = function (autoshare) {
+                    var serviceInfo = autoshare.getServiceInfo();
+                    for (var service in serviceInfo) {
+                        var info = serviceInfo[service];
+                        if (service == 'facebook' && info['is_connected']) {
+                            yt.style.setDisplayed('fb-promo-fb-linked', true);
+                            hideFbPromoAlert();
+                        }
+                        if (service == 'es' && info['is_connected']) {
+                            yt.style.setDisplayed('es-optin-success', true);
+                            hideEsOptinAlert();
+                        }
+                    }
+                };
+                autoshare.addServiceChangedCallback(serviceChangedCallback);
+
+                window['autoshare'] = autoshare;
+
+                var prefs = yt.UserPrefs;
+                var optOut = prefs.getFlag3(prefs.Flags.FLAG3_FBPROMO_OPT_OUT);
+                if (!optOut) {
+                    _showdiv('fb-promo1');
+                }
+
+                // The user has "dismissed" the promo, i.e., clicked on the [x].
+                // This is distinct from simply hiding the promo as a side effect.
+                window.dismissFbPromoAlert = function () {
+                    prefs.setFlag3(prefs.Flags.FLAG3_FBPROMO_OPT_OUT, true);
+                    prefs.save();
+                    hideFbPromoAlert();
+                };
+
+                function hideFbPromoAlert() {
+                    _hidediv('fb-promo1');
+                }
+            })();
+
+        });
+
+        yt.setConfig('HOMEPAGE_AJAX_RECOMMENDATIONS', true);
+        yt.pubsub.subscribe('init', yt.www.home.ModuleHelper.initDismissRec);
+    </script>
+
+    <script>
+        // Initialize the subscriptions helper object that supports both the inline
+        // "edit subscription" link featurette in the Recent Activity module and
+        // the subscribe-from-masthead facility.
+        var gaiaHost = 'http://web.archive.org/web/20111110192655/https://accounts.google.com';
+        var gaiaLocale = 'ja-US';
+        window['subui_'] = new yt.www.home.Subscriptions(gaiaHost, gaiaLocale);
+        yt.pubsub.subscribe('init', function () {
+            window['subui_'].setCurrentLink(_gel('_firsteditsublink'));
+        });
+    </script>
+
+
+    <script>
+        if (window.yt.timing) {
+            yt.timing.tick('ct');
+        }
+    </script>
+
+</head>
+
+<body id="" class="date-20111110 ja_JP ltr" dir="ltr">
+
+    <form name="logoutForm" method="POST" action="https://nowtube.vercel.app/">
+        <input type="hidden" name="action_logout" value="1">
+        <input name="session_token" type="hidden" value="bYCvBIGkncX33Bzn50DpkZOqGJB8MTMyMTAzOTYxNEAxMzIwOTUzMjE0">
+    </form>
+    <!-- begin page -->
+    <div id="page" class="  home ">
+        <!-- begin pagetop -->
+        <div id="masthead-container">
+
+            <div id="masthead" class="" dir="ltr">
+                <a id="logo-container" href="https://nowtube.vercel.app/" title="YouTube ホーム">
+                    <img id="logo" src="./img/pixel.gif" alt="YouTube ホーム">
+                </a>
+
+
+
+                <div id="masthead-sections">
+                    <a href="/web/20111110192655/http://www.youtube.com/videos?feature=mh">ランキング </a><a
+                        href="./upload.html" class="split end ">アップロード</a><span class="valign-fix"></span>
+                    <a class="start" href="https://nowtube.vercel.app/login.html?mode=register">アカウントを作成</a> <a
+                        class="end"
+                        href="http://web.archive.org/web/20111110192655/https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Dja_JP%26next%3D%252Findex%253Fhl%253Dja&amp;hl=ja_JP&amp;ltmpl=sso">ログイン</a>
+                </div>
+
+
+
+
+
+                <form id="masthead-search" class="search-form" autocomplete="off"
+                    action="/web/20111110192655/http://www.youtube.com/results"
+                    onsubmit="if (_gel('masthead-search-term').value == '') return false;">
+                    <button class="search-button yt-uix-button"
+                        onclick="if (_gel('masthead-search-term').value == '') return false; _gel('masthead-search').submit(); return false;;return false;"
+                        type="button" id="search-btn" dir="ltr" tabindex="2" role="button"><span
+                            class="yt-uix-button-content">検索 </span></button>
+                    <div id="masthead-search-terms" dir="ltr"><label><input id="masthead-search-term"
+                                onfocus="_addclass(_gel('masthead-search'), 'focused'); "
+                                onblur="_removeclass(_gel('masthead-search'), 'focused');" class="search-term "
+                                name="search_query" value="" type="text" tabindex="1"
+                                onkeyup="goog.i18n.bidi.setDirAttribute(event,this)" title="検索"
+                                autocomplete="off"></label></div>
+                    <script>document.getElementById('masthead-search-term').focus();</script> <input type="hidden"
+                        name="aq" value="f"><input type="hidden" name="aql" value="" disabled=""><input type="hidden"
+                        name="oq" value="" disabled="">
+                </form>
+
+
+            </div>
+
+
+        </div>
+        <!-- end pagetop -->
+    </div>
+    <div id="alerts"></div>
+    <div id="content-container">
+        <!-- begin content -->
+        <div id="content" class="">
+            <div id="watch-container">
+                <!-- begin watch-headline-container -->
+                <div id="watch-headline-container">
+                    <div id="watch-headline" class="watch-headline">
+
+
+
+                        <div id="watch-longform-ad" style="display:none;">
+                            <div id="watch-longform-text" style="visibility:hidden">Advertisement</div>
+                            <div id="watch-longform-ad-placeholder"><img
+                                    src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                    width="300" height="60"></div>
+                            <div id="instream_google_companion_ad_div"></div>
+                        </div>
+
+
+                        <h1 id="watch-headline-title">
+
+
+                            <span id="eow-title" class="" dir="ltr" title="KICKED BY A HORSE">
+                                KICKED BY A HORSE
+                            </span>
+
+                        </h1>
+
+                        <div id="watch-headline-user-info">
+                            <a id="watch-userbanner" class="inline-block" rel="author"
+                                href="/web/20110813042442/http://www.youtube.com/user/RayWilliamJohnson"
+                                title="RayWilliamJohnson"><strong><img
+                                        src="https://web.archive.org/web/20110813042442im_/http://i4.ytimg.com/u/Gt7X90Au6BV8rf49BiM6Dg/watch_icon.jpg?v=4bbed2ac"
+                                        alt="RayWilliamJohnson" height="25"></strong></a>
+
+                            <span id="watch-video-count"
+                                class="watch-expander yt-uix-expander yt-uix-expander-collapsed"
+                                data-expander-action="yt.www.watch.watch5.handleToggleMoreFromUser">
+                                <span class="watch-expander-head yt-uix-expander-head yt-rounded">
+                                    <button class="yt-uix-expander-arrow" onclick="return false;"></button>
+                                    216 videos
+                                </span>
+                            </span>
+
+
+
+
+
+
+
+                            <span class="subscription-container"
+                                data-subscription-expandable-id="subscription-button-module-menu"
+                                data-subscription-value="RayWilliamJohnson" data-subscription-menu-type="expander"
+                                data-subscription-xsrf="" data-subscription-feature="" data-subscription-type="user">
+
+
+
+
+
+
+
+                                <button type="button" class="subscribe-button yt-uix-button yt-uix-tooltip"
+                                    onclick=";return false;"
+                                    title="Click to be notified of new videos from this channel" data-loaded="true"
+                                    data-button-action="yt.www.subscriptions.button.toggleMenu" role="button"
+                                    aria-pressed="false"><span class="yt-uix-button-content">Subscribe</span></button>
+
+                                <span class="subscription-subscribed-container hid"><span
+                                        class="subscription-options-button subscription-expander yt-uix-expander yt-uix-expander-collapsed"
+                                        data-expander-action="yt.www.subscriptions.button.toggleMenu"><span
+                                            class="yt-uix-expander-head yt-rounded"><button
+                                                class="yt-uix-expander-arrow" onclick="return false;"></button><span
+                                                class="yt-alert yt-alert-success yt-alert-small yt-alert-naked yt-rounded"><img
+                                                    src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                    class="icon" alt="Alert icon"><span
+                                                    class="yt-alert-content">Subscribed</span></span></span></span></span>
+                            </span>
+
+                        </div>
+
+                        <div id="subscription-button-module-menu"
+                            class="hid subscription-menu-expandable subscription-menu">
+                            <div class="subscription-menu-not-logged-in">
+                                <strong><a
+                                        href="https://web.archive.org/web/20110813042442/https://www.google.com/accounts/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Den_US%26next%3Dhttp%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DZgS2mdBL3Rk%2526feature%253Dtopvideos_mp&amp;hl=en_US&amp;ltmpl=sso">Sign
+                                        In</a> or <a
+                                        href="/web/20110813042442/http://www.youtube.com/signup?next=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DZgS2mdBL3Rk%26feature%3Dtopvideos_mp">Sign
+                                        Up</a> now!
+                                </strong>
+
+                            </div>
+                        </div>
+
+
+                        <div id="watch-more-from-user" class="collapsed">
+                            <div id="watch-channel-discoverbox" class="yt-rounded">
+                                <span id="watch-channel-loading">Loading...</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- end watch-headline-container -->
+                <div id="watch-video-container">
+                    <div id="watch-video" style="z-index: 1000;">
+                        <script>
+                            if (window.yt.timing) {
+                                yt.timing.tick('bf');
+                            }
+                        </script>
+
+                        <div class="jwplayer playlist-none" id="watch-player"
+                            style="width: 640px; height: 363px; background-color: rgb(0, 0, 0);">
+                            <div class="jwclick" id="watch-player_menu" style="display: none;">
+                                <div class="jwclick_item">About JW Player 6.4.3359 (Premium edition)</div>
+                            </div><span class="jwmain"><span class="jwvideo"><video
+                                        x-webkit-airplay="allow"></video></span><span class="jwcontrols">
+                                    <div id="watch-player_caption" class="jwcaptions">
+                                        <div
+                                            style="display: none; height: auto; position: absolute; bottom: 20px; text-align: center; width: 100%;">
+                                            <span
+                                                style="color: rgb(255, 255, 255); display: inline-block; font-family: Arial, sans-serif; font-style: normal; font-weight: normal; height: auto; margin: auto; position: relative; text-align: center; text-decoration: none; overflow-wrap: break-word; width: auto; background: rgb(0, 0, 0);"></span>
+                                        </div>
+                                    </div>
+                                    <div id="watch-player_display" class="jwdisplay">
+                                        <div class="jwpreview jwuniform"></div>
+                                        <div class="jwdisplayIcon" id="watch-player_display_button" style="opacity: 1;">
+                                            <div class="jwtext" style=""></div>
+                                            <div class="icon" id="watch-player_display_button_play"></div>
+                                        </div>
+                                    </div><img class="jwlogo" id="watch-player_logo"
+                                        style="display: none; visibility: visible; opacity: 1;">
+                                    <div class="jwdock" id="watch-player_dock">
+                                        <div class="jwdockbuttons">
+                                            <div class="capLeft"></div>
+                                            <div class="capRight"></div>
+                                        </div>
+                                    </div><span id="watch-player_controlbar" class="jwcontrolbar"><span
+                                            class="jwbackground">&nbsp;</span><span class="jwcapLeft">&nbsp;</span><span
+                                            class="jwgroup jwleft"><span
+                                                class="jwplay jwbuttoncontainer"><button>&nbsp;</button></span><span
+                                                class="jwdivider">&nbsp;</span><span
+                                                class="jwprev jwbuttoncontainer"><button>&nbsp;</button></span><span
+                                                class="jwnext jwbuttoncontainer"><button>&nbsp;</button></span><span
+                                                class="jwdivider nextdiv">&nbsp;</span><span
+                                                id="watch-player_controlbar_elapsed"
+                                                class="jwtext jwelapsed">00:00</span></span><span
+                                            class="jwgroup jwcenter"><span class="jwslider jwtime"><span
+                                                    class="jwtimeSliderCapLeft">&nbsp;</span><span
+                                                    class="jwrail jwsmooth"><span class="jwrailgroup Rail"><span
+                                                            class="jwtimeSliderRailCapLeft">&nbsp;</span><span
+                                                            class="jwtimeSliderRail">&nbsp;</span><span
+                                                            class="jwtimeSliderRailCapRight jwcapRight">&nbsp;</span></span><span
+                                                        class="jwrailgroup Buffer" style="width: 0%; opacity: 0;"><span
+                                                            class="jwtimeSliderBufferCapLeft">&nbsp;</span><span
+                                                            class="jwtimeSliderBuffer">&nbsp;</span><span
+                                                            class="jwtimeSliderBufferCapRight jwcapRight">&nbsp;</span></span><span
+                                                        class="jwrailgroup Progress"
+                                                        style="width: 0%; opacity: 0;"><span
+                                                            class="jwtimeSliderProgressCapLeft">&nbsp;</span><span
+                                                            class="jwtimeSliderProgress">&nbsp;</span><span
+                                                            class="jwtimeSliderProgressCapRight jwcapRight">&nbsp;</span></span><span
+                                                        class="jwtimeSliderThumb jwthumb"
+                                                        style="left: 0%;">&nbsp;</span>
+                                                    <div class="jwoverlay" id="watch-player_controlbar_timetooltip">
+                                                        <div class="jwarrow"></div>
+                                                        <div class="jwborder jwtopleft"></div>
+                                                        <div class="jwborder jwbottomleft"></div>
+                                                        <div class="jwborder jwtopright"></div>
+                                                        <div class="jwborder jwbottomright"></div>
+                                                        <div class="jwborder jwleft"></div>
+                                                        <div class="jwborder jwright"></div>
+                                                        <div class="jwborder jwtop"></div>
+                                                        <div class="jwborder jwbottom"></div>
+                                                        <div class="jwback"></div>
+                                                        <div class="jwcontents">
+                                                            <div>
+                                                                <div id="watch-player_controlbar_thumb"></div>
+                                                                <div class="jwoverlaytext">00:00</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </span><span
+                                                    class="jwtimeSliderCapRight">&nbsp;</span></span></span><span
+                                            class="jwgroup jwright"><span id="watch-player_controlbar_duration"
+                                                class="jwtext jwduration">00:00</span><span
+                                                class="jwdivider">&nbsp;</span><span
+                                                class="jwhd jwbuttoncontainer"><button>&nbsp;</button>
+                                                <div class="jwoverlay" id="watch-player_controlbar_hd_overlay">
+                                                    <div class="jwarrow"></div>
+                                                    <div class="jwborder jwtopleft"></div>
+                                                    <div class="jwborder jwbottomleft"></div>
+                                                    <div class="jwborder jwtopright"></div>
+                                                    <div class="jwborder jwbottomright"></div>
+                                                    <div class="jwborder jwleft"></div>
+                                                    <div class="jwborder jwright"></div>
+                                                    <div class="jwborder jwtop"></div>
+                                                    <div class="jwborder jwbottom"></div>
+                                                    <div class="jwback"></div>
+                                                    <div class="jwcontents">
+                                                        <div class="jwmenu" id="watch-player_controlbar_hd"><img
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAAAYCAYAAABtGnqsAAABKUlEQVR42u2WYQ2DMBSEcYCESuAHAioBCZOAhOFgEiahEpCAhEpAQtcu1+TSwSDbfrDtvuQFWtpHe7lXqCohhBAPDMPQxBhjhBhzjDM9O3MbfWmspfYVc82zeegPlCMUkfpc8f4aa2qOKl5eYI+2iTHlTewU0Mc4bQnPAq6No/UYtN1SniMJmDbuFhzp9wgYr11yIO6ndwWknPd3cM6jCrhValsCJod0VMrduwJS3nDY0qWF9tlB1Gf2OBDlVp5j7kMCpvzjN3xATD6kIYjjcwclPi6dUXhWiu/x7D8EJJFmOMvDSX3hOI/rTOJOuWRp7CWLQnPGLMZPCkjOsuTEtLG6+LDY4lfFruRp4ELLsTQH48xaHv1kCiGEECLStm1QvB5ykBBCiJe5AX69621Fd8YvAAAAAElFTkSuQmCC">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span><span class="jwcc jwbuttoncontainer"><button>&nbsp;</button>
+                                                <div class="jwoverlay" id="watch-player_controlbar_cc_overlay">
+                                                    <div class="jwarrow"></div>
+                                                    <div class="jwborder jwtopleft"></div>
+                                                    <div class="jwborder jwbottomleft"></div>
+                                                    <div class="jwborder jwtopright"></div>
+                                                    <div class="jwborder jwbottomright"></div>
+                                                    <div class="jwborder jwleft"></div>
+                                                    <div class="jwborder jwright"></div>
+                                                    <div class="jwborder jwtop"></div>
+                                                    <div class="jwborder jwbottom"></div>
+                                                    <div class="jwback"></div>
+                                                    <div class="jwcontents">
+                                                        <div class="jwmenu" id="watch-player_controlbar_cc"><img
+                                                                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAAAYCAYAAAAF6fiUAAABjklEQVR42u1X3c2DMAzsBhmBEXhggIzACIzACGUDRmCEjsAIGSEjMAIfkS7oegr0oQ/9IvkkC2HH+fHZDjweBoPBYDAIpmlqD1kP2Q/ZDhnEPsA2kM5Dt5PfWNBnSfpnEpojvUfYwyE92ZJulPXWi/3ONQff5eDhvcG7pzGvFJwcAA2I+DUcRFnrJABkhTwe8yX/lgiIYl9pP0/af9CkqYmAlN0v0TV08HTASAdvSgRAF4S4OwJiDjbZEykLVwAFnQlYMJfT/dZIwFtbKNjHXOIga6aAxOyPoATxvSNgL6zFQd7xXLEu2xzmCpCTjBoJOLNOKqClrH7r9RcEjBqEDwRsmrVcjURAbm09V4O00EXPUBMBDfde7rGwRRm/aEbezH1HwMxBo17eqy9d1iu1r/6ujdZ4D2wo94inQ5BmGdvD/i0BDkTn9d6+Zgq+Qb6CNmpBm94ntX4NeamEttRbMc59OjS3iqvLEjpfaF/+qi3KPrz9SBgMBoPBYDD8a3Rdt5v8TiwDDQaDwWD4Ef4AO4h4lB2vwSEAAAAASUVORK5CYII=">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span><span class="jwdivider">&nbsp;</span><span
+                                                class="jwmute"><button>&nbsp;</button>
+                                                <div class="jwoverlay" id="watch-player_controlbar_volumeoverlay">
+                                                    <div class="jwarrow"></div>
+                                                    <div class="jwborder jwtopleft"></div>
+                                                    <div class="jwborder jwbottomleft"></div>
+                                                    <div class="jwborder jwtopright"></div>
+                                                    <div class="jwborder jwbottomright"></div>
+                                                    <div class="jwborder jwleft"></div>
+                                                    <div class="jwborder jwright"></div>
+                                                    <div class="jwborder jwtop"></div>
+                                                    <div class="jwborder jwbottom"></div>
+                                                    <div class="jwback"></div>
+                                                    <div class="jwcontents"><span
+                                                            class="jwslider jwvolume jwvertical"><span
+                                                                class="jwvolumeCapTop">&nbsp;</span><span
+                                                                class="jwrail jwsmooth"><span
+                                                                    class="jwrailgroup Rail"><span
+                                                                        class="jwvolumeRailCapTop">&nbsp;</span><span
+                                                                        class="jwvolumeRail">&nbsp;</span><span
+                                                                        class="jwvolumeRailCapBottom jwcapBottom">&nbsp;</span></span><span
+                                                                    class="jwrailgroup Progress"
+                                                                    style="height: 90%; bottom: 0px; opacity: 0;"><span
+                                                                        class="jwvolumeProgressCapTop">&nbsp;</span><span
+                                                                        class="jwvolumeProgress">&nbsp;</span><span
+                                                                        class="jwvolumeProgressCapBottom jwcapBottom">&nbsp;</span><span
+                                                                        class="jwvolumeThumb jwthumb"
+                                                                        style="top: 0px;">&nbsp;</span></span></span><span
+                                                                class="jwvolumeCapBottom jwcapBottom">&nbsp;</span></span>
+                                                    </div>
+                                                </div>
+                                            </span><span class="jwdivider">&nbsp;</span><span
+                                                class="jwfullscreen jwbuttoncontainer"><button>&nbsp;</button>
+                                                <div class="jwoverlay" id="watch-player_controlbar_fullscreenoverlay">
+                                                    <div class="jwarrow"></div>
+                                                    <div class="jwborder jwtopleft"></div>
+                                                    <div class="jwborder jwbottomleft"></div>
+                                                    <div class="jwborder jwtopright"></div>
+                                                    <div class="jwborder jwbottomright"></div>
+                                                    <div class="jwborder jwleft"></div>
+                                                    <div class="jwborder jwright"></div>
+                                                    <div class="jwborder jwtop"></div>
+                                                    <div class="jwborder jwbottom"></div>
+                                                    <div class="jwback"></div>
+                                                    <div class="jwcontents">
+                                                        <div class="jwoverlaytext">Fullscreen</div>
+                                                    </div>
+                                                </div>
+                                            </span></span><span class="jwcapRight">&nbsp;</span></span>
+                                </span><span class="jwinstream"></span></span><span class="jwaspect"></span><span
+                                class="jwplaylistcontainer"></span>
+                        </div>
+
+                        <!-- begin watch-video-extra -->
+                        <div id="watch-video-extra">
+
+
+                        </div>
+                        <!-- end watch-video-extra -->
+                    </div>
+                </div>
+                <!-- begin watch-main-container -->
+                <div id="watch-main-container">
+                    <div id="watch-main">
+                        <div id="watch-panel">
+                            <div id="flash10-promo-div" style="display: none;"
+                                class="yt-alert yt-alert-warn yt-rounded  hid"><img
+                                    src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                    class="icon master-sprite" alt="Alert icon">
+                                <div class="yt-alert-content"> Upgrade to Flash Player 10 for improved playback
+                                    performance. <a
+                                        href="https://web.archive.org/web/20110813042442/http://www.adobe.com/go/getflashplayer/"
+                                        onmousedown="urchinTracker('/Events/VideoWatch/GetFlashUpgrade');">Upgrade
+                                        Now</a> or <a
+                                        href="https://web.archive.org/web/20110813042442/http://help.youtube.com/support/youtube/bin/answer.py?answer=95402">More
+                                        Info</a>.
+                                </div><button type="button" onclick="_hidediv(this.parentNode);"
+                                    class="close master-sprite">close</button>
+                            </div>
+
+
+                            <div id="watch-actions">
+                                <div id="watch-actions-right">
+                                    <span class="watch-view-count">
+                                        <strong>6,038,220</strong>
+                                    </span>
+                                    <button onclick=";return false;" title="Show video statistics" type="button"
+                                        id="watch-insight-button"
+                                        class="yt-uix-tooltip yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+                                        data-button-action="yt.www.watch.actions.stats" role="button"
+                                        aria-pressed="false" data-tooltip="Show video statistics"
+                                        data-tooltip-title="Show video statistics" data-tooltip-timer="618"><img
+                                            class="yt-uix-button-icon yt-uix-button-icon-watch-insight"
+                                            src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                            alt=""></button>
+
+                                </div>
+                                <span id="watch-like-unlike" class="yt-uix-button-group"><button
+                                        onclick=";return false;" title="I like this" type="button"
+                                        class="start yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip"
+                                        id="watch-like" data-button-action="yt.www.watch.actions.like" role="button"
+                                        aria-pressed="false" data-tooltip="I like this" data-tooltip-title="I like this"
+                                        data-tooltip-timer="637"><img
+                                            class="yt-uix-button-icon yt-uix-button-icon-watch-like"
+                                            src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                            alt=""><span class="yt-uix-button-content">Like</span></button><button
+                                        onclick=";return false;" title="I dislike this" type="button"
+                                        class="end yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+                                        id="watch-unlike" data-button-action="yt.www.watch.actions.unlike" role="button"
+                                        aria-pressed="false" data-tooltip="I dislike this"
+                                        data-tooltip-title="I dislike this" data-tooltip-timer="639"><img
+                                            class="yt-uix-button-icon yt-uix-button-icon-watch-unlike"
+                                            src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                            alt=""></button></span>
+                                <span dir="ltr" class="yt-uix-button-group addto-container watch show-label"
+                                    data-video-ids="ZgS2mdBL3Rk" data-feature="watch"><button type="button"
+                                        class="start yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip"
+                                        onclick=";return false;" title="Add to Watch Later
+" data-button-action="yt.www.watch.actions.showSigninOrCreateChannelWarning" role="button" aria-pressed="false"
+                                        data-tooltip="Add to Watch Later
+" data-tooltip-title="Add to Watch Later
+" data-tooltip-timer="646"><img class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                            src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                            alt=""><span class="yt-uix-button-content"><span class="addto-label">Add
+                                                to</span></span></button><button type="button"
+                                        class="end yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+                                        onclick=";return false;" title="Add to favorites or playlist"
+                                        data-button-action="yt.www.watch.actions.showSigninOrCreateChannelWarning"
+                                        role="button" aria-pressed="false" data-tooltip="Add to favorites or playlist"
+                                        data-tooltip-title="Add to favorites or playlist" data-tooltip-timer="652"><img
+                                            class="yt-uix-button-icon yt-uix-button-icon-arrow"
+                                            src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                            alt=""></button></span>
+
+                                <button onclick=";return false;" title="Share or embed this video" type="button"
+                                    class="yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip" id="watch-share"
+                                    data-button-action="yt.www.watch.actions.share" role="button" aria-pressed="false"
+                                    data-tooltip="Share or embed this video"
+                                    data-tooltip-title="Share or embed this video" data-tooltip-timer="620"><span
+                                        class="yt-uix-button-content">Share</span></button>
+
+                                <button onclick=";return false;" title="Flag as inappropriate" type="button"
+                                    class="yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+                                    id="watch-flag" data-button-action="yt.www.watch.actions.flag" role="button"
+                                    aria-pressed="false"><img class="yt-uix-button-icon yt-uix-button-icon-watch-flag"
+                                        src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                        alt=""></button>
+
+
+                            </div>
+
+                            <div id="watch-actions-area-container" class="hid">
+                                <div id="watch-actions-area" class="yt-rounded">
+                                    <div id="watch-actions-loading" class="watch-actions-panel hid">
+                                        Loading...
+                                    </div>
+                                    <div id="watch-actions-logged-out" class="watch-actions-panel hid">
+                                        <div class="yt-alert yt-alert-warn yt-alert-small yt-alert-naked yt-rounded ">
+                                            <img src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                class="icon master-sprite" alt="Alert icon">
+                                            <div class="yt-alert-content"> <strong><a
+                                                        href="https://web.archive.org/web/20110813042442/https://www.google.com/accounts/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Den_US%26next%3Dhttp%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DZgS2mdBL3Rk%2526feature%253Dtopvideos_mp&amp;hl=en_US&amp;ltmpl=sso">Sign
+                                                        In</a> or <a
+                                                        href="/web/20110813042442/http://www.youtube.com/signup?new=true&amp;next=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DZgS2mdBL3Rk%26feature%3Dtopvideos_mp">Sign
+                                                        Up</a> now!
+                                                </strong>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="watch-actions-error" class="watch-actions-panel hid">
+                                        <div class="yt-alert yt-alert-error yt-alert-small yt-alert-naked yt-rounded ">
+                                            <img src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                class="icon master-sprite" alt="Alert icon">
+                                            <div id="watch-error-string" class="yt-alert-content"></div>
+                                        </div>
+                                    </div>
+                                    <div id="watch-actions-share" class="watch-actions-panel hid"></div>
+
+                                    <div id="watch-actions-ajax" class="watch-actions-panel hid"></div>
+
+                                    <div class="close">
+                                        <img src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                            class="close-button" onclick="yt.www.watch.actions.hide();">
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div id="watch-info" class="yt-rounded">
+
+                                <div id="watch-description"
+                                    class="watch-expander yt-uix-expander  yt-uix-expander-collapsed"
+                                    data-expander-action="yt.www.watch.watch5.handleToggleDescription">
+                                    <div id="watch-description-clip">
+                                        <p id="watch-uploader-info">
+
+                                            Uploaded by <a class="author" rel="author"
+                                                href="/web/20110813042442/http://www.youtube.com/user/RayWilliamJohnson">RayWilliamJohnson</a>
+                                            on <span id="eow-date" class="watch-video-date">May 30, 2011</span>
+
+                                        </p>
+                                        <div id="watch-description-text">
+                                            <p id="eow-description">RAY'S PERSONAL VIDEO: <a
+                                                    href="https://web.archive.org/web/20110813042442/http://www.youtube.com/watch?v=WS95kxAXguM"
+                                                    target="_blank" title="http://www.youtube.com/watch?v=WS95kxAXguM"
+                                                    rel="nofollow" dir="ltr"
+                                                    class="yt-uix-redirect-link">http://www.youtube.com/watch?v=WS95kxAXguM</a>‬<br><br>=3
+                                                IN SPANISH: <a
+                                                    href="https://web.archive.org/web/20110813042442/http://www.youtube.com/igualatres"
+                                                    target="_blank" title="http://www.youtube.com/igualatres"
+                                                    rel="nofollow" dir="ltr"
+                                                    class="yt-uix-redirect-link">http://www.youtube.com/igualatres</a><br><br>WEBSITE:
+                                                <a href="https://web.archive.org/web/20110813042442/http://raywj.com/"
+                                                    target="_blank" title="http://raywj.com" rel="nofollow" dir="ltr"
+                                                    class="yt-uix-redirect-link">http://raywj.com</a><br><br>OUTRO
+                                                SONG: <a
+                                                    href="https://web.archive.org/web/20110813042442/http://www.youtube.com/yourfavoritemartian"
+                                                    target="_blank" title="http://www.youtube.com/yourfavoritemartian"
+                                                    rel="nofollow" dir="ltr"
+                                                    class="yt-uix-redirect-link">http://www.youtube.com/yourfavoritemartian</a><br><br>FACEBOOK:
+                                                <a href="https://web.archive.org/web/20110813042442/http://www.facebook.com/raywilliamjohnson"
+                                                    target="_blank" title="http://www.facebook.com/raywilliamjohnson"
+                                                    rel="nofollow" dir="ltr"
+                                                    class="yt-uix-redirect-link">http://www.facebook.com/raywilliamjohnson</a><br><br>TWITTER:
+                                                <a href="https://web.archive.org/web/20110813042442/https://twitter.com/RayWJ"
+                                                    target="_blank" title="https://twitter.com/RayWJ" rel="nofollow"
+                                                    dir="ltr"
+                                                    class="yt-uix-redirect-link">https://twitter.com/RayWJ</a><br><br>**********************************************************************<br>Here
+                                                are the links to the full reviews of the content discussed in this
+                                                video. Please don't harass the content creators or send them
+                                                hate-messages. If you like what you see on each of their channels,
+                                                feel free to subscribe to them. :) Thanx:<br><br>Cameraman Gets
+                                                Kicked in the Head by a Horse: <br><a
+                                                    href="https://web.archive.org/web/20110813042442/http://bit.ly/jNCnvx"
+                                                    target="_blank" title="http://bit.ly/jNCnvx" rel="nofollow"
+                                                    dir="ltr"
+                                                    class="yt-uix-redirect-link">http://bit.ly/jNCnvx</a><br><br>Crazy
+                                                Naked Guy on the 6 Train:<br><a
+                                                    href="https://web.archive.org/web/20110813042442/http://bit.ly/iE3VZr"
+                                                    target="_blank" title="http://bit.ly/iE3VZr" rel="nofollow"
+                                                    dir="ltr"
+                                                    class="yt-uix-redirect-link">http://bit.ly/iE3VZr</a><br><br>Cat
+                                                Mom Hugs Baby Kitten: <br><a
+                                                    href="https://web.archive.org/web/20110813042442/http://bit.ly/ixJIYv"
+                                                    target="_blank" title="http://bit.ly/ixJIYv" rel="nofollow"
+                                                    dir="ltr" class="yt-uix-redirect-link">http://bit.ly/ixJIYv</a>
+                                            </p>
+                                        </div>
+                                        <div id="watch-description-extras">
+                                            <h4>Category:</h4>
+                                            <p id="eow-category"><a
+                                                    href="/web/20110813042442/http://www.youtube.com/entertainment">Entertainment</a>
+                                            </p>
+
+
+
+                                            <h4>Tags:</h4>
+                                            <ul id="eow-tags" class="watch-info-tag-list">
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=yt%3Aquality%3Dhigh&amp;search=tag">yt:quality=high</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=raywilliamjohnson&amp;search=tag">raywilliamjohnson</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=ray&amp;search=tag">ray</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=william&amp;search=tag">william</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=johnson&amp;search=tag">johnson</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=rwj&amp;search=tag">rwj</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=rjw&amp;search=tag">rjw</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Cameraman&amp;search=tag">Cameraman</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Gets&amp;search=tag">Gets</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Kicked&amp;search=tag">Kicked</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=in&amp;search=tag">in</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=the&amp;search=tag">the</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Head&amp;search=tag">Head</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=by&amp;search=tag">by</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Horse&amp;search=tag">Horse</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Crazy&amp;search=tag">Crazy</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Naked&amp;search=tag">Naked</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Guy&amp;search=tag">Guy</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=on&amp;search=tag">on</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Train&amp;search=tag">Train</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Cat&amp;search=tag">Cat</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Mom&amp;search=tag">Mom</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Hugs&amp;search=tag">Hugs</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Baby&amp;search=tag">Baby</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=Kitten&amp;search=tag">Kitten</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=yourfavorite&amp;search=tag">yourfavorite</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=martian&amp;search=tag">martian</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=transphobic&amp;search=tag">transphobic</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=techno&amp;search=tag">techno</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=breakingnyc&amp;search=tag">breakingnyc</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=breaking&amp;search=tag">breaking</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=los&amp;search=tag">los</a>
+                                                </li>
+                                                <li><a
+                                                        href="/web/20110813042442/http://www.youtube.com/results?search_query=angeles&amp;search=tag">angeles</a>
+                                                </li>
+                                            </ul>
+
+
+                                            <h4>License:</h4>
+                                            <p id="eow-reuse">
+                                                Standard YouTube License
+                                            </p>
+
+
+                                        </div>
+
+                                    </div>
+                                    <div id="watch-description-fadeout"></div>
+
+                                    <ul id="watch-description-extra-info">
+                                        <li>
+                                            <div class="watch-sparkbars">
+                                                <div class="watch-sparkbar-likes" style="width: 93.603463151%">
+                                                </div>
+                                                <div class="watch-sparkbar-dislikes" style="width: 6.39653684896%">
+                                                </div>
+                                            </div>
+                                            <span class="watch-likes-dislikes">
+                                                <span class="likes">61,841</span> likes, <span
+                                                    class="dislikes">4,226</span> dislikes
+                                            </span>
+                                        </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    </ul>
+
+
+                                    <div class="yt-uix-expander-head">
+                                        <div id="watch-description-expand" class="expand">
+                                            <button type="button" class="metadata-inline yt-uix-button"
+                                                onclick=";return false;" role="button" aria-pressed="false"><span
+                                                    class="yt-uix-button-content">Show more <img
+                                                        src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                        alt="Show more">
+                                                </span></button>
+                                        </div>
+                                        <div id="watch-description-collapse" class="collapse">
+                                            <button type="button" class="metadata-inline yt-uix-button"
+                                                onclick=";return false;" role="button" aria-pressed="false"><span
+                                                    class="yt-uix-button-content">Show less <img
+                                                        src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                        alt="Show less">
+                                                </span></button>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                            <div id="watch-discussion">
+
+
+
+                                <div id="comments-view" class="comments-disabled">
+                                    <div class="comments-section">
+                                        <h4>All Comments</h4>
+                                        <div class="comments-disabled-message">
+                                            <img
+                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/icon_comments_disabled-vflxokpZC.png">
+                                            <span>Adding comments has been disabled for this video.</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div id="watch-sidebar">
+
+                            <div id="watch-channel-brand-div" style="display:none" class="watch-module">
+                                <div id="ad300x250" class="alignR"></div>
+                                <div id="google_companion_ad_div" class="alignR"></div>
+                                <div style="padding-top: 3px;display:none;">
+                                    Advertisement
+                                </div>
+                            </div>
+
+
+
+                            <div class="watch-module">
+                                <div class="watch-module-body">
+
+                                    <h4 class="first">Suggestions</h4>
+                                    <ul id="watch-related" class="video-list">
+                                        <div id="ppv-container" class="hid">
+                                            <li class="video-list-item "><a
+                                                    href="/web/20110813042442/http://www.youtube.com/watch?v=k4EfCmdqkS0&amp;feature=fvwrel"
+                                                    class="video-list-item-link "><span
+                                                        class="ux-thumb-wrap  contains_addto"><span
+                                                            class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                    src="//web.archive.org/web/20110813042442/http://i4.ytimg.com/vi/k4EfCmdqkS0/default.jpg"
+                                                                    alt="Thumbnail"
+                                                                    data-thumb="//web.archive.org/web/20110813042442/http://i4.ytimg.com/vi/k4EfCmdqkS0/default.jpg"
+                                                                    data-group-key="thumb-group-0"></span></span><span
+                                                            class="video-time">5:34</span><span dir="ltr"
+                                                            class="yt-uix-button-group addto-container short video-actions"
+                                                            data-video-ids="k4EfCmdqkS0"
+                                                            data-feature="thumbnail"><button type="button"
+                                                                class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                                onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                    class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                    src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                    alt=""><span class="yt-uix-button-content"><span
+                                                                        class="addto-label">Add to</span></span><img
+                                                                    class="yt-uix-button-arrow"
+                                                                    src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                    alt=""></button><button type="button"
+                                                                class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                                onclick=";return false;"
+                                                                data-button-menu-id="shared-addto-menu" role="button"
+                                                                aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                    src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                    alt=""></button></span></span><span dir="ltr"
+                                                        class="title" title="BIKINI CHICKS">BIKINI
+                                                        CHICKS</span><span class="stat">by
+                                                        RayWilliamJohnson</span><span class="stat view-count">6,193,857
+                                                        views
+                                                    </span></a></li>
+
+                                            <span class="featured-label">Featured Video</span>
+                                        </div>
+
+
+
+
+
+                                        <li class="video-list-item "><a class="video-list-item-link"
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=ouIoi_qbQaw&amp;feature=list_related&amp;playnext=1&amp;list=SP6A40AB04892E2A1F">
+                                                <span class="playlist-video-thumbs watch-related-playlist-video-thumbs">
+                                                    <span class="playlist-thumb playlist-thumb-0">
+                                                        <span class="video-thumb ux-thumb-66 "><span class="clip"><img
+                                                                    src="//web.archive.org/web/20110813042442im_/http://i4.ytimg.com/vi/ouIoi_qbQaw/default.jpg"
+                                                                    alt="Thumbnail"></span></span>
+                                                    </span>
+                                                    <span class="playlist-thumb playlist-thumb-1">
+                                                        <span class="video-thumb ux-thumb-50 "><span class="clip"><img
+                                                                    src="//web.archive.org/web/20110813042442im_/http://i1.ytimg.com/vi/xJ25hTHGk9Q/default.jpg"
+                                                                    alt="Thumbnail"></span></span>
+                                                    </span>
+                                                    <span class="playlist-thumb playlist-thumb-2">
+                                                        <span class="video-thumb ux-thumb-50 "><span class="clip"><img
+                                                                    src="//web.archive.org/web/20110813042442im_/http://i1.ytimg.com/vi/X3F2NPHU1VY/default.jpg"
+                                                                    alt="Thumbnail"></span></span>
+                                                    </span>
+                                                </span>
+                                                <span class="title">=3</span><span class="stat">by
+                                                    RayWilliamJohnson</span><span class="stat"><span
+                                                        class="yt-badge-std">PLAYLIST</span><strong>47
+                                                        videos</strong></span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=J2k-ffxEMSE&amp;feature=relmfu"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442/http://i3.ytimg.com/vi/J2k-ffxEMSE/default.jpg"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i3.ytimg.com/vi/J2k-ffxEMSE/default.jpg"
+                                                                data-group-key="thumb-group-0"></span></span><span
+                                                        class="video-time">5:17</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="J2k-ffxEMSE" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="BOOTY SHAKIN'">BOOTY SHAKIN'</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">6,213,859 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=8wTOypNpjPc&amp;feature=relmfu"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442/http://i1.ytimg.com/vi/8wTOypNpjPc/default.jpg"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i1.ytimg.com/vi/8wTOypNpjPc/default.jpg"
+                                                                data-group-key="thumb-group-0"></span></span><span
+                                                        class="video-time">5:25</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="8wTOypNpjPc" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="Kick the Baby!">Kick the Baby!</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">8,392,396 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=BriU4G33Hd0&amp;feature=relmfu"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442/http://i3.ytimg.com/vi/BriU4G33Hd0/default.jpg"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i3.ytimg.com/vi/BriU4G33Hd0/default.jpg"
+                                                                data-group-key="thumb-group-0"></span></span><span
+                                                        class="video-time">5:10</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="BriU4G33Hd0" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="AIRPORT PR0N">AIRPORT PR0N</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">5,708,971 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=EZpbrFIMFKs&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442/http://i2.ytimg.com/vi/EZpbrFIMFKs/default.jpg"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i2.ytimg.com/vi/EZpbrFIMFKs/default.jpg"
+                                                                data-group-key="thumb-group-0"></span></span><span
+                                                        class="video-time">1:55</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="EZpbrFIMFKs" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title"
+                                                    title="Naked man attacking people on the subway.">Naked man
+                                                    attacking people on the subway.</span><span class="stat">by
+                                                    craftnation</span><span class="stat view-count">109,683 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=w_E_tsaOLkE&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442/http://i4.ytimg.com/vi/w_E_tsaOLkE/default.jpg"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i4.ytimg.com/vi/w_E_tsaOLkE/default.jpg"
+                                                                data-group-key="thumb-group-0"></span></span><span
+                                                        class="video-time">5:48</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="w_E_tsaOLkE" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="THE JESUS DANCE">THE JESUS
+                                                    DANCE</span><span class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">7,678,723 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=0i2zaDSXhFM&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442/http://i1.ytimg.com/vi/0i2zaDSXhFM/default.jpg"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i1.ytimg.com/vi/0i2zaDSXhFM/default.jpg"
+                                                                data-group-key="thumb-group-0"></span></span><span
+                                                        class="video-time">5:29</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="0i2zaDSXhFM" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="GOOFY RUN">GOOFY RUN</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">9,409,534 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=A_6gNZCkajU&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442/http://i2.ytimg.com/vi/A_6gNZCkajU/default.jpg"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i2.ytimg.com/vi/A_6gNZCkajU/default.jpg"
+                                                                data-group-key="thumb-group-0"></span></span><span
+                                                        class="video-time">4:42</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="A_6gNZCkajU" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="Bugs Bunny'd">Bugs Bunny'd</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">5,871,458 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=xs-rgXUu448&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442/http://i1.ytimg.com/vi/xs-rgXUu448/default.jpg"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i1.ytimg.com/vi/xs-rgXUu448/default.jpg"
+                                                                data-group-key="thumb-group-0"></span></span><span
+                                                        class="video-time">5:46</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="xs-rgXUu448" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="TOO FAT TO DIE!">TOO FAT TO
+                                                    DIE!</span><span class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">7,536,102 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=my9K_7cMUUc&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442/http://i2.ytimg.com/vi/my9K_7cMUUc/default.jpg"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i2.ytimg.com/vi/my9K_7cMUUc/default.jpg"
+                                                                data-group-key="thumb-group-0"></span></span><span
+                                                        class="video-time">5:27</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="my9K_7cMUUc" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="I'M DREAMING">I'M DREAMING</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">6,785,355 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=Cnc4we44oTI&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i4.ytimg.com/vi/Cnc4we44oTI/default.jpg"
+                                                                data-group-key="thumb-group-1"></span></span><span
+                                                        class="video-time">5:17</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="Cnc4we44oTI" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="CRAZY WIZARD">CRAZY WIZARD</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">6,500,419 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=Vw4KVoEVcr0&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i3.ytimg.com/vi/Vw4KVoEVcr0/default.jpg"
+                                                                data-group-key="thumb-group-1"></span></span><span
+                                                        class="video-time">1:01</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="Vw4KVoEVcr0" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="Cat mom hugs baby kitten">Cat mom hugs baby
+                                                    kitten</span><span class="stat">by dragomirnet86</span><span
+                                                    class="stat view-count">32,570,657 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=dSXzS-goNs0&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i1.ytimg.com/vi/dSXzS-goNs0/default.jpg"
+                                                                data-group-key="thumb-group-1"></span></span><span
+                                                        class="video-time">3:20</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="dSXzS-goNs0" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="CRAZY Naked Guy on Train?!">CRAZY Naked Guy
+                                                    on Train?!</span><span class="stat">by OutbackZack</span><span
+                                                    class="stat view-count">143,035 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=ErIRt52MOkE&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i2.ytimg.com/vi/ErIRt52MOkE/default.jpg"
+                                                                data-group-key="thumb-group-1"></span></span><span
+                                                        class="video-time">5:47</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="ErIRt52MOkE" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="Strippers and Stuff">Strippers and
+                                                    Stuff</span><span class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">6,456,302 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=Cb3hoZu3hzY&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i4.ytimg.com/vi/Cb3hoZu3hzY/default.jpg"
+                                                                data-group-key="thumb-group-1"></span></span><span
+                                                        class="video-time">5:15</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="Cb3hoZu3hzY" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="GAY BUG">GAY BUG</span><span class="stat">by
+                                                    RayWilliamJohnson</span><span class="stat view-count">7,395,569
+                                                    views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=S_VxSOBpQf0&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i4.ytimg.com/vi/S_VxSOBpQf0/default.jpg"
+                                                                data-group-key="thumb-group-2"></span></span><span
+                                                        class="video-time">5:50</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="S_VxSOBpQf0" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="OPTIMUS CRANE">OPTIMUS CRANE</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">6,915,475 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=XpLPEmopV-8&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i1.ytimg.com/vi/XpLPEmopV-8/default.jpg"
+                                                                data-group-key="thumb-group-2"></span></span><span
+                                                        class="video-time">6:07</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="XpLPEmopV-8" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="SPONGE BOBBLE!">SPONGE BOBBLE!</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">8,862,855 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=29PbY4RIpXo&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i3.ytimg.com/vi/29PbY4RIpXo/default.jpg"
+                                                                data-group-key="thumb-group-2"></span></span><span
+                                                        class="video-time">5:40</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="29PbY4RIpXo" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="TALKING DOG">TALKING DOG</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">7,618,252 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=LmavDIvsAGM&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i1.ytimg.com/vi/LmavDIvsAGM/default.jpg"
+                                                                data-group-key="thumb-group-2"></span></span><span
+                                                        class="video-time">6:11</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="LmavDIvsAGM" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="WINDOW LICKER">WINDOW LICKER</span><span
+                                                    class="stat">by RayWilliamJohnson</span><span
+                                                    class="stat view-count">8,070,440 views
+                                                </span></a></li>
+
+
+
+                                        <li class="video-list-item "><a
+                                                href="/web/20110813042442/http://www.youtube.com/watch?v=WS95kxAXguM&amp;feature=related"
+                                                class="video-list-item-link "><span
+                                                    class="ux-thumb-wrap  contains_addto"><span
+                                                        class="video-thumb ux-thumb-96 "><span class="clip"><img
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt="Thumbnail"
+                                                                data-thumb="//web.archive.org/web/20110813042442/http://i4.ytimg.com/vi/WS95kxAXguM/default.jpg"
+                                                                data-group-key="thumb-group-2"></span></span><span
+                                                        class="video-time">11:21</span><span dir="ltr"
+                                                        class="yt-uix-button-group addto-container short video-actions"
+                                                        data-video-ids="WS95kxAXguM" data-feature="thumbnail"><button
+                                                            type="button"
+                                                            class="start addto-button-plus-hide-arrow yt-uix-button yt-uix-button-short yt-uix-tooltip"
+                                                            onclick=";return false;" title="Add to Watch Later
+" data-button-menu-id="shared-addto-menu" role="button" aria-pressed="false"><img
+                                                                class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""><span class="yt-uix-button-content"><span
+                                                                    class="addto-label">Add to</span></span><img
+                                                                class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button><button type="button"
+                                                            class="end yt-uix-button yt-uix-button-short yt-uix-button-empty"
+                                                            onclick=";return false;"
+                                                            data-button-menu-id="shared-addto-menu" role="button"
+                                                            aria-pressed="false"><img class="yt-uix-button-arrow"
+                                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
+                                                                alt=""></button></span></span><span dir="ltr"
+                                                    class="title" title="QUEER PANTS!">QUEER PANTS!</span><span
+                                                    class="stat">by BreakingNYC</span><span
+                                                    class="stat view-count">937,579 views
+                                                </span></a></li>
+
+
+                                    </ul>
+                                    <ul id="watch-more-related" class="video-list hid">
+                                        <span id="watch-more-related-loading">
+                                            Loading more suggestions...
+                                        </span>
+                                    </ul>
+                                    <button type="button" id="watch-more-related-button" onclick=";return false;"
+                                        class=" yt-uix-button"
+                                        data-button-action="yt.www.watch.watch5.handleLoadMoreRelated" role="button"
+                                        aria-pressed="false"><span class="yt-uix-button-content">Load more
+                                            suggestions</span></button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div style="visibility: hidden; height: 0px; padding: 0px; overflow: hidden;">
+                        <img src="https://web.archive.org/web/20110813042442im_/http://www.youtube-nocookie.com/gen_204?attributionpartner=TheStation%2Buser"
+                            width="1" height="1" border="0">
+                        <img src="https://web.archive.org/web/20110813042442im_/http://www.youtube-nocookie.com/robots.txt?attributionpartner=TheStation%2Buser&amp;v=ZgS2mdBL3Rk"
+                            width="1" height="1" border="0">
+
+
+
+                        <div id="baseDiv"></div>
+
+                    </div>
+                </div>
+                <!-- end watch-main-container -->
+            </div>
+
+        </div>
+        <!-- end content -->
+    </div>
+    <!-- begin pagebottom -->
+    <div id="footer-container">
+        <div id="footer">
+            <ul class="footer-links">
+                <li><a href="//web.archive.org/web/20111110192655/http://www.google.com/support/youtube/bin/static.py?p=homepage&amp;page=start.cs&amp;hl=ja_JP"
+                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Help');">ヘルプ</a>
+                </li>
+                <li><a href="/web/20111110192655/http://www.youtube.com/t/about_youtube"
+                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'About');">NowTube について</a></li>
+                <li><a href="/web/20111110192655/http://www.youtube.com/t/press"
+                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Press');">プレス ルーム</a></li>
+                <li><a href="/web/20111110192655/http://www.youtube.com/t/copyright_center"
+                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Copyright');">著作権</a></li>
+                <li><a href="/web/20111110192655/http://www.youtube.com/creators"
+                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Creators');">動画の作成とパートナー</a></li>
+                <li><a href="/web/20111110192655/http://www.youtube.com/t/advertising_overview"
+                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Advertising');">広告</a></li>
+                <li><a href="/web/20111110192655/http://www.youtube.com/dev">開発者</a></li>
+                <li><a href="//web.archive.org/web/20111110192655/http://www.google.com/support/youtube/bin/request.py?contact_type=abuse&amp;hl=ja_JP"
+                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Safety');">安全性</a></li>
+                <li><a href="/web/20111110192655/http://www.youtube.com/t/privacy_at_youtube"
+                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Privacy');">プライバシー</a></li>
+                <li><a href="/web/20111110192655/http://www.youtube.com/t/terms"
+                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Terms');">規約</a></li>
+            </ul>
+
+            <div class="footer-info">
+                <span dir="ltr">© 2026 NowTube</span>
+
+                <ul class="pickers">
+                    <li><a href="//web.archive.org/web/20111110192655/http://www.google.com/tools/feedback/intl/ja/error.html"
+                            onclick="return yt.www.feedback.start(yt.getConfig('FEEDBACK_LOCALE_LANGUAGE'), yt.getConfig('FEEDBACK_LOCALE_EXTRAS'));"
+                            id="reportbug">バグの報告</a></li>
+
+                </ul>
+            </div>
+            <ul class="pickers">
+                <li>言語:
+                    <a href="#" onclick="yt.www.masthead.loadPicker('language-picker', ''); return false;">日本語</a>
+                </li>
+                <li>国/地域:
+                    <a href="#" onclick="yt.www.masthead.loadPicker('region-picker', ''); return false;">指定なし</a>
+                </li>
+            </ul>
+            <div id="picker-container"></div>
+            <div id="picker-loading" style="display: none">お待ちください... 現在日本語でしか利用できません...</div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div id="playlist-bar" class="hid passive editable"
+        data-video-url="/watch?v=&amp;feature=BFql&amp;playnext=1&amp;list=QL" data-list-id="" data-list-type="QL">
+        <div id="playlist-bar-bar-container">
+            <div id="playlist-bar-bar">
+                <div id="playlist-bar-notifications" style="display: none;"
+                    class="yt-alert yt-alert-success yt-alert-small yt-alert-naked yt-rounded "><img
+                        src="./img/pixel.gif" class="icon master-sprite" alt="アラート アイコン">
+                    <div class="yt-alert-content"></div>
+                </div>
+                <span id="playlist-bar-info"><span class="playlist-bar-active playlist-bar-group"><button
+                            onclick=";return false;" title="前の動画" type="button" id="playlist-bar-prev-button"
+                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+                            role="button"><img class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-prev"
+                                src="./img/pixel.gif" alt=""></button><span class="playlist-bar-count">0 / <span
+                                class="item-count">0</span></span><button type="button"
+                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-empty"
+                            onclick=";return false;" id="playlist-bar-next-button" role="button"><img
+                                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-next" src="./img/pixel.gif"
+                                alt=""></button></span><span class="playlist-bar-active playlist-bar-group"><button
+                            type="button"
+                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-toggle yt-uix-button-empty"
+                            onclick=";return false;" id="playlist-bar-autoplay-button" role="button"><img
+                                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-autoplay"
+                                src="./img/pixel.gif" alt=""></button><button type="button"
+                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-toggle yt-uix-button-empty"
+                            onclick=";return false;" id="playlist-bar-shuffle-button" role="button"><img
+                                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-shuffle" src="./img/pixel.gif"
+                                alt=""></button></span><span class="playlist-bar-passive playlist-bar-group"><button
+                            onclick=";return false;" title="動画の再生" type="button" id="playlist-bar-play-button"
+                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+                            role="button"><img class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-play"
+                                src="./img/pixel.gif" alt=""></button><span class="playlist-bar-count"><span
+                                class="item-count">0</span></span></span><span id="playlist-bar-title"
+                        class="yt-uix-button-group"><span class="playlist-title">保存されていない再生リスト</span></span></span>
+                <a id="playlist-bar-lists-back" href="#">
+                    再生中の再生リストに戻る
+                </a>
+
+                <span id="playlist-bar-controls"><span class="playlist-bar-group"><button type="button"
+                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-text yt-uix-button-empty"
+                            onclick=";return false;" id="playlist-bar-toggle-button" role="button"><img
+                                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-toggle" src="./img/pixel.gif"
+                                alt=""></button></span><span class="playlist-bar-group"><button type="button"
+                            class="yt-uix-tooltip yt-uix-tooltip-masked yt-uix-button-reverse flip yt-uix-button yt-uix-button-text"
+                            onclick=";return false;" data-button-menu-id="playlist-bar-options-menu"
+                            data-button-has-sibling-menu="true" role="button"><span class="yt-uix-button-content">オプション
+                            </span><img class="yt-uix-button-arrow" src="./img/pixel.gif" alt=""></button></span></span>
+            </div>
+        </div>
+
+        <div id="playlist-bar-tray-container">
+            <div id="playlist-bar-tray" class="yt-uix-slider yt-uix-slider-fluid"><button
+                    class="yt-uix-button playlist-bar-tray-button yt-uix-slider-prev" onclick="return false;"><img
+                        class="yt-uix-slider-prev-arrow" src="./img/pixel.gif" alt="前へ"></button><button
+                    class="yt-uix-button playlist-bar-tray-button yt-uix-slider-next" onclick="return false;"><img
+                        class="yt-uix-slider-next-arrow" src="./img/pixel.gif" alt="次へ"></button>
+                <div class="yt-uix-slider-body">
+                    <div id="playlist-bar-tray-content" class="yt-uix-slider-slide">
+                        <ol class="video-list"></ol>
+                        <ol id="playlist-bar-help">
+                            <li class="empty playlist-bar-help-message">キューが空です。このボタン <img src="./img/pixel.gif"
+                                    class="addto-button-help"> を使ってキューに動画を追加するか、<br><a
+                                    href="http://web.archive.org/web/20111110192655/https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Dja_JP%26next%3D%252Findex%253Fhl%253Dja&amp;hl=ja_JP&amp;ltmpl=sso">ログイン</a>して別のリストを読み込んでください。
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="yt-uix-slider-shade-left"></div>
+                    <div class="yt-uix-slider-shade-right"></div>
+                </div>
+            </div>
+            <div id="playlist-bar-save"></div>
+            <div id="playlist-bar-lists" class="dark-lolz"></div>
+            <div id="playlist-bar-loading"><img src="./img/pixel.gif" alt="読み込んでいます..."><span
+                    id="playlist-bar-loading-message">読み込んでいます...</span><span id="playlist-bar-saving-message"
+                    class="hid">保存しています...</span></div>
+            <div id="playlist-bar-template" style="display: none;"
+                data-video-thumb-url="//i4.ytimg.com/vi/__video_encrypted_id__/default.jpg">
+                <!--<li class="playlist-bar-item yt-uix-slider-slide-unit __classes__" data-video-id="__video_encrypted_id__"><a href="__video_url__" title="__video_title__"><span class="video-thumb ux-thumb-96 "><span class="clip"><img src="//s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" alt="__video_title__" data-thumb-manual="true" data-thumb="__video_thumb_url__" ></span></span><span class="screen"></span><span class="count"><strong>__list_position__</strong></span><span class="play"><img src="//s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"></span><span class="yt-uix-button delete"><img class="yt-uix-button-icon-playlist-bar-delete" src="//s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" alt="削除"></span><span class="now-playing">再生中</span><span dir="ltr" class="title"><span>__video_title__  <span class="uploader">作成者: __video_username__</span>
+</span></span><span class="dragger"></span></a></li>-->
+            </div>
+            <div id="playlist-bar-next-up-template" style="display: none;">
+                <!--<div class="playlist-bar-next-thumb"><span class="video-thumb ux-thumb-64 "><span class="clip"><img src="//i4.ytimg.com/vi/__video_encrypted_id__/default.jpg" alt="サムネイル
+" ></span></span></div>-->
+            </div>
+        </div>
+        <div id="playlist-bar-options-menu" class="hid">
+
+            <div id="playlist-bar-extras-menu">
+                <ul>
+                    <li><span class="yt-uix-button-menu-item" data-action="clear">
+                            このリストの動画をすべて削除
+                        </span></li>
+                </ul>
+
+            </div>
+
+            <ul>
+                <li><span class="yt-uix-button-menu-item"
+                        onclick="window.location.href='http://web.archive.org/web/20111110192655/http://www.google.com/support/youtube/bin/answer.py?answer=146749'">詳細</span>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <div id="shared-addto-menu" style="display: none;" class="hid sign-in">
+        <div class="addto-menu">
+            <form>
+                <div id="addto-list-panel" class="menu-panel active-panel">
+                    <span class="yt-uix-button-menu-item yt-uix-tooltip sign-in" data-possible-tooltip=""
+                        data-tooltip-show-delay="750">これを再生リストに追加するには<a class="sign-in-link">ログイン</a>してください
+                    </span>
+
+                </div>
+                <div id="addto-list-error-panel" class="menu-panel">
+                    <div class="panel-content">
+                        <img src="./img/pixel.gif">
+                        <span class="error-details"></span>
+                        <a class="show-menu-link">戻る</a>
+                    </div>
+                </div>
+
+                <div id="addto-note-input-panel" class="menu-panel">
+                    <div class="panel-content">
+                        <img src="./img/pixel.gif">
+                        <span class="message">再生リストに追加しました</span>
+                        <span class="addto-note-title yt-uix-tooltip" title="この再生リストの詳細"
+                            data-tooltip-show-delay="750"></span>
+                    </div>
+                    <div class="yt-uix-char-counter" data-char-limit="150">
+                        <div class="addto-note-box addto-text-box"><textarea id="addto-note"
+                                class="addto-note yt-uix-char-counter-input" maxlength="150"></textarea><label
+                                for="addto-note" class="addto-note-label">この動画について簡単に説明してください...</label></div><span
+                            class="yt-uix-char-counter-remaining">150</span>
+                    </div> <button disabled="disabled" type="button" class="playlist-save-note yt-uix-button"
+                        onclick=";return false;" role="button"><span class="yt-uix-button-content">メモを追加
+                        </span></button>
+                </div>
+                <div id="addto-note-saving-panel" class="menu-panel">
+                    <div class="panel-content loading-content">
+                        <img src="./img/pixel.gif">
+                        <span>保存しています...</span>
+                    </div>
+                </div>
+                <div id="addto-note-saved-panel" class="menu-panel">
+                    <div class="panel-content">
+                        <img src="./img/pixel.gif">
+                        <span class="message">編集内容が保存されました。</span>
+                    </div>
+                </div>
+                <div id="addto-note-error-panel" class="menu-panel">
+                    <div class="panel-content">
+                        <img src="./img/pixel.gif">
+                        <span class="message">エラーが発生しました</span>
+                        <ul class="error-details"></ul>
+                        <a class="add-note-link">メモを追加</a>
+                    </div>
+                </div>
+                <div class="close-note hid">
+                    <img src="./img/pixel.gif" class="close-button">
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <!-- end pagebottom -->
+
+    </div>
+    <!-- end page -->
+    <script>
+        yt.setConfig('TIMING_ACTION', 'index');
+    </script>
+
+
+
+    <script>
+
+
+
+        yt.setMsg({
+            'LIST_CLEARED': "\u30ea\u30b9\u30c8\u3092\u6d88\u53bb\u3057\u307e\u3057\u305f",
+            'PLAYLIST_VIDEO_DELETED': "\u52d5\u753b\u3092\u524a\u9664\u3057\u307e\u3057\u305f\u3002",
+            'ERROR_OCCURRED': "\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002",
+            'NEXT_VIDEO_TOOLTIP': "\u6b21\u306e\u52d5\u753b:\u003cbr\u003e \u0026#8220;${next_video_title}\u0026#8221;",
+            'NEXT_VIDEO_NOTHUMB_TOOLTIP': "\u6b21\u306e\u52d5\u753b",
+            'SHOW_PLAYLIST_TOOLTIP': "\u518d\u751f\u30ea\u30b9\u30c8\u3092\u8868\u793a\u3057\u307e\u3059",
+            'HIDE_PLAYLIST_TOOLTIP': "\u518d\u751f\u30ea\u30b9\u30c8\u3092\u975e\u8868\u793a\u306b\u3057\u307e\u3059",
+            'AUTOPLAY_ON_TOOLTIP': "\u81ea\u52d5\u518d\u751f\u3092\u30aa\u30d5\u306b\u3059\u308b",
+            'AUTOPLAY_OFF_TOOLTIP': "\u81ea\u52d5\u518d\u751f\u3092\u30aa\u30f3\u306b\u3059\u308b",
+            'SHUFFLE_ON_TOOLTIP': "\u30b7\u30e3\u30c3\u30d5\u30eb\u3092\u30aa\u30d5\u306b\u3059\u308b",
+            'SHUFFLE_OFF_TOOLTIP': "\u30b7\u30e3\u30c3\u30d5\u30eb\u3092\u30aa\u30f3\u306b\u3059\u308b",
+            'PLAYLIST_BAR_PLAYLIST_SAVED': "\u518d\u751f\u30ea\u30b9\u30c8\u304c\u4fdd\u5b58\u3055\u308c\u307e\u3057\u305f\u3002",
+            'PLAYLIST_BAR_ADDED_TO_FAVORITES': "\u304a\u6c17\u306b\u5165\u308a\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f",
+            'PLAYLIST_BAR_ADDED_TO_PLAYLIST': "\u518d\u751f\u30ea\u30b9\u30c8\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f",
+            'PLAYLIST_BAR_ADDED_TO_QUEUE': "\u30ad\u30e5\u30fc\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f",
+            'AUTOPLAY_WARNING1': "\u6b21\u306e\u52d5\u753b\u306f 1 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+            'AUTOPLAY_WARNING2': "\u6b21\u306e\u52d5\u753b\u306f 2 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+            'AUTOPLAY_WARNING3': "\u6b21\u306e\u52d5\u753b\u306f 3 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+            'AUTOPLAY_WARNING4': "\u6b21\u306e\u52d5\u753b\u306f 4 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+            'AUTOPLAY_WARNING5': "\u6b21\u306e\u52d5\u753b\u306f 5 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+            'UNDO_LINK': "\u5143\u306b\u623b\u3059"
+        });
+
+
+        yt.setConfig({
+            'DRAGDROP_BINARY_URL': "\/\/web.archive.org\/web\/20111110192655\/http:\/\/s.ytimg.com\/yt\/jsbin\/www-dragdrop-vfl2-I9H_.js",
+            'PLAYLIST_BAR_PLAYING_INDEX': -1,
+            'LIST_COPY_ON_EDIT_ENABLED': false
+        });
+
+        yt.net.ajax.setToken('addto_ajax_logged_out', "YX03RLALVDZzxOf7MSWmgcOnAIp8MEAxMzIwOTUzMjE1");
+
+        yt.pubsub.subscribe('init', yt.www.lists.init);
+
+
+
+
+
+        yt.www.thumbnaildelayload.init();
+
+
+
+
+        yt.events.listen(_gel('masthead-search-term'), 'focus', yt.www.home.ads.workaroundReset);
+
+
+
+        if (_gel('masthead-search')) {
+            yt.setTimeout(function () {
+                window.yt.www.suggest.install(_gel('masthead-search'),
+                    _gel('masthead-search')['search_query'],
+                    'ja',
+                    '閉じる',
+                    '',
+                    'ウェブ検索',
+                    -1,
+                    null);
+            }, 100);
+        }
+
+    </script>
+
+    <table id="completeTable" class="yt-suggest-table" style="visibility: hidden; left: 247px; top: 43px; width: 309px;"
+        cellspacing="0" cellpadding="0"></table><iframe id="yt-suggest-iframe"
+        allow="autoplay 'self'; fullscreen 'self'"
+        style="left: 247px; top: 43px; width: 309px; height: 0px; visibility: hidden;"></iframe>
+    <script src="./js/videos.js"></script>
+    <script src="./js/nav-auth.js"></script>
+</body>
+
+</html>
