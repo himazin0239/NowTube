@@ -599,7 +599,7 @@
                         </div>
 
                     </div>
-                    
+
                     <div class="homepage-side-block">
 
                         <div class="module-title">注目動画</div>
@@ -625,11 +625,11 @@
                                                     class="yt-uix-button-content"><span class="addto-label">追加先</span>
                                                 </span><img class="yt-uix-button-arrow" src="./img/pixel.gif"
                                                     alt=""></button></span><span dir="ltr" class="title"
-                                            title="Test1">Test1</span><span
-                                            class="stat">ユーザー: User1</span><span class="stat view-count">再生回数
+                                            title="Test1">Test1</span><span class="stat">ユーザー: User1</span><span
+                                            class="stat view-count">再生回数
                                             00,000 回
                                         </span></a></li>
-                                        <li class="video-list-item "><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                                <li class="video-list-item "><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
                                         class="video-list-item-link "
                                         onmousedown="yt.analytics.urchinTracker('/Events/Home/PersonalizedHome/FEA/Logged_Out');"><span
                                             class="ux-thumb-wrap contains-addto "><span
@@ -647,8 +647,8 @@
                                                     class="yt-uix-button-content"><span class="addto-label">追加先</span>
                                                 </span><img class="yt-uix-button-arrow" src="./img/pixel.gif"
                                                     alt=""></button></span><span dir="ltr" class="title"
-                                            title="Test1">Test1</span><span
-                                            class="stat">ユーザー: User1</span><span class="stat view-count">再生回数
+                                            title="Test1">Test1</span><span class="stat">ユーザー: User1</span><span
+                                            class="stat view-count">再生回数
                                             00,000 回
                                         </span></a></li>
 
@@ -660,20 +660,50 @@
                     <div class="homepage-side-block">
                         <div id="homepage-whats-new">
                             <div class="module-title">New!</div>
+                            <style>
+                                .whatsnew-img {
+                                    float: left;
+                                    margin-right: 15px;
+                                }
 
+                                .whatsnew-content {
+                                    overflow: hidden;
+                                    *zoom: 1;
+                                }
 
-                            <h3><a href="https://nowtube.vercel.app/mobile.html">新しいモバイル サイト</a></h3>
-                            <div class="entry">
-                                すべての NowTube 機能を携帯端末で利用できます
+                                .whatsnew-content h3 {
+                                    margin-top: 0;
+                                    margin-bottom: 5px;
+                                }
+
+                                .clearfix:after {
+                                    content: ".";
+                                    display: block;
+                                    height: 0;
+                                    clear: both;
+                                    visibility: hidden;
+                                }
+
+                                .clearfix {
+                                    *zoom: 1;
+                                }
+                            </style>
+
+                            <div class="whatsnew-section clearfix">
+                                <a href="https://nowtube.vercel.app/mobile.html">
+                                    <img src="./img/mobile_icon.gif" alt="Mobile Icon" class="whatsnew-img">
+                                </a>
+                                <div class="whatsnew-content">
+                                    <h3><a href="https://nowtube.vercel.app/mobile.html">新しいモバイル サイト</a></h3>
+                                    <div class="entry">
+                                        すべての NowTube 機能を携帯端末で利用できます
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
                     <div id="ad_creative_3" class="ad-div " style="z-index: 1">
-
-                        <iframe id="ad_creative_iframe_3" scrolling="no" style="z-index: 1"
-                            src="http://web.archive.org/web/20111110192655/http://ad-g.doubleclick.net/adi/tst.ythome/promo1;sz=300x100;tile=3;klg=ja;kt=K;kga=-1;kgg=-1;kcr=us;dc_dedup=1;kmyd=ad_creative_3;ord=1040048842789389?"
-                            width="300" height="100" frameborder="0"></iframe>
 
                         <script>
                             (function () {
