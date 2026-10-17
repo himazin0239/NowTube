@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>動画を再生 - NowTube</title><link rel="icon" href="./img/favicon.ico">
+  <link rel="stylesheet" href="./css/www-core-vflDhoE5U.css">
+  <style>body{font:13px Arial,sans-serif;color:#333;background:#fff}#watch-wrap{max-width:960px;margin:24px auto;padding:0 14px}#player{width:100%;max-height:70vh;background:#000}h1{font-size:20px}#watch-error{margin:20px 0;color:#900}@media(max-width:600px){#watch-wrap{margin:12px auto}}</style>
+</head>
+<body>
+  <div id="watch-wrap"><a href="./index.html"><img src="./img/logo.gif" alt="NowTube ホーム" width="100"></a> | <a href="./mobile.html">モバイル版</a>
+    <hr><div id="watch-content"><p>動画を読み込んでいます…</p></div><p><a href="./index.html">NowTube ホームに戻る</a></p>
+  </div>
+  <script>
+    (async function () {
+      var root = document.getElementById('watch-content');
+      var id = new URLSearchParams(location.search).get('id');
+      if (!id) { root.innerHTML = '<p id="watch-error">動画IDが指定されていません。</p>'; return; }
+      try {
+        var response = await fetch('/api/videos', { cache: 'no-store' });
+        if (!response.ok) throw new Error('一覧APIに接続できません。');
+        var data = await response.json();
+        var video = (data.videos || []).find(function (item) { return item.id === id; });
+        if (!video) throw new Error('動画が見つかりません。削除されたか、まだ登録されていない可能性があります。');
+        var title = document.createElement('h1'); title.textContent = video.title; root.appendChild(title);
+        var player = document.createElement('video'); player.id = 'player'; player.controls = true; player.playsInline = true; player.preload = 'metadata'; player.src = video.url; root.appendChild(player);
+        var uploader = document.createElement('p'); uploader.textContent = '投稿者: ' + (video.uploader || 'NowTubeユーザー'); root.appendChild(uploader);
+        if (video.description) { var desc = document.createElement('p'); desc.textContent = video.description; root.appendChild(desc); }
+      } catch (error) { var message = document.createElement('p'); message.id = 'watch-error'; message.textContent = error.message || '動画を読み込めませんでした。'; root.replaceChildren(message); }
+    })();
+  </script>
+</body>
+</html>

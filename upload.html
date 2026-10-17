@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>動画をアップロード - NowTube</title>
+  <link rel="icon" href="./img/favicon.ico">
+  <link rel="stylesheet" href="./css/www-core-vflDhoE5U.css">
+  <style>
+    body { background:#fff; color:#333; font:13px Arial, sans-serif; }
+    #upload-wrap { max-width:760px; margin:24px auto; padding:0 14px; }
+    .nt-box { border:1px solid #ccc; border-radius:4px; background:#f5f5f5; padding:18px; }
+    h1 { font-size:22px; margin:0 0 18px; }
+    label { display:block; font-weight:bold; margin:13px 0 5px; }
+    input[type=text], textarea { box-sizing:border-box; width:100%; padding:8px; border:1px solid #aaa; font:14px Arial,sans-serif; }
+    textarea { min-height:85px; resize:vertical; }
+    input[type=file] { max-width:100%; margin:8px 0; }
+    .nt-button { margin-top:15px; padding:9px 18px; border:1px solid #2459a9; border-radius:4px; color:#fff; font-weight:bold; background:linear-gradient(#7da9ed,#3d70c4); cursor:pointer; }
+    .nt-button:disabled { opacity:.6; cursor:wait; }
+    #status { margin-top:14px; white-space:pre-wrap; overflow-wrap:anywhere; }
+    .hint { color:#666; line-height:1.6; }
+    header { border-bottom:1px solid #ddd; padding:12px max(calc((100% - 980px)/2), 14px); }
+    header img { width:100px; height:auto; vertical-align:middle; }
+    header a { margin-left:16px; }
+    @media(max-width:600px) { #upload-wrap { margin:14px auto; } .nt-box { padding:12px; } }
+  </style>
+</head>
+<body>
+  <header><a href="./index.html"><img src="./img/logo.gif" alt="NowTube ホーム"></a><a href="./mobile.html">モバイル版</a></header>
+  <main id="upload-wrap">
+    <div class="nt-box">
+      <h1>動画をアップロード</h1>
+      <p>あなたの日常を世界へ！ NowTubeに動画を投稿しましょう。</p>
+      <form id="upload-form">
+        <label for="video-title">タイトル</label>
+        <input id="video-title" name="title" type="text" maxlength="100" required placeholder="動画のタイトル">
+        <label for="video-description">説明（任意）</label>
+        <textarea id="video-description" name="description" maxlength="1000" placeholder="この動画について"></textarea>
+        <label for="upload-password">投稿用パスワード</label>
+        <input id="upload-password" name="password" type="password" required autocomplete="current-password" placeholder="管理者が設定した投稿用パスワード">
+        <label for="video-file">動画ファイル</label>
+        <input id="video-file" name="file" type="file" accept="video/mp4,video/webm,video/quicktime,video/x-m4v,.mp4,.webm,.mov,.m4v" required>
+        <p class="hint">対応形式：MP4、WebM、MOV、M4V<br>最大ファイルサイズ：100 MiB（約105 MB）。MP4（H.264映像＋AAC音声）を推奨します。<br>※公開サイトに投稿した動画は、URLを知っている人が視聴できる場合があります。自分が投稿・共有する権利を持つ動画だけをアップロードしてください。</p>
+        <button class="nt-button" id="upload-button" type="submit">アップロード</button>
+      </form>
+      <div id="status" role="status" aria-live="polite"></div>
+    </div>
+  </main>
+  <script type="module" src="./js/upload.js"></script>
+</body>
+</html>
