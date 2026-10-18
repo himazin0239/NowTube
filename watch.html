@@ -3,935 +3,1027 @@
 
 <head>
 
-    <script>
-        var yt = yt || {}; yt.timing = yt.timing || {}; yt.timing.tick = function (label, opt_time) { var timer = yt.timing['timer'] || {}; if (opt_time) { timer[label] = opt_time; } else { timer[label] = new Date().getTime(); } yt.timing['timer'] = timer; }; yt.timing.info = function (label, value) { var info_args = yt.timing['info_args'] || {}; info_args[label] = value; yt.timing['info_args'] = info_args; }; yt.timing.info('e', '907605,915502,904441'); yt.timing.tick('start'); yt.timing.info('li', '0'); try { yt.timing['srt'] = window.gtbExternal && window.gtbExternal.pageT() || window.external && window.external.pageT; } catch (e) { } if (window.chrome && window.chrome.csi) { yt.timing['srt'] = Math.floor(window.chrome.csi().pageT); } if (window.msPerformance && window.msPerformance.timing) { yt.timing['srt'] = window.msPerformance.timing.responseStart - window.msPerformance.timing.navigationStart; }    </script>
+  <script>
+    var yt = yt || {}; yt.timing = yt.timing || {}; yt.timing.tick = function (label, opt_time) { var timer = yt.timing['timer'] || {}; if (opt_time) { timer[label] = opt_time; } else { timer[label] = new Date().getTime(); } yt.timing['timer'] = timer; }; yt.timing.info = function (label, value) { var info_args = yt.timing['info_args'] || {}; info_args[label] = value; yt.timing['info_args'] = info_args; }; yt.timing.info('e', '907605,915502,904441'); yt.timing.tick('start'); yt.timing.info('li', '0'); try { yt.timing['srt'] = window.gtbExternal && window.gtbExternal.pageT() || window.external && window.external.pageT; } catch (e) { } if (window.chrome && window.chrome.csi) { yt.timing['srt'] = Math.floor(window.chrome.csi().pageT); } if (window.msPerformance && window.msPerformance.timing) { yt.timing['srt'] = window.msPerformance.timing.responseStart - window.msPerformance.timing.navigationStart; }    </script>
 
 
-    <title>
-        NowTube - Shoot Your Life.
-    </title>
+  <title>
+    NowTube - Shoot Your Life.
+  </title>
 
-    <link rel="search" type="application/opensearchdescription+xml"
-        href="http://web.archive.org/web/20111110192655/http://www.youtube.com/opensearch?locale=ja_JP"
-        title="YouTube 動画検索">
+  <link rel="search" type="application/opensearchdescription+xml"
+    href="http://web.archive.org/web/20111110192655/http://www.youtube.com/opensearch?locale=ja_JP"
+    title="YouTube 動画検索">
 
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-    <link rel="canonical" href="./index.html">
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="./index.html">
 
-    <meta name="description" content="NowTube では、動画を発見、再生、アップロード、共有することができます。">
+  <meta name="description" content="NowTube では、動画を発見、再生、アップロード、共有することができます。">
 
-    <meta name="keywords"
-        content="動画, ビデオ, 無料, フリー, 簡単, 検索, 見つける, 発見, 再生, 視聴, 見る, 参加, 共有, 公開, アップロード, 娯楽, エンターテイメント, video, free, simple, search, find, discover, watch, engage, share, sharing, upload, entertainment">
+  <meta name="keywords"
+    content="動画, ビデオ, 無料, フリー, 簡単, 検索, 見つける, 発見, 再生, 視聴, 見る, 参加, 共有, 公開, アップロード, 娯楽, エンターテイメント, video, free, simple, search, find, discover, watch, engage, share, sharing, upload, entertainment">
 
-    <script>
-        if (window.yt.timing) {
-            yt.timing.tick('hpcss');
+  <script>
+    if (window.yt.timing) {
+      yt.timing.tick('hpcss');
+    }
+  </script>
+
+  <meta property="fb:app_id" content="87741124305">
+  <link rel="publisher" href="https://plus.google.com/115229808208707341778">
+
+
+
+  <link id="www-core-css" rel="stylesheet" href="./css/www-core-vflDhoE5U.css">
+
+
+
+  <style>
+
+  </style>
+
+
+
+
+  <script id="www-core-js"
+    src="//web.archive.org/web/20111110192655js_/http://s.ytimg.com/yt/jsbin/www-core-vfluk7G1H.js"></script>
+
+
+
+  <script>
+    yt.setConfig({
+      'XSRF_TOKEN': 'bYCvBIGkncX33Bzn50DpkZOqGJB8MTMyMTAzOTYxNEAxMzIwOTUzMjE0',
+      'XSRF_FIELD_NAME': 'session_token'
+    });
+    yt.pubsub.subscribe('init', yt.www.xsrf.populateSessionToken);
+
+    yt.setConfig('XSRF_REDIRECT_TOKEN', '7aU3GbwB8wFzGxpCMoEiBdCoDrF8MTMyMTAzOTYxNUAxMzIwOTUzMjE1');
+
+    yt.setConfig('LOGGED_IN', false);
+    yt.setConfig('ENABLE_WATCH6', false);
+    yt.setConfig('I18N_PLURAL_RULES', function (n) { return 'other'; });
+
+    yt.setConfig('FEEDBACK_LOCALE_LANGUAGE', "ja");
+    yt.setConfig('FEEDBACK_LOCALE_EXTRAS', { "experiments": "907605,915502,904441", "accept_language": null });
+  </script>
+
+  <script>
+    if (window.yt.timing) {
+      yt.timing.tick('hpjs');
+    }
+  </script>
+
+
+  <script>
+    var masthead = new yt.www.home.ads.mastheadAd('1', false, '2', '8VfciKmOHPU', true, true, false)
+    yt.pubsub.subscribe('init', function () {
+      _showdiv('masthead-utility-menulink-short');
+      _hidediv('masthead-utility-menulink-long');
+    });
+  </script>
+
+  <script>
+    yt.net.ajax.setToken('subscription_ajax', "");
+    yt.pubsub.subscribe('init', yt.www.subscriptions.SubscriptionButton.init);
+  </script>
+
+
+  <script>
+    yt.net.ajax.setToken('channel_recommendations_token', '');
+    yt.setConfig('USERNAME', "");
+    yt.setConfig('SUBS_XSRF', "");
+
+
+    var moduleHelper = new yt.www.home.ModuleHelper('',
+      false, true);
+  </script>
+
+
+
+  <script>
+
+
+    yt.pubsub.subscribe('init', function () {
+      (function () {
+        var sessionToken = '';
+        var rootUrl = './index.html';
+        var locale = 'ja_JP';
+        var serviceInfo = null;
+        var isGaiaUser = false;
+        var facebookAppKey = '7ff82e59b6b2fbd316cca35309e95df3';
+        var tpDomain = 's.youtube-3rd-party.com';
+
+        var autoshare = new yt.sharing.AutoShare(sessionToken, rootUrl, locale, serviceInfo,
+          isGaiaUser, facebookAppKey, tpDomain);
+
+        // Register Facebook connect button.
+        if (_gel('fb-login-btn')) {
+          autoshare.registerConnectDialogLauncher(_gel('fb-login-btn'), 'facebook', true);
         }
-    </script>
 
-    <meta property="fb:app_id" content="87741124305">
-    <link rel="publisher" href="https://plus.google.com/115229808208707341778">
+        var gaiaChangedCallback = function (autoshare) {
+          var isGaiaUser = autoshare.isGaiaUser();
+          yt.style.setDisplayed('fb-promo-google-nag', !isGaiaUser);
+          yt.style.setDisplayed('fb-promo-google-linked', isGaiaUser);
 
-
-
-    <link id="www-core-css" rel="stylesheet" href="./css/www-core-vflDhoE5U.css">
-
-
-
-    <style>
-
-    </style>
-
-
-
-
-    <script id="www-core-js"
-        src="//web.archive.org/web/20111110192655js_/http://s.ytimg.com/yt/jsbin/www-core-vfluk7G1H.js"></script>
-
-
-
-    <script>
-        yt.setConfig({
-            'XSRF_TOKEN': 'bYCvBIGkncX33Bzn50DpkZOqGJB8MTMyMTAzOTYxNEAxMzIwOTUzMjE0',
-            'XSRF_FIELD_NAME': 'session_token'
-        });
-        yt.pubsub.subscribe('init', yt.www.xsrf.populateSessionToken);
-
-        yt.setConfig('XSRF_REDIRECT_TOKEN', '7aU3GbwB8wFzGxpCMoEiBdCoDrF8MTMyMTAzOTYxNUAxMzIwOTUzMjE1');
-
-        yt.setConfig('LOGGED_IN', false);
-        yt.setConfig('ENABLE_WATCH6', false);
-        yt.setConfig('I18N_PLURAL_RULES', function (n) { return 'other'; });
-
-        yt.setConfig('FEEDBACK_LOCALE_LANGUAGE', "ja");
-        yt.setConfig('FEEDBACK_LOCALE_EXTRAS', { "experiments": "907605,915502,904441", "accept_language": null });
-    </script>
-
-    <script>
-        if (window.yt.timing) {
-            yt.timing.tick('hpjs');
+          if (isGaiaUser) {
+            var link = _gel('fb-promo-google-linked-continue-to-fb');
+            var fn = function () {
+              autoshare.handleConnectService({ currentTarget: _gel('fb-login-btn') });
+            }
+            link.onclick = fn;
+          }
         }
-    </script>
+        autoshare.addGaiaChangedCallback(gaiaChangedCallback);
 
-
-    <script>
-        var masthead = new yt.www.home.ads.mastheadAd('1', false, '2', '8VfciKmOHPU', true, true, false)
-        yt.pubsub.subscribe('init', function () {
-            _showdiv('masthead-utility-menulink-short');
-            _hidediv('masthead-utility-menulink-long');
-        });
-    </script>
-
-    <script>
-        yt.net.ajax.setToken('subscription_ajax', "");
-        yt.pubsub.subscribe('init', yt.www.subscriptions.SubscriptionButton.init);
-    </script>
-
-
-    <script>
-        yt.net.ajax.setToken('channel_recommendations_token', '');
-        yt.setConfig('USERNAME', "");
-        yt.setConfig('SUBS_XSRF', "");
-
-
-        var moduleHelper = new yt.www.home.ModuleHelper('',
-            false, true);
-    </script>
-
-
-
-    <script>
-
-
-        yt.pubsub.subscribe('init', function () {
-            (function () {
-                var sessionToken = '';
-                var rootUrl = './index.html';
-                var locale = 'ja_JP';
-                var serviceInfo = null;
-                var isGaiaUser = false;
-                var facebookAppKey = '7ff82e59b6b2fbd316cca35309e95df3';
-                var tpDomain = 's.youtube-3rd-party.com';
-
-                var autoshare = new yt.sharing.AutoShare(sessionToken, rootUrl, locale, serviceInfo,
-                    isGaiaUser, facebookAppKey, tpDomain);
-
-                // Register Facebook connect button.
-                if (_gel('fb-login-btn')) {
-                    autoshare.registerConnectDialogLauncher(_gel('fb-login-btn'), 'facebook', true);
-                }
-
-                var gaiaChangedCallback = function (autoshare) {
-                    var isGaiaUser = autoshare.isGaiaUser();
-                    yt.style.setDisplayed('fb-promo-google-nag', !isGaiaUser);
-                    yt.style.setDisplayed('fb-promo-google-linked', isGaiaUser);
-
-                    if (isGaiaUser) {
-                        var link = _gel('fb-promo-google-linked-continue-to-fb');
-                        var fn = function () {
-                            autoshare.handleConnectService({ currentTarget: _gel('fb-login-btn') });
-                        }
-                        link.onclick = fn;
-                    }
-                }
-                autoshare.addGaiaChangedCallback(gaiaChangedCallback);
-
-                var canConnectCallback = function (autoshare) {
-                    var isGaiaUser = autoshare.isGaiaUser();
-                    yt.style.setDisplayed('fb-promo-google-nag', !isGaiaUser);
-                    yt.style.setDisplayed('fb-promo-google-linked', false);
-                    yt.style.setDisplayed('fb-promo-fb-linked', false);
-                    return isGaiaUser;
-                }
-                autoshare.addCanConnectCallback(canConnectCallback);
-
-                var serviceChangedCallback = function (autoshare) {
-                    var serviceInfo = autoshare.getServiceInfo();
-                    for (var service in serviceInfo) {
-                        var info = serviceInfo[service];
-                        if (service == 'facebook' && info['is_connected']) {
-                            yt.style.setDisplayed('fb-promo-fb-linked', true);
-                            hideFbPromoAlert();
-                        }
-                        if (service == 'es' && info['is_connected']) {
-                            yt.style.setDisplayed('es-optin-success', true);
-                            hideEsOptinAlert();
-                        }
-                    }
-                };
-                autoshare.addServiceChangedCallback(serviceChangedCallback);
-
-                window['autoshare'] = autoshare;
-
-                var prefs = yt.UserPrefs;
-                var optOut = prefs.getFlag3(prefs.Flags.FLAG3_FBPROMO_OPT_OUT);
-                if (!optOut) {
-                    _showdiv('fb-promo1');
-                }
-
-                // The user has "dismissed" the promo, i.e., clicked on the [x].
-                // This is distinct from simply hiding the promo as a side effect.
-                window.dismissFbPromoAlert = function () {
-                    prefs.setFlag3(prefs.Flags.FLAG3_FBPROMO_OPT_OUT, true);
-                    prefs.save();
-                    hideFbPromoAlert();
-                };
-
-                function hideFbPromoAlert() {
-                    _hidediv('fb-promo1');
-                }
-            })();
-
-        });
-
-        yt.setConfig('HOMEPAGE_AJAX_RECOMMENDATIONS', true);
-        yt.pubsub.subscribe('init', yt.www.home.ModuleHelper.initDismissRec);
-    </script>
-
-    <script>
-        // Initialize the subscriptions helper object that supports both the inline
-        // "edit subscription" link featurette in the Recent Activity module and
-        // the subscribe-from-masthead facility.
-        var gaiaHost = 'http://web.archive.org/web/20111110192655/https://accounts.google.com';
-        var gaiaLocale = 'ja-US';
-        window['subui_'] = new yt.www.home.Subscriptions(gaiaHost, gaiaLocale);
-        yt.pubsub.subscribe('init', function () {
-            window['subui_'].setCurrentLink(_gel('_firsteditsublink'));
-        });
-    </script>
-
-
-    <script>
-        if (window.yt.timing) {
-            yt.timing.tick('ct');
+        var canConnectCallback = function (autoshare) {
+          var isGaiaUser = autoshare.isGaiaUser();
+          yt.style.setDisplayed('fb-promo-google-nag', !isGaiaUser);
+          yt.style.setDisplayed('fb-promo-google-linked', false);
+          yt.style.setDisplayed('fb-promo-fb-linked', false);
+          return isGaiaUser;
         }
-    </script>
+        autoshare.addCanConnectCallback(canConnectCallback);
 
+        var serviceChangedCallback = function (autoshare) {
+          var serviceInfo = autoshare.getServiceInfo();
+          for (var service in serviceInfo) {
+            var info = serviceInfo[service];
+            if (service == 'facebook' && info['is_connected']) {
+              yt.style.setDisplayed('fb-promo-fb-linked', true);
+              hideFbPromoAlert();
+            }
+            if (service == 'es' && info['is_connected']) {
+              yt.style.setDisplayed('es-optin-success', true);
+              hideEsOptinAlert();
+            }
+          }
+        };
+        autoshare.addServiceChangedCallback(serviceChangedCallback);
+
+        window['autoshare'] = autoshare;
+
+        var prefs = yt.UserPrefs;
+        var optOut = prefs.getFlag3(prefs.Flags.FLAG3_FBPROMO_OPT_OUT);
+        if (!optOut) {
+          _showdiv('fb-promo1');
+        }
+
+        // The user has "dismissed" the promo, i.e., clicked on the [x].
+        // This is distinct from simply hiding the promo as a side effect.
+        window.dismissFbPromoAlert = function () {
+          prefs.setFlag3(prefs.Flags.FLAG3_FBPROMO_OPT_OUT, true);
+          prefs.save();
+          hideFbPromoAlert();
+        };
+
+        function hideFbPromoAlert() {
+          _hidediv('fb-promo1');
+        }
+      })();
+
+    });
+
+    yt.setConfig('HOMEPAGE_AJAX_RECOMMENDATIONS', true);
+    yt.pubsub.subscribe('init', yt.www.home.ModuleHelper.initDismissRec);
+  </script>
+
+  <script>
+    // Initialize the subscriptions helper object that supports both the inline
+    // "edit subscription" link featurette in the Recent Activity module and
+    // the subscribe-from-masthead facility.
+    var gaiaHost = 'http://web.archive.org/web/20111110192655/https://accounts.google.com';
+    var gaiaLocale = 'ja-US';
+    window['subui_'] = new yt.www.home.Subscriptions(gaiaHost, gaiaLocale);
+    yt.pubsub.subscribe('init', function () {
+      window['subui_'].setCurrentLink(_gel('_firsteditsublink'));
+    });
+  </script>
+
+
+  <script>
+    if (window.yt.timing) {
+      yt.timing.tick('ct');
+    }
+  </script>
+
+  <style id="nowtube-watch-layout-fix">
+    /* Keep the video area within its own column so it cannot cover related-video links. */
+    #watch-video-container {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+    }
+
+    #watch-video {
+      position: relative;
+      z-index: 1 !important;
+    }
+
+    #watch-wrap {
+      position: relative;
+      z-index: 1;
+      width: 640px;
+      max-width: 100%;
+    }
+
+    #watch-wrap #video-player {
+      display: block;
+      max-width: 100%;
+    }
+
+    #watch-sidebar {
+      position: relative;
+      z-index: 5;
+    }
+
+    #watch-sidebar a,
+    #watch-sidebar button {
+      position: relative;
+      z-index: 6;
+      pointer-events: auto;
+    }
+  </style>
 </head>
 
 <body id="" class="date-20111110 ja_JP ltr" dir="ltr">
 
-    <form name="logoutForm" method="POST" action="https://nowtube.vercel.app/">
-        <input type="hidden" name="action_logout" value="1">
-        <input name="session_token" type="hidden" value="bYCvBIGkncX33Bzn50DpkZOqGJB8MTMyMTAzOTYxNEAxMzIwOTUzMjE0">
-    </form>
-    <!-- begin page -->
-    <div id="page" class="  home ">
-        <!-- begin pagetop -->
-        <div id="masthead-container">
+  <form name="logoutForm" method="POST" action="https://nowtube.vercel.app/">
+    <input type="hidden" name="action_logout" value="1">
+    <input name="session_token" type="hidden" value="bYCvBIGkncX33Bzn50DpkZOqGJB8MTMyMTAzOTYxNEAxMzIwOTUzMjE0">
+  </form>
+  <!-- begin page -->
+  <div id="page" class="  home ">
+    <!-- begin pagetop -->
+    <div id="masthead-container">
 
-            <div id="masthead" class="" dir="ltr">
-                <a id="logo-container" href="https://nowtube.vercel.app/" title="YouTube ホーム">
-                    <img id="logo" src="./img/pixel.gif" alt="YouTube ホーム">
-                </a>
+      <div id="masthead" class="" dir="ltr">
+        <a id="logo-container" href="https://nowtube.vercel.app/" title="YouTube ホーム">
+          <img id="logo" src="./img/pixel.gif" alt="YouTube ホーム">
+        </a>
 
 
 
-                <div id="masthead-sections">
-                    <a href="/web/20111110192655/http://www.youtube.com/videos?feature=mh">ランキング </a><a
-                        href="./upload.html" class="split end ">アップロード</a><span class="valign-fix"></span>
-                    <a class="start" href="https://nowtube.vercel.app/login.html?mode=register">アカウントを作成</a> <a
-                        class="end"
-                        href="http://web.archive.org/web/20111110192655/https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Dja_JP%26next%3D%252Findex%253Fhl%253Dja&amp;hl=ja_JP&amp;ltmpl=sso">ログイン</a>
-                </div>
-
+        <div id="masthead-sections">
+          <a href="/web/20111110192655/http://www.youtube.com/videos?feature=mh">ランキング </a><a href="./upload.html"
+            class="split end ">アップロード</a><span class="valign-fix"></span>
+          <a class="start" href="https://nowtube.vercel.app/login.html?mode=register">アカウントを作成</a> <a class="end"
+            href="http://web.archive.org/web/20111110192655/https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Dja_JP%26next%3D%252Findex%253Fhl%253Dja&amp;hl=ja_JP&amp;ltmpl=sso">ログイン</a>
+        </div>
 
 
 
 
-                <form id="masthead-search" class="search-form" autocomplete="off"
-                    action="./search.html" method="get"
-                    onsubmit="if (_gel('masthead-search-term').value == '') return false;">
-                    <button class="search-button yt-uix-button"
-                        onclick="if (_gel('masthead-search-term').value == '') return false; _gel('masthead-search').submit(); return false;;return false;"
-                        type="button" id="search-btn" dir="ltr" tabindex="2" role="button"><span
-                            class="yt-uix-button-content">検索 </span></button>
-                    <div id="masthead-search-terms" dir="ltr"><label><input id="masthead-search-term"
-                                onfocus="_addclass(_gel('masthead-search'), 'focused'); "
-                                onblur="_removeclass(_gel('masthead-search'), 'focused');" class="search-term "
-                                name="search_query" value="" type="text" tabindex="1"
-                                onkeyup="goog.i18n.bidi.setDirAttribute(event,this)" title="検索"
-                                autocomplete="off"></label></div>
-                    <script>document.getElementById('masthead-search-term').focus();</script> <input type="hidden"
-                        name="aq" value="f"><input type="hidden" name="aql" value="" disabled=""><input type="hidden"
-                        name="oq" value="" disabled="">
-                </form>
+
+        <form id="masthead-search" class="search-form" autocomplete="off" action="./search.html" method="get"
+          onsubmit="if (_gel('masthead-search-term').value == '') return false;">
+          <button class="search-button yt-uix-button"
+            onclick="if (_gel('masthead-search-term').value == '') return false; _gel('masthead-search').submit(); return false;;return false;"
+            type="button" id="search-btn" dir="ltr" tabindex="2" role="button"><span class="yt-uix-button-content">検索
+            </span></button>
+          <div id="masthead-search-terms" dir="ltr"><label><input id="masthead-search-term"
+                onfocus="_addclass(_gel('masthead-search'), 'focused'); "
+                onblur="_removeclass(_gel('masthead-search'), 'focused');" class="search-term " name="search_query"
+                value="" type="text" tabindex="1" onkeyup="goog.i18n.bidi.setDirAttribute(event,this)" title="検索"
+                autocomplete="off"></label></div>
+          <script>document.getElementById('masthead-search-term').focus();</script> <input type="hidden" name="aq"
+            value="f"><input type="hidden" name="aql" value="" disabled=""><input type="hidden" name="oq" value=""
+            disabled="">
+        </form>
+
+
+      </div>
+
+
+    </div>
+    <!-- end pagetop -->
+  </div>
+  <div id="alerts"></div>
+  <div id="content-container">
+    <!-- begin content -->
+    <div id="content" class="">
+      <div id="watch-container">
+        <div id="watch-video-container">
+          <div id="watch-video" style="z-index: 1000;">
+            <script>
+              if (window.yt.timing) {
+                yt.timing.tick('bf');
+              }
+            </script>
+
+            <div id="watch-wrap">
+              <h1>
+                <strong>
+                  <div id="video-title"
+                    style="margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent; font-weight: bold; line-height: 1.1363em; color: #333;">
+                    タイトルを読み込んでいます…</div>
+                </strong>
+              </h1>
+
+              <div id="video-uploader"
+                style="color: #03c; text-decoration: none; margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent;">
+                投稿者</div>
+
+              <video id="video-player" controls playsinline preload="metadata"
+                style="width: 640px; height: 385px;"></video>
+            </div>
+
+            <!-- begin watch-video-extra -->
+            <div id="watch-video-extra">
 
 
             </div>
-
-
+            <!-- end watch-video-extra -->
+          </div>
         </div>
-        <!-- end pagetop -->
-    </div>
-    <div id="alerts"></div>
-    <div id="content-container">
-        <!-- begin content -->
-        <div id="content" class="">
-            <div id="watch-container">
-                <div id="watch-video-container">
-                    <div id="watch-video" style="z-index: 1000;">
-                        <script>
-                            if (window.yt.timing) {
-                                yt.timing.tick('bf');
-                            }
-                        </script>
-
-                        <div id="watch-wrap">
-                            <h1>
-                                <strong>
-                                    <div id="video-title" style="margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent; font-weight: bold; line-height: 1.1363em; color: #333;">タイトルを読み込んでいます…</div>
-                                </strong>
-                            </h1>
-
-                            <div id="video-uploader" style="color: #03c; text-decoration: none; margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent;">投稿者</div>
-
-                            <video id="video-player" controls playsinline preload="metadata"
-                                style="width: 640px; height: 385px;"></video>
-
-                            <div id="video-views">再生回数</div>
-                        </div>
-
-                        <!-- begin watch-video-extra -->
-                        <div id="watch-video-extra">
+        <!-- begin watch-main-container -->
+        <div id="watch-main-container">
+          <div id="watch-main">
+            <div id="watch-panel">
+              <div id="flash10-promo-div" style="display: none;" class="yt-alert yt-alert-warn yt-rounded  hid"><img
+                  src="./img/pixel.gif" class="icon master-sprite" alt="Alert icon">
+                <div class="yt-alert-content"> Upgrade to Flash Player 10 for improved playback
+                  performance. <a
+                    href="https://web.archive.org/web/20110813042442/http://www.adobe.com/go/getflashplayer/"
+                    onmousedown="urchinTracker('/Events/VideoWatch/GetFlashUpgrade');">Upgrade
+                    Now</a> or <a
+                    href="https://web.archive.org/web/20110813042442/http://help.youtube.com/support/youtube/bin/answer.py?answer=95402">More
+                    Info</a>.
+                </div><button type="button" onclick="_hidediv(this.parentNode);"
+                  class="close master-sprite">close</button>
+              </div>
 
 
-                        </div>
-                        <!-- end watch-video-extra -->
-                    </div>
+              <div id="watch-actions">
+                <div id="watch-actions-right">
+                  <span class="watch-view-count">
+                    <strong>
+                      <div id="video-views">再生回数</div>
+                    </strong>
+                  </span>
+                  <button onclick=";return false;" title="Show video statistics" type="button" id="watch-insight-button"
+                    class="yt-uix-tooltip yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+                    data-button-action="yt.www.watch.actions.stats" role="button" aria-pressed="false"
+                    data-tooltip="Show video statistics" data-tooltip-title="Show video statistics"
+                    data-tooltip-timer="618"><img class="yt-uix-button-icon yt-uix-button-icon-watch-insight"
+                      src="./img/pixel.gif" alt=""></button>
+
                 </div>
-                <!-- begin watch-main-container -->
-                <div id="watch-main-container">
-                    <div id="watch-main">
-                        <div id="watch-panel">
-                            <div id="flash10-promo-div" style="display: none;"
-                                class="yt-alert yt-alert-warn yt-rounded  hid"><img src="./img/pixel.gif"
-                                    class="icon master-sprite" alt="Alert icon">
-                                <div class="yt-alert-content"> Upgrade to Flash Player 10 for improved playback
-                                    performance. <a
-                                        href="https://web.archive.org/web/20110813042442/http://www.adobe.com/go/getflashplayer/"
-                                        onmousedown="urchinTracker('/Events/VideoWatch/GetFlashUpgrade');">Upgrade
-                                        Now</a> or <a
-                                        href="https://web.archive.org/web/20110813042442/http://help.youtube.com/support/youtube/bin/answer.py?answer=95402">More
-                                        Info</a>.
-                                </div><button type="button" onclick="_hidediv(this.parentNode);"
-                                    class="close master-sprite">close</button>
-                            </div>
-
-
-                            <div id="watch-actions">
-                                <div id="watch-actions-right">
-                                    <span class="watch-view-count">
-                                        <strong>
-                                            <div id="video-views">再生回数</div>
-                                        </strong>
-                                    </span>
-                                    <button onclick=";return false;" title="Show video statistics" type="button"
-                                        id="watch-insight-button"
-                                        class="yt-uix-tooltip yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
-                                        data-button-action="yt.www.watch.actions.stats" role="button"
-                                        aria-pressed="false" data-tooltip="Show video statistics"
-                                        data-tooltip-title="Show video statistics" data-tooltip-timer="618"><img
-                                            class="yt-uix-button-icon yt-uix-button-icon-watch-insight"
-                                            src="./img/pixel.gif" alt=""></button>
-
-                                </div>
-                                <span id="watch-like-unlike" class="yt-uix-button-group"><button
-                                        onclick=";return false;" title="I like this" type="button"
-                                        class="start yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip"
-                                        id="watch-like" data-button-action="yt.www.watch.actions.like" role="button"
-                                        aria-pressed="false" data-tooltip="I like this" data-tooltip-title="I like this"
-                                        data-tooltip-timer="637"><img
-                                            class="yt-uix-button-icon yt-uix-button-icon-watch-like"
-                                            src="./img/pixel.gif" alt=""><span
-                                            class="yt-uix-button-content">高評価</span></button><button
-                                        onclick=";return false;" title="I dislike this" type="button"
-                                        class="end yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
-                                        id="watch-unlike" data-button-action="yt.www.watch.actions.unlike" role="button"
-                                        aria-pressed="false" data-tooltip="I dislike this"
-                                        data-tooltip-title="I dislike this" data-tooltip-timer="639"><img
-                                            class="yt-uix-button-icon yt-uix-button-icon-watch-unlike"
-                                            src="./img/pixel.gif" alt=""></button></span>
-                                <span dir="ltr" class="yt-uix-button-group addto-container watch show-label"
-                                    data-video-ids="ZgS2mdBL3Rk" data-feature="watch"><button type="button"
-                                        class="start yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip"
-                                        onclick=";return false;" title="Add to Watch Later
+                <span id="watch-like-unlike" class="yt-uix-button-group"><button onclick=";return false;"
+                    title="I like this" type="button" class="start yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip"
+                    id="watch-like" data-button-action="yt.www.watch.actions.like" role="button" aria-pressed="false"
+                    data-tooltip="I like this" data-tooltip-title="I like this" data-tooltip-timer="637"><img
+                      class="yt-uix-button-icon yt-uix-button-icon-watch-like" src="./img/pixel.gif" alt=""><span
+                      class="yt-uix-button-content">高評価</span></button><button onclick=";return false;"
+                    title="I dislike this" type="button"
+                    class="end yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+                    id="watch-unlike" data-button-action="yt.www.watch.actions.unlike" role="button"
+                    aria-pressed="false" data-tooltip="I dislike this" data-tooltip-title="I dislike this"
+                    data-tooltip-timer="639"><img class="yt-uix-button-icon yt-uix-button-icon-watch-unlike"
+                      src="./img/pixel.gif" alt=""></button></span>
+                <span dir="ltr" class="yt-uix-button-group addto-container watch show-label"
+                  data-video-ids="ZgS2mdBL3Rk" data-feature="watch"><button type="button"
+                    class="start yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip" onclick=";return false;" title="Add to Watch Later
 " data-button-action="yt.www.watch.actions.showSigninOrCreateChannelWarning" role="button" aria-pressed="false"
-                                        data-tooltip="Add to Watch Later
+                    data-tooltip="Add to Watch Later
 " data-tooltip-title="Add to Watch Later
 " data-tooltip-timer="646"><img class="yt-uix-button-icon yt-uix-button-icon-addto" src="./img/pixel.gif" alt=""><span
-                                            class="yt-uix-button-content"><span
-                                                class="addto-label">追加先</span></span></button><button type="button"
-                                        class="end yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
-                                        onclick=";return false;" title="Add to favorites or playlist"
-                                        data-button-action="yt.www.watch.actions.showSigninOrCreateChannelWarning"
-                                        role="button" aria-pressed="false" data-tooltip="Add to favorites or playlist"
-                                        data-tooltip-title="Add to favorites or playlist" data-tooltip-timer="652"><img
-                                            class="yt-uix-button-icon yt-uix-button-icon-arrow" src="./img/pixel.gif"
-                                            alt=""></button></span>
+                      class="yt-uix-button-content"><span class="addto-label">追加先</span></span></button><button
+                    type="button" class="end yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+                    onclick=";return false;" title="Add to favorites or playlist"
+                    data-button-action="yt.www.watch.actions.showSigninOrCreateChannelWarning" role="button"
+                    aria-pressed="false" data-tooltip="Add to favorites or playlist"
+                    data-tooltip-title="Add to favorites or playlist" data-tooltip-timer="652"><img
+                      class="yt-uix-button-icon yt-uix-button-icon-arrow" src="./img/pixel.gif" alt=""></button></span>
 
-                                <button onclick=";return false;" title="Share or embed this video" type="button"
-                                    class="yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip" id="watch-share"
-                                    data-button-action="yt.www.watch.actions.share" role="button" aria-pressed="false"
-                                    data-tooltip="Share or embed this video"
-                                    data-tooltip-title="Share or embed this video" data-tooltip-timer="620"><span
-                                        class="yt-uix-button-content">共有</span></button>
+                <button onclick=";return false;" title="Share or embed this video" type="button"
+                  class="yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip" id="watch-share"
+                  data-button-action="yt.www.watch.actions.share" role="button" aria-pressed="false"
+                  data-tooltip="Share or embed this video" data-tooltip-title="Share or embed this video"
+                  data-tooltip-timer="620"><span class="yt-uix-button-content">共有</span></button>
 
-                                <button onclick=";return false;" title="Flag as inappropriate" type="button"
-                                    class="yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty"
-                                    id="watch-flag" data-button-action="yt.www.watch.actions.flag" role="button"
-                                    aria-pressed="false"><img class="yt-uix-button-icon yt-uix-button-icon-watch-flag"
-                                        src="./img/pixel.gif" alt=""></button>
+                <button onclick=";return false;" title="Flag as inappropriate" type="button"
+                  class="yt-uix-tooltip-reverse yt-uix-button yt-uix-tooltip yt-uix-button-empty" id="watch-flag"
+                  data-button-action="yt.www.watch.actions.flag" role="button" aria-pressed="false"><img
+                    class="yt-uix-button-icon yt-uix-button-icon-watch-flag" src="./img/pixel.gif" alt=""></button>
 
 
-                            </div>
+              </div>
 
-                            <div id="watch-actions-area-container" class="hid">
-                                <div id="watch-actions-area" class="yt-rounded">
-                                    <div id="watch-actions-loading" class="watch-actions-panel hid">
-                                        Loading...
-                                    </div>
-                                    <div id="watch-actions-logged-out" class="watch-actions-panel hid">
-                                        <div class="yt-alert yt-alert-warn yt-alert-small yt-alert-naked yt-rounded ">
-                                            <img src="./img/pixel.gif" class="icon master-sprite" alt="Alert icon">
-                                            <div class="yt-alert-content"> <strong><a
-                                                        href="https://web.archive.org/web/20110813042442/https://www.google.com/accounts/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Den_US%26next%3Dhttp%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DZgS2mdBL3Rk%2526feature%253Dtopvideos_mp&amp;hl=en_US&amp;ltmpl=sso">Sign
-                                                        In</a> or <a
-                                                        href="/web/20110813042442/http://www.youtube.com/signup?new=true&amp;next=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DZgS2mdBL3Rk%26feature%3Dtopvideos_mp">Sign
-                                                        Up</a> now!
-                                                </strong>
+              <div id="watch-actions-area-container" class="hid">
+                <div id="watch-actions-area" class="yt-rounded">
+                  <div id="watch-actions-loading" class="watch-actions-panel hid">
+                    Loading...
+                  </div>
+                  <div id="watch-actions-logged-out" class="watch-actions-panel hid">
+                    <div class="yt-alert yt-alert-warn yt-alert-small yt-alert-naked yt-rounded ">
+                      <img src="./img/pixel.gif" class="icon master-sprite" alt="Alert icon">
+                      <div class="yt-alert-content"> <strong>この機能は未実装です! また、不適切な動画があった場合、<a
+                            href="mailto:wdq.ewfjiow8402@gmail.com">wdq.ewfjiow8402@gmail.com</a>にご連絡ください!
+                        </strong>
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="watch-actions-error" class="watch-actions-panel hid">
-                                        <div class="yt-alert yt-alert-error yt-alert-small yt-alert-naked yt-rounded ">
-                                            <img src="./img/pixel.gif" class="icon master-sprite" alt="Alert icon">
-                                            <div id="watch-error-string" class="yt-alert-content"></div>
-                                        </div>
-                                    </div>
-                                    <div id="watch-actions-share" class="watch-actions-panel hid"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="watch-actions-error" class="watch-actions-panel hid">
+                    <div class="yt-alert yt-alert-error yt-alert-small yt-alert-naked yt-rounded ">
+                      <img src="./img/pixel.gif" class="icon master-sprite" alt="Alert icon">
+                      <div id="watch-error-string" class="yt-alert-content"></div>
+                    </div>
+                  </div>
+                  <div id="watch-actions-share" class="watch-actions-panel hid"></div>
 
-                                    <div id="watch-actions-ajax" class="watch-actions-panel hid"></div>
+                  <div id="watch-actions-ajax" class="watch-actions-panel hid"></div>
 
-                                    <div class="close">
-                                        <img src="./img/pixel.gif" class="close-button"
-                                            onclick="yt.www.watch.actions.hide();">
-                                    </div>
+                  <div class="close">
+                    <img src="./img/pixel.gif" class="close-button" onclick="yt.www.watch.actions.hide();">
+                  </div>
 
-                                </div>
-                            </div>
-                            <div id="watch-info" class="yt-rounded">
+                </div>
+              </div>
+              <div id="watch-info" class="yt-rounded">
 
-                                <div id="watch-description"
-                                    class="watch-expander yt-uix-expander  yt-uix-expander-collapsed"
-                                    data-expander-action="yt.www.watch.watch5.handleToggleDescription">
-                                    <div id="watch-description-clip">
-                                        <p id="watch-uploader-info">
+                <div id="watch-description" class="watch-expander yt-uix-expander  yt-uix-expander-collapsed"
+                  data-expander-action="yt.www.watch.watch5.handleToggleDescription">
+                  <div id="watch-description-clip">
+                    <p id="watch-uploader-info">
 
-                                            投稿者:
-                                        <div id="video-uploader" style="color: #03c; text-decoration: none; margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent;">投稿者</div>
+                      投稿者:
+                    <div id="video-uploader"
+                      style="color: #03c; text-decoration: none; margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent;">
+                      投稿者</div>
+                    <div id="video-upload-date" style="margin-top:3px;color:#666;font-size:11px;">アップロード日を読み込んでいます…
+                    </div>
 
-                                        </p>
-                                        <div id="watch-description-text">
-                                            <div id="video-description">概要欄を読み込んでいます…</div>
-                                        </div>
+                    </p>
+                    <div id="watch-description-text">
+                      <div id="video-description">概要欄を読み込んでいます…</div>
+                    </div>
 
-                                    </div>
-                                    <div id="watch-description-fadeout"></div>
+                  </div>
+                  <div id="watch-description-fadeout"></div>
 
-                                    <ul id="watch-description-extra-info">
-                                        <li>
-                                            <div class="watch-sparkbars">
-                                                <div class="watch-sparkbar-likes" style="width: 50%">
-                                                </div>
-                                                <div class="watch-sparkbar-dislikes" style="width: 50%">
-                                                </div>
-                                            </div>
-                                            <span class="watch-likes-dislikes">
-                                                <span class="likes">Temp</span> likes, <span
-                                                    class="dislikes">Temp</span> dislikes
-                                            </span>
-                                        </li>
-                                    </ul>
-
-                                    <script>
-                                        (async function () {
-                                            // URLから ?id=xxx を取得
-                                            var id = new URLSearchParams(location.search).get('id');
-                                            if (!id) {
-                                                document.getElementById('watch-wrap').innerHTML = '<p class="error-msg">動画IDが指定されていません。</p>';
-                                                return;
-                                            }
-
-                                            try {
-                                                // APIから動画一覧データを取得
-                                                var response = await fetch('/api/videos');
-                                                if (!response.ok) throw new Error('APIに接続できません。');
-                                                var data = await response.json();
-
-                                                // 該当する動画データを検索
-                                                var video = (data.videos || []).find(function (item) {
-                                                    return item.id === id;
-                                                });
-                                                if (!video) throw new Error('動画が見つかりません。');
-
-                                                // 各要素の id を指定して、データを直接流し込む
-
-                                                // 1. タイトル
-                                                document.getElementById('video-title').textContent = video.title;
-
-                                                // 2. MP4動画プレイヤー
-                                                var player = document.getElementById('video-player');
-                                                player.src = video.url;
-                                                if (video.thumbnailUrl) {
-                                                    player.poster = video.thumbnailUrl;
-                                                }
-
-                                                // 3. 再生回数
-                                                document.getElementById('video-views').textContent =
-                                                    Number(video.viewCount || 0).toLocaleString('ja-JP') + ' 回';
-
-                                                // 4. 投稿者名
-                                                document.getElementById('video-uploader').textContent =
-                                                    (video.uploader || 'NowTubeユーザー');
-
-                                            } catch (error) {
-                                                document.getElementById('watch-wrap').innerHTML = '<p class="error-msg">' + error.message + '</p>';
-                                            }
-                                        })();
-                                    </script>
-
-
-                                    <div class="yt-uix-expander-head">
-                                        <div id="watch-description-expand" class="expand">
-                                            <button type="button" class="metadata-inline yt-uix-button"
-                                                onclick=";return false;" role="button" aria-pressed="false"><span
-                                                    class="yt-uix-button-content">詳細 <img src="./img/pixel.gif"
-                                                        alt="Show more">
-                                                </span></button>
-                                        </div>
-                                        <div id="watch-description-collapse" class="collapse">
-                                            <button type="button" class="metadata-inline yt-uix-button"
-                                                onclick=";return false;" role="button" aria-pressed="false"><span
-                                                    class="yt-uix-button-content">最小化 <img src="./img/pixel.gif"
-                                                        alt="Show less">
-                                                </span></button>
-                                        </div>
-                                    </div>
-
-
-
-                                </div>
-
-                            </div>
-                            <div id="watch-discussion">
-
-
-
-                                <div id="comments-view" class="comments-disabled">
-                                    <div class="comments-section">
-                                        <h4>コメント</h4>
-                                        <div class="comments-disabled-message">
-                                            <img
-                                                src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/icon_comments_disabled-vflxokpZC.png">
-                                            <span>コメントは未実装です</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-
+                  <ul id="watch-description-extra-info">
+                    <li>
+                      <div class="watch-sparkbars">
+                        <div class="watch-sparkbar-likes" style="width: 50%">
                         </div>
-                        <div id="watch-sidebar">
-
-                            <div id="watch-channel-brand-div" style="display:none" class="watch-module">
-                                <div id="ad300x250" class="alignR"></div>
-                                <div id="google_companion_ad_div" class="alignR"></div>
-                                <div style="padding-top: 3px;display:none;">
-                                    Advertisement
-                                </div>
-                            </div>
-
-
-
-                            <div class="watch-module">
-                                <div class="watch-module-body">
-
-                                    <h4 class="first">Suggestions</h4>
-                                    <ul id="watch-related" class="video-list">
-                                        <div id="ppv-container" class="hid">
-                                            <li class="video-list-item "><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-                                        class="video-list-item-link "
-                                        onmousedown="yt.analytics.urchinTracker('/Events/Home/PersonalizedHome/FEA/Logged_Out');"><span
-                                            class="ux-thumb-wrap contains-addto "><span
-                                                class="video-thumb ux-thumb-110 "><span class="clip"><img
-                                                        src="./img/default.jpg" alt="サムネイル
-" data-thumb="./img/default.jpg" data-group-key="thumb-group-0"></span></span><span
-                                                class="video-time">00:00</span><button type="button"
-                                                class="addto-button short video-actions yt-uix-button yt-uix-button-short"
-                                                onclick=";return false;"
-                                                data-button-menu-action="yt.www.lists.addto.toggleMenu"
-                                                data-button-menu-id="shared-addto-menu" data-video-ids="kPhUSVCcG6c"
-                                                data-feature="thumbnail" role="button"><img
-                                                    class="yt-uix-button-icon yt-uix-button-icon-addto"
-                                                    src="./img/pixel.gif" alt=""><span
-                                                    class="yt-uix-button-content"><span class="addto-label">追加先</span>
-                                                </span><img class="yt-uix-button-arrow" src="./img/pixel.gif"
-                                                    alt=""></button></span><span dir="ltr" class="title"
-                                            title="Test1">Test1</span><span class="stat">ユーザー: User1</span><span
-                                            class="stat view-count">再生回数
-                                            00,000 回
-                                        </span></a></li>
-
-                                            <span class="featured-label">Featured Video</span>
-                                        </div>
-
-                                    </ul>
-                                    <ul id="watch-more-related" class="video-list hid">
-                                        <span id="watch-more-related-loading">
-                                            Loading more suggestions...
-                                        </span>
-                                    </ul>
-                                    <button type="button" id="watch-more-related-button" onclick=";return false;"
-                                        class=" yt-uix-button"
-                                        data-button-action="yt.www.watch.watch5.handleLoadMoreRelated" role="button"
-                                        aria-pressed="false"><span class="yt-uix-button-content">Load more
-                                            suggestions</span></button>
-                                </div>
-                            </div>
-
+                        <div class="watch-sparkbar-dislikes" style="width: 50%">
                         </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div style="visibility: hidden; height: 0px; padding: 0px; overflow: hidden;">
-                        <img src="https://web.archive.org/web/20110813042442im_/http://www.youtube-nocookie.com/gen_204?attributionpartner=TheStation%2Buser"
-                            width="1" height="1" border="0">
-                        <img src="https://web.archive.org/web/20110813042442im_/http://www.youtube-nocookie.com/robots.txt?attributionpartner=TheStation%2Buser&amp;v=ZgS2mdBL3Rk"
-                            width="1" height="1" border="0">
+                      </div>
+                      <span class="watch-likes-dislikes">
+                        <span class="likes">Temp</span> likes, <span class="dislikes">Temp</span> dislikes
+                      </span>
+                    </li>
+                  </ul>
+
+                  <script>
+                    (async function () {
+                      var id = new URLSearchParams(location.search).get('id');
+                      var byId = function (name) { return document.querySelectorAll('[id="' + name + '"]'); };
+                      var setAll = function (name, value) {
+                        byId(name).forEach(function (node) { node.textContent = value; });
+                      };
+                      var safe = function (value) {
+                        return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+                          return ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]);
+                        });
+                      };
+                      var fmtViews = function (v) {
+                        var n = Number(v);
+                        return (Number.isFinite(n) && n >= 0 ? n : 0).toLocaleString('ja-JP') + ' 回';
+                      };
+                      var fmtDuration = function (v) {
+                        var n = Number(v);
+                        if (!Number.isFinite(n) || n < 0) return '';
+                        n = Math.floor(n);
+                        var h = Math.floor(n / 3600), m = Math.floor((n % 3600) / 60), sec = n % 60;
+                        return h ? h + ':' + String(m).padStart(2, '0') + ':' + String(sec).padStart(2, '0') : m + ':' + String(sec).padStart(2, '0');
+                      };
+                      var date = function (v) {
+                        var x = v.createdAt || v.created_at || v.uploadedAt || v.uploaded_at || v.timestamp || v.date;
+                        if (x == null) return 0;
+                        var n = typeof x === 'number' ? x : Date.parse(x);
+                        if (!Number.isFinite(n)) return 0;
+                        return n > 0 && n < 100000000000 ? n * 1000 : n;
+                      };
+                      var count = function (v) { var n = Number(v.viewCount); return Number.isFinite(n) && n > 0 ? n : 0; };
+                      var channelHref = function (username) {
+                        return './channel.html?user=' + encodeURIComponent(String(username || '').trim());
+                      };
+                      var renderUploader = function (username) {
+                        var name = String(username || 'NowTubeユーザー');
+                        var html = '<a href="' + channelHref(name) + '" style="color:#03c;text-decoration:none;">' + safe(name) + '</a>';
+                        byId('video-uploader').forEach(function (node) { node.innerHTML = html; });
+                      };
+                      var formatUploadDate = function (v) {
+                        var n = date(v);
+                        if (!n) return '';
+                        var d = new Date(n);
+                        if (!Number.isFinite(d.getTime())) return '';
+                        return d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日';
+                      };
+                      var renderRelated = function (all, current) {
+                        var list = document.getElementById('watch-related');
+                        if (!list) return;
+                        var others = all.filter(function (v) { return v && String(v.id) !== String(current.id); });
+                        others.sort(function (a, b) {
+                          var sameA = current.uploader && a.uploader === current.uploader ? 1 : 0;
+                          var sameB = current.uploader && b.uploader === current.uploader ? 1 : 0;
+                          return sameB - sameA || count(b) - count(a) || date(b) - date(a);
+                        });
+                        var chosen = others.slice(0, 8);
+                        if (!chosen.length) {
+                          list.innerHTML = '<li class="video-list-item"><span class="stat">関連動画はまだありません。</span></li>';
+                          return;
+                        }
+                        list.innerHTML = chosen.map(function (v) {
+                          var href = './watch.html?id=' + encodeURIComponent(v.id);
+                          var image = v.thumbnailUrl || v.thumbnail || './img/default.jpg';
+                          var duration = fmtDuration(v.duration);
+                          var uploader = String(v.uploader || 'NowTubeユーザー');
+                          return '<li class="video-list-item">' +
+                            '<a class="video-list-item-link" href="' + href + '">' +
+                            '<span class="ux-thumb-wrap"><span class="video-thumb ux-thumb-110"><span class="clip"><img src="' + safe(image) + '" alt="サムネイル"></span></span>' +
+                            (duration ? '<span class="video-time">' + safe(duration) + '</span>' : '') + '</span>' +
+                            '<span class="title" title="' + safe(v.title) + '">' + safe(v.title || '無題の動画') + '</span></a>' +
+                            '<span class="stat">ユーザー: <a href="' + channelHref(uploader) + '" style="color:#03c;text-decoration:none;">' + safe(uploader) + '</a></span>' +
+                            '<span class="stat view-count">再生回数 ' + count(v).toLocaleString('ja-JP') + ' 回</span></li>';
+                        }).join('');
+                      };
+                      if (!id) {
+                        document.getElementById('watch-wrap').innerHTML = '<p class="error-msg">動画IDが指定されていません。</p>';
+                        return;
+                      }
+                      try {
+                        var response = await fetch('/api/videos', { cache: 'no-store' });
+                        if (!response.ok) throw new Error('APIに接続できません。');
+                        var data = await response.json();
+                        var videos = Array.isArray(data.videos) ? data.videos : [];
+                        var video = videos.find(function (item) { return String(item.id) === String(id); });
+                        if (!video) throw new Error('動画が見つかりません。');
+
+                        setAll('video-title', video.title || '無題の動画');
+                        renderUploader(video.uploader || 'NowTubeユーザー');
+                        var uploadDate = formatUploadDate(video);
+                        var descriptionText = video.description || '概要欄はありません。';
+                        setAll('video-description', descriptionText);
+                        setAll('video-upload-date', uploadDate ? 'アップロード日: ' + safe(uploadDate) : 'アップロード日: 不明');
+                        setAll('video-views', fmtViews(video.viewCount));
+
+                        var player = document.getElementById('video-player');
+                        if (player) {
+                          player.src = video.url;
+                          if (video.thumbnailUrl) player.poster = video.thumbnailUrl;
+                          player.load();
+                        }
+
+                        // Count a visit once per page load; update all duplicated display elements.
+                        try {
+                          var viewResponse = await fetch('/api/view', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ id: video.id })
+                          });
+                          if (viewResponse.ok) {
+                            var viewData = await viewResponse.json();
+                            setAll('video-views', fmtViews(viewData.viewCount));
+                            video.viewCount = viewData.viewCount;
+                          }
+                        } catch (viewError) {
+                          console.warn('再生回数を更新できませんでした', viewError);
+                        }
+                        renderRelated(videos, video);
+                      } catch (error) {
+                        var wrap = document.getElementById('watch-wrap');
+                        if (wrap) wrap.innerHTML = '<p class="error-msg">' + safe(error.message || '動画を読み込めませんでした。') + '</p>';
+                      }
+                    })();
+                  </script>
 
 
-
-                        <div id="baseDiv"></div>
-
-                    </div>
-                </div>
-                <!-- end watch-main-container -->
-            </div>
-
-        </div>
-        <!-- end content -->
-    </div>
-    <!-- begin pagebottom -->
-    <div id="footer-container">
-        <div id="footer">
-            <ul class="footer-links">
-                <li><a href="//web.archive.org/web/20111110192655/http://www.google.com/support/youtube/bin/static.py?p=homepage&amp;page=start.cs&amp;hl=ja_JP"
-                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Help');">ヘルプ</a>
-                </li>
-                <li><a href="/web/20111110192655/http://www.youtube.com/t/about_youtube"
-                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'About');">NowTube について</a></li>
-                <li><a href="/web/20111110192655/http://www.youtube.com/t/press"
-                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Press');">プレス ルーム</a></li>
-                <li><a href="/web/20111110192655/http://www.youtube.com/t/copyright_center"
-                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Copyright');">著作権</a></li>
-                <li><a href="/web/20111110192655/http://www.youtube.com/creators"
-                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Creators');">動画の作成とパートナー</a></li>
-                <li><a href="/web/20111110192655/http://www.youtube.com/t/advertising_overview"
-                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Advertising');">広告</a></li>
-                <li><a href="/web/20111110192655/http://www.youtube.com/dev">開発者</a></li>
-                <li><a href="//web.archive.org/web/20111110192655/http://www.google.com/support/youtube/bin/request.py?contact_type=abuse&amp;hl=ja_JP"
-                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Safety');">安全性</a></li>
-                <li><a href="/web/20111110192655/http://www.youtube.com/t/privacy_at_youtube"
-                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Privacy');">プライバシー</a></li>
-                <li><a href="/web/20111110192655/http://www.youtube.com/t/terms"
-                        onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Terms');">規約</a></li>
-            </ul>
-
-            <div class="footer-info">
-                <span dir="ltr">© 2026 NowTube</span>
-
-                <ul class="pickers">
-                    <li><a href="//web.archive.org/web/20111110192655/http://www.google.com/tools/feedback/intl/ja/error.html"
-                            onclick="return yt.www.feedback.start(yt.getConfig('FEEDBACK_LOCALE_LANGUAGE'), yt.getConfig('FEEDBACK_LOCALE_EXTRAS'));"
-                            id="reportbug">バグの報告</a></li>
-
-                </ul>
-            </div>
-            <ul class="pickers">
-                <li>言語:
-                    <a href="#" onclick="yt.www.masthead.loadPicker('language-picker', ''); return false;">日本語</a>
-                </li>
-                <li>国/地域:
-                    <a href="#" onclick="yt.www.masthead.loadPicker('region-picker', ''); return false;">指定なし</a>
-                </li>
-            </ul>
-            <div id="picker-container"></div>
-            <div id="picker-loading" style="display: none">お待ちください... 現在日本語でしか利用できません...</div>
-
-
-        </div>
-
-    </div>
-
-
-
-
-    <div id="playlist-bar" class="hid passive editable"
-        data-video-url="/watch?v=&amp;feature=BFql&amp;playnext=1&amp;list=QL" data-list-id="" data-list-type="QL">
-        <div id="playlist-bar-bar-container">
-            <div id="playlist-bar-bar">
-                <div id="playlist-bar-notifications" style="display: none;"
-                    class="yt-alert yt-alert-success yt-alert-small yt-alert-naked yt-rounded "><img
-                        src="./img/pixel.gif" class="icon master-sprite" alt="アラート アイコン">
-                    <div class="yt-alert-content"></div>
-                </div>
-                <span id="playlist-bar-info"><span class="playlist-bar-active playlist-bar-group"><button
-                            onclick=";return false;" title="前の動画" type="button" id="playlist-bar-prev-button"
-                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-tooltip yt-uix-button-empty"
-                            role="button"><img class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-prev"
-                                src="./img/pixel.gif" alt=""></button><span class="playlist-bar-count">0 / <span
-                                class="item-count">0</span></span><button type="button"
-                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-empty"
-                            onclick=";return false;" id="playlist-bar-next-button" role="button"><img
-                                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-next" src="./img/pixel.gif"
-                                alt=""></button></span><span class="playlist-bar-active playlist-bar-group"><button
-                            type="button"
-                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-toggle yt-uix-button-empty"
-                            onclick=";return false;" id="playlist-bar-autoplay-button" role="button"><img
-                                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-autoplay"
-                                src="./img/pixel.gif" alt=""></button><button type="button"
-                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-toggle yt-uix-button-empty"
-                            onclick=";return false;" id="playlist-bar-shuffle-button" role="button"><img
-                                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-shuffle" src="./img/pixel.gif"
-                                alt=""></button></span><span class="playlist-bar-passive playlist-bar-group"><button
-                            onclick=";return false;" title="動画の再生" type="button" id="playlist-bar-play-button"
-                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-tooltip yt-uix-button-empty"
-                            role="button"><img class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-play"
-                                src="./img/pixel.gif" alt=""></button><span class="playlist-bar-count"><span
-                                class="item-count">0</span></span></span><span id="playlist-bar-title"
-                        class="yt-uix-button-group"><span class="playlist-title">保存されていない再生リスト</span></span></span>
-                <a id="playlist-bar-lists-back" href="#">
-                    再生中の再生リストに戻る
-                </a>
-
-                <span id="playlist-bar-controls"><span class="playlist-bar-group"><button type="button"
-                            class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-text yt-uix-button-empty"
-                            onclick=";return false;" id="playlist-bar-toggle-button" role="button"><img
-                                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-toggle" src="./img/pixel.gif"
-                                alt=""></button></span><span class="playlist-bar-group"><button type="button"
-                            class="yt-uix-tooltip yt-uix-tooltip-masked yt-uix-button-reverse flip yt-uix-button yt-uix-button-text"
-                            onclick=";return false;" data-button-menu-id="playlist-bar-options-menu"
-                            data-button-has-sibling-menu="true" role="button"><span class="yt-uix-button-content">オプション
-                            </span><img class="yt-uix-button-arrow" src="./img/pixel.gif" alt=""></button></span></span>
-            </div>
-        </div>
-
-        <div id="playlist-bar-tray-container">
-            <div id="playlist-bar-tray" class="yt-uix-slider yt-uix-slider-fluid"><button
-                    class="yt-uix-button playlist-bar-tray-button yt-uix-slider-prev" onclick="return false;"><img
-                        class="yt-uix-slider-prev-arrow" src="./img/pixel.gif" alt="前へ"></button><button
-                    class="yt-uix-button playlist-bar-tray-button yt-uix-slider-next" onclick="return false;"><img
-                        class="yt-uix-slider-next-arrow" src="./img/pixel.gif" alt="次へ"></button>
-                <div class="yt-uix-slider-body">
-                    <div id="playlist-bar-tray-content" class="yt-uix-slider-slide">
-                        <ol class="video-list"></ol>
-                        <ol id="playlist-bar-help">
-                            <li class="empty playlist-bar-help-message">キューが空です。このボタン <img src="./img/pixel.gif"
-                                    class="addto-button-help"> を使ってキューに動画を追加するか、<br><a
-                                    href="http://web.archive.org/web/20111110192655/https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Dja_JP%26next%3D%252Findex%253Fhl%253Dja&amp;hl=ja_JP&amp;ltmpl=sso">ログイン</a>して別のリストを読み込んでください。
-                            </li>
-                        </ol>
-                    </div>
-                    <div class="yt-uix-slider-shade-left"></div>
-                    <div class="yt-uix-slider-shade-right"></div>
-                </div>
-            </div>
-            <div id="playlist-bar-save"></div>
-            <div id="playlist-bar-lists" class="dark-lolz"></div>
-            <div id="playlist-bar-loading"><img src="./img/pixel.gif" alt="読み込んでいます..."><span
-                    id="playlist-bar-loading-message">読み込んでいます...</span><span id="playlist-bar-saving-message"
-                    class="hid">保存しています...</span></div>
-            <div id="playlist-bar-template" style="display: none;"
-                data-video-thumb-url="//i4.ytimg.com/vi/__video_encrypted_id__/default.jpg">
-                <!--<li class="playlist-bar-item yt-uix-slider-slide-unit __classes__" data-video-id="__video_encrypted_id__"><a href="__video_url__" title="__video_title__"><span class="video-thumb ux-thumb-96 "><span class="clip"><img src="//s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" alt="__video_title__" data-thumb-manual="true" data-thumb="__video_thumb_url__" ></span></span><span class="screen"></span><span class="count"><strong>__list_position__</strong></span><span class="play"><img src="//s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"></span><span class="yt-uix-button delete"><img class="yt-uix-button-icon-playlist-bar-delete" src="//s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" alt="削除"></span><span class="now-playing">再生中</span><span dir="ltr" class="title"><span>__video_title__  <span class="uploader">作成者: __video_username__</span>
-</span></span><span class="dragger"></span></a></li>-->
-            </div>
-            <div id="playlist-bar-next-up-template" style="display: none;">
-                <!--<div class="playlist-bar-next-thumb"><span class="video-thumb ux-thumb-64 "><span class="clip"><img src="//i4.ytimg.com/vi/__video_encrypted_id__/default.jpg" alt="サムネイル
-" ></span></span></div>-->
-            </div>
-        </div>
-        <div id="playlist-bar-options-menu" class="hid">
-
-            <div id="playlist-bar-extras-menu">
-                <ul>
-                    <li><span class="yt-uix-button-menu-item" data-action="clear">
-                            このリストの動画をすべて削除
-                        </span></li>
-                </ul>
-
-            </div>
-
-            <ul>
-                <li><span class="yt-uix-button-menu-item"
-                        onclick="window.location.href='http://web.archive.org/web/20111110192655/http://www.google.com/support/youtube/bin/answer.py?answer=146749'">詳細</span>
-                </li>
-            </ul>
-        </div>
-
-    </div>
-
-
-    <div id="shared-addto-menu" style="display: none;" class="hid sign-in">
-        <div class="addto-menu">
-            <form>
-                <div id="addto-list-panel" class="menu-panel active-panel">
-                    <span class="yt-uix-button-menu-item yt-uix-tooltip sign-in" data-possible-tooltip=""
-                        data-tooltip-show-delay="750">これを再生リストに追加するには<a class="sign-in-link">ログイン</a>してください
-                    </span>
-
-                </div>
-                <div id="addto-list-error-panel" class="menu-panel">
-                    <div class="panel-content">
-                        <img src="./img/pixel.gif">
-                        <span class="error-details"></span>
-                        <a class="show-menu-link">戻る</a>
-                    </div>
-                </div>
-
-                <div id="addto-note-input-panel" class="menu-panel">
-                    <div class="panel-content">
-                        <img src="./img/pixel.gif">
-                        <span class="message">再生リストに追加しました</span>
-                        <span class="addto-note-title yt-uix-tooltip" title="この再生リストの詳細"
-                            data-tooltip-show-delay="750"></span>
-                    </div>
-                    <div class="yt-uix-char-counter" data-char-limit="150">
-                        <div class="addto-note-box addto-text-box"><textarea id="addto-note"
-                                class="addto-note yt-uix-char-counter-input" maxlength="150"></textarea><label
-                                for="addto-note" class="addto-note-label">この動画について簡単に説明してください...</label></div><span
-                            class="yt-uix-char-counter-remaining">150</span>
-                    </div> <button disabled="disabled" type="button" class="playlist-save-note yt-uix-button"
-                        onclick=";return false;" role="button"><span class="yt-uix-button-content">メモを追加
+                  <div class="yt-uix-expander-head">
+                    <div id="watch-description-expand" class="expand">
+                      <button type="button" class="metadata-inline yt-uix-button" onclick=";return false;" role="button"
+                        aria-pressed="false"><span class="yt-uix-button-content">詳細 <img src="./img/pixel.gif"
+                            alt="Show more">
                         </span></button>
-                </div>
-                <div id="addto-note-saving-panel" class="menu-panel">
-                    <div class="panel-content loading-content">
-                        <img src="./img/pixel.gif">
-                        <span>保存しています...</span>
                     </div>
-                </div>
-                <div id="addto-note-saved-panel" class="menu-panel">
-                    <div class="panel-content">
-                        <img src="./img/pixel.gif">
-                        <span class="message">編集内容が保存されました。</span>
+                    <div id="watch-description-collapse" class="collapse">
+                      <button type="button" class="metadata-inline yt-uix-button" onclick=";return false;" role="button"
+                        aria-pressed="false"><span class="yt-uix-button-content">最小化 <img src="./img/pixel.gif"
+                            alt="Show less">
+                        </span></button>
                     </div>
-                </div>
-                <div id="addto-note-error-panel" class="menu-panel">
-                    <div class="panel-content">
-                        <img src="./img/pixel.gif">
-                        <span class="message">エラーが発生しました</span>
-                        <ul class="error-details"></ul>
-                        <a class="add-note-link">メモを追加</a>
-                    </div>
-                </div>
-                <div class="close-note hid">
-                    <img src="./img/pixel.gif" class="close-button">
+                  </div>
+
+
+
                 </div>
 
-            </form>
+              </div>
+              <div id="watch-discussion">
+
+
+
+                <div id="comments-view" class="comments-disabled">
+                  <div class="comments-section">
+                    <h4>コメント</h4>
+                    <div class="comments-disabled-message">
+                      <img
+                        src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/icon_comments_disabled-vflxokpZC.png">
+                      <span>コメントは未実装です</span>
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+            <div id="watch-sidebar">
+
+              <div id="watch-channel-brand-div" style="display:none" class="watch-module">
+                <div id="ad300x250" class="alignR"></div>
+                <div id="google_companion_ad_div" class="alignR"></div>
+                <div style="padding-top: 3px;display:none;">
+                  Advertisement
+                </div>
+              </div>
+
+
+
+              <div class="watch-module">
+                <div class="watch-module-body">
+
+                  <h4 class="first">関連動画</h4>
+                  <ul id="watch-related" class="video-list">
+                    <div id="ppv-container" class="hid">
+                      <li class="video-list-item "><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                          class="video-list-item-link "
+                          onmousedown="yt.analytics.urchinTracker('/Events/Home/PersonalizedHome/FEA/Logged_Out');"><span
+                            class="ux-thumb-wrap contains-addto "><span class="video-thumb ux-thumb-110 "><span
+                                class="clip"><img src="./img/default.jpg" alt="サムネイル
+" data-thumb="./img/default.jpg" data-group-key="thumb-group-0"></span></span><span
+                              class="video-time">00:00</span><button type="button"
+                              class="addto-button short video-actions yt-uix-button yt-uix-button-short"
+                              onclick=";return false;" data-button-menu-action="yt.www.lists.addto.toggleMenu"
+                              data-button-menu-id="shared-addto-menu" data-video-ids="kPhUSVCcG6c"
+                              data-feature="thumbnail" role="button"><img
+                                class="yt-uix-button-icon yt-uix-button-icon-addto" src="./img/pixel.gif" alt=""><span
+                                class="yt-uix-button-content"><span class="addto-label">追加先</span>
+                              </span><img class="yt-uix-button-arrow" src="./img/pixel.gif" alt=""></button></span><span
+                            dir="ltr" class="title" title="Test1">Test1</span><span class="stat">ユーザー: User1</span><span
+                            class="stat view-count">再生回数
+                            00,000 回
+                          </span></a></li>
+
+                      <span class="featured-label">Featured Video</span>
+                    </div>
+
+                  </ul>
+                  <ul id="watch-more-related" class="video-list hid">
+                    <span id="watch-more-related-loading">
+                      Loading more suggestions...
+                    </span>
+                  </ul>
+                  <button type="button" id="watch-more-related-button" onclick=";return false;" class=" yt-uix-button"
+                    data-button-action="yt.www.watch.watch5.handleLoadMoreRelated" role="button"
+                    aria-pressed="false"><span class="yt-uix-button-content">Load more
+                      suggestions</span></button>
+                </div>
+              </div>
+
+            </div>
+            <div class="clear"></div>
+          </div>
+          <div style="visibility: hidden; height: 0px; padding: 0px; overflow: hidden;">
+            <img
+              src="https://web.archive.org/web/20110813042442im_/http://www.youtube-nocookie.com/gen_204?attributionpartner=TheStation%2Buser"
+              width="1" height="1" border="0">
+            <img
+              src="https://web.archive.org/web/20110813042442im_/http://www.youtube-nocookie.com/robots.txt?attributionpartner=TheStation%2Buser&amp;v=ZgS2mdBL3Rk"
+              width="1" height="1" border="0">
+
+
+
+            <div id="baseDiv"></div>
+
+          </div>
+        </div>
+        <!-- end watch-main-container -->
+      </div>
+
+    </div>
+    <!-- end content -->
+  </div>
+  <!-- begin pagebottom -->
+  <div id="footer-container">
+    <div id="footer">
+      <ul class="footer-links">
+        <li><a
+            href="//web.archive.org/web/20111110192655/http://www.google.com/support/youtube/bin/static.py?p=homepage&amp;page=start.cs&amp;hl=ja_JP"
+            onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Help');">ヘルプ</a>
+        </li>
+        <li><a href="/web/20111110192655/http://www.youtube.com/t/about_youtube"
+            onmousedown="yt.analytics.trackEvent('Footer', 'link', 'About');">NowTube について</a></li>
+        <li><a href="/web/20111110192655/http://www.youtube.com/t/press"
+            onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Press');">プレス ルーム</a></li>
+        <li><a href="/web/20111110192655/http://www.youtube.com/t/copyright_center"
+            onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Copyright');">著作権</a></li>
+        <li><a href="/web/20111110192655/http://www.youtube.com/creators"
+            onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Creators');">動画の作成とパートナー</a></li>
+        <li><a href="/web/20111110192655/http://www.youtube.com/t/advertising_overview"
+            onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Advertising');">広告</a></li>
+        <li><a href="/web/20111110192655/http://www.youtube.com/dev">開発者</a></li>
+        <li><a
+            href="//web.archive.org/web/20111110192655/http://www.google.com/support/youtube/bin/request.py?contact_type=abuse&amp;hl=ja_JP"
+            onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Safety');">安全性</a></li>
+        <li><a href="/web/20111110192655/http://www.youtube.com/t/privacy_at_youtube"
+            onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Privacy');">プライバシー</a></li>
+        <li><a href="/web/20111110192655/http://www.youtube.com/t/terms"
+            onmousedown="yt.analytics.trackEvent('Footer', 'link', 'Terms');">規約</a></li>
+      </ul>
+
+      <div class="footer-info">
+        <span dir="ltr">© 2026 NowTube</span>
+
+        <ul class="pickers">
+          <li><a href="//web.archive.org/web/20111110192655/http://www.google.com/tools/feedback/intl/ja/error.html"
+              onclick="return yt.www.feedback.start(yt.getConfig('FEEDBACK_LOCALE_LANGUAGE'), yt.getConfig('FEEDBACK_LOCALE_EXTRAS'));"
+              id="reportbug">バグの報告</a></li>
+
+        </ul>
+      </div>
+      <ul class="pickers">
+        <li>言語:
+          <a href="#" onclick="yt.www.masthead.loadPicker('language-picker', ''); return false;">日本語</a>
+        </li>
+        <li>国/地域:
+          <a href="#" onclick="yt.www.masthead.loadPicker('region-picker', ''); return false;">指定なし</a>
+        </li>
+      </ul>
+      <div id="picker-container"></div>
+      <div id="picker-loading" style="display: none">お待ちください... 現在日本語でしか利用できません...</div>
+
+
+    </div>
+
+  </div>
+
+
+
+
+  <div id="playlist-bar" class="hid passive editable"
+    data-video-url="/watch?v=&amp;feature=BFql&amp;playnext=1&amp;list=QL" data-list-id="" data-list-type="QL">
+    <div id="playlist-bar-bar-container">
+      <div id="playlist-bar-bar">
+        <div id="playlist-bar-notifications" style="display: none;"
+          class="yt-alert yt-alert-success yt-alert-small yt-alert-naked yt-rounded "><img src="./img/pixel.gif"
+            class="icon master-sprite" alt="アラート アイコン">
+          <div class="yt-alert-content"></div>
+        </div>
+        <span id="playlist-bar-info"><span class="playlist-bar-active playlist-bar-group"><button
+              onclick=";return false;" title="前の動画" type="button" id="playlist-bar-prev-button"
+              class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+              role="button"><img class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-prev" src="./img/pixel.gif"
+                alt=""></button><span class="playlist-bar-count">0 / <span class="item-count">0</span></span><button
+              type="button" class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-empty"
+              onclick=";return false;" id="playlist-bar-next-button" role="button"><img
+                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-next" src="./img/pixel.gif"
+                alt=""></button></span><span class="playlist-bar-active playlist-bar-group"><button type="button"
+              class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-toggle yt-uix-button-empty"
+              onclick=";return false;" id="playlist-bar-autoplay-button" role="button"><img
+                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-autoplay" src="./img/pixel.gif"
+                alt=""></button><button type="button"
+              class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-toggle yt-uix-button-empty"
+              onclick=";return false;" id="playlist-bar-shuffle-button" role="button"><img
+                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-shuffle" src="./img/pixel.gif"
+                alt=""></button></span><span class="playlist-bar-passive playlist-bar-group"><button
+              onclick=";return false;" title="動画の再生" type="button" id="playlist-bar-play-button"
+              class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-tooltip yt-uix-button-empty"
+              role="button"><img class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-play" src="./img/pixel.gif"
+                alt=""></button><span class="playlist-bar-count"><span class="item-count">0</span></span></span><span
+            id="playlist-bar-title" class="yt-uix-button-group"><span
+              class="playlist-title">保存されていない再生リスト</span></span></span>
+        <a id="playlist-bar-lists-back" href="#">
+          再生中の再生リストに戻る
+        </a>
+
+        <span id="playlist-bar-controls"><span class="playlist-bar-group"><button type="button"
+              class="yt-uix-tooltip yt-uix-tooltip-masked  yt-uix-button yt-uix-button-text yt-uix-button-empty"
+              onclick=";return false;" id="playlist-bar-toggle-button" role="button"><img
+                class="yt-uix-button-icon yt-uix-button-icon-playlist-bar-toggle" src="./img/pixel.gif"
+                alt=""></button></span><span class="playlist-bar-group"><button type="button"
+              class="yt-uix-tooltip yt-uix-tooltip-masked yt-uix-button-reverse flip yt-uix-button yt-uix-button-text"
+              onclick=";return false;" data-button-menu-id="playlist-bar-options-menu"
+              data-button-has-sibling-menu="true" role="button"><span class="yt-uix-button-content">オプション
+              </span><img class="yt-uix-button-arrow" src="./img/pixel.gif" alt=""></button></span></span>
+      </div>
+    </div>
+
+    <div id="playlist-bar-tray-container">
+      <div id="playlist-bar-tray" class="yt-uix-slider yt-uix-slider-fluid"><button
+          class="yt-uix-button playlist-bar-tray-button yt-uix-slider-prev" onclick="return false;"><img
+            class="yt-uix-slider-prev-arrow" src="./img/pixel.gif" alt="前へ"></button><button
+          class="yt-uix-button playlist-bar-tray-button yt-uix-slider-next" onclick="return false;"><img
+            class="yt-uix-slider-next-arrow" src="./img/pixel.gif" alt="次へ"></button>
+        <div class="yt-uix-slider-body">
+          <div id="playlist-bar-tray-content" class="yt-uix-slider-slide">
+            <ol class="video-list"></ol>
+            <ol id="playlist-bar-help">
+              <li class="empty playlist-bar-help-message">キューが空です。このボタン <img src="./img/pixel.gif"
+                  class="addto-button-help"> を使ってキューに動画を追加するか、<br><a
+                  href="http://web.archive.org/web/20111110192655/https://accounts.google.com/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Dja_JP%26next%3D%252Findex%253Fhl%253Dja&amp;hl=ja_JP&amp;ltmpl=sso">ログイン</a>して別のリストを読み込んでください。
+              </li>
+            </ol>
+          </div>
+          <div class="yt-uix-slider-shade-left"></div>
+          <div class="yt-uix-slider-shade-right"></div>
+        </div>
+      </div>
+      <div id="playlist-bar-save"></div>
+      <div id="playlist-bar-lists" class="dark-lolz"></div>
+      <div id="playlist-bar-loading"><img src="./img/pixel.gif" alt="読み込んでいます..."><span
+          id="playlist-bar-loading-message">読み込んでいます...</span><span id="playlist-bar-saving-message"
+          class="hid">保存しています...</span></div>
+      <div id="playlist-bar-template" style="display: none;"
+        data-video-thumb-url="//i4.ytimg.com/vi/__video_encrypted_id__/default.jpg">
+        <!--<li class="playlist-bar-item yt-uix-slider-slide-unit __classes__" data-video-id="__video_encrypted_id__"><a href="__video_url__" title="__video_title__"><span class="video-thumb ux-thumb-96 "><span class="clip"><img src="//s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" alt="__video_title__" data-thumb-manual="true" data-thumb="__video_thumb_url__" ></span></span><span class="screen"></span><span class="count"><strong>__list_position__</strong></span><span class="play"><img src="//s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"></span><span class="yt-uix-button delete"><img class="yt-uix-button-icon-playlist-bar-delete" src="//s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif" alt="削除"></span><span class="now-playing">再生中</span><span dir="ltr" class="title"><span>__video_title__  <span class="uploader">作成者: __video_username__</span>
+</span></span><span class="dragger"></span></a></li>-->
+      </div>
+      <div id="playlist-bar-next-up-template" style="display: none;">
+        <!--<div class="playlist-bar-next-thumb"><span class="video-thumb ux-thumb-64 "><span class="clip"><img src="//i4.ytimg.com/vi/__video_encrypted_id__/default.jpg" alt="サムネイル
+" ></span></span></div>-->
+      </div>
+    </div>
+    <div id="playlist-bar-options-menu" class="hid">
+
+      <div id="playlist-bar-extras-menu">
+        <ul>
+          <li><span class="yt-uix-button-menu-item" data-action="clear">
+              このリストの動画をすべて削除
+            </span></li>
+        </ul>
+
+      </div>
+
+      <ul>
+        <li><span class="yt-uix-button-menu-item"
+            onclick="window.location.href='http://web.archive.org/web/20111110192655/http://www.google.com/support/youtube/bin/answer.py?answer=146749'">詳細</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <div id="shared-addto-menu" style="display: none;" class="hid sign-in">
+    <div class="addto-menu">
+      <form>
+        <div id="addto-list-panel" class="menu-panel active-panel">
+          <span class="yt-uix-button-menu-item yt-uix-tooltip sign-in" data-possible-tooltip=""
+            data-tooltip-show-delay="750">これを再生リストに追加するには<a class="sign-in-link">ログイン</a>してください
+          </span>
+
+        </div>
+        <div id="addto-list-error-panel" class="menu-panel">
+          <div class="panel-content">
+            <img src="./img/pixel.gif">
+            <span class="error-details"></span>
+            <a class="show-menu-link">戻る</a>
+          </div>
         </div>
 
+        <div id="addto-note-input-panel" class="menu-panel">
+          <div class="panel-content">
+            <img src="./img/pixel.gif">
+            <span class="message">再生リストに追加しました</span>
+            <span class="addto-note-title yt-uix-tooltip" title="この再生リストの詳細" data-tooltip-show-delay="750"></span>
+          </div>
+          <div class="yt-uix-char-counter" data-char-limit="150">
+            <div class="addto-note-box addto-text-box"><textarea id="addto-note"
+                class="addto-note yt-uix-char-counter-input" maxlength="150"></textarea><label for="addto-note"
+                class="addto-note-label">この動画について簡単に説明してください...</label></div><span
+              class="yt-uix-char-counter-remaining">150</span>
+          </div> <button disabled="disabled" type="button" class="playlist-save-note yt-uix-button"
+            onclick=";return false;" role="button"><span class="yt-uix-button-content">メモを追加
+            </span></button>
+        </div>
+        <div id="addto-note-saving-panel" class="menu-panel">
+          <div class="panel-content loading-content">
+            <img src="./img/pixel.gif">
+            <span>保存しています...</span>
+          </div>
+        </div>
+        <div id="addto-note-saved-panel" class="menu-panel">
+          <div class="panel-content">
+            <img src="./img/pixel.gif">
+            <span class="message">編集内容が保存されました。</span>
+          </div>
+        </div>
+        <div id="addto-note-error-panel" class="menu-panel">
+          <div class="panel-content">
+            <img src="./img/pixel.gif">
+            <span class="message">エラーが発生しました</span>
+            <ul class="error-details"></ul>
+            <a class="add-note-link">メモを追加</a>
+          </div>
+        </div>
+        <div class="close-note hid">
+          <img src="./img/pixel.gif" class="close-button">
+        </div>
+
+      </form>
     </div>
 
-
-
-    <!-- end pagebottom -->
-
-    </div>
-    <!-- end page -->
-    <script>
-        yt.setConfig('TIMING_ACTION', 'index');
-    </script>
+  </div>
 
 
 
-    <script>
+  <!-- end pagebottom -->
+
+  </div>
+  <!-- end page -->
+  <script>
+    yt.setConfig('TIMING_ACTION', 'index');
+  </script>
 
 
 
-        yt.setMsg({
-            'LIST_CLEARED': "\u30ea\u30b9\u30c8\u3092\u6d88\u53bb\u3057\u307e\u3057\u305f",
-            'PLAYLIST_VIDEO_DELETED': "\u52d5\u753b\u3092\u524a\u9664\u3057\u307e\u3057\u305f\u3002",
-            'ERROR_OCCURRED': "\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002",
-            'NEXT_VIDEO_TOOLTIP': "\u6b21\u306e\u52d5\u753b:\u003cbr\u003e \u0026#8220;${next_video_title}\u0026#8221;",
-            'NEXT_VIDEO_NOTHUMB_TOOLTIP': "\u6b21\u306e\u52d5\u753b",
-            'SHOW_PLAYLIST_TOOLTIP': "\u518d\u751f\u30ea\u30b9\u30c8\u3092\u8868\u793a\u3057\u307e\u3059",
-            'HIDE_PLAYLIST_TOOLTIP': "\u518d\u751f\u30ea\u30b9\u30c8\u3092\u975e\u8868\u793a\u306b\u3057\u307e\u3059",
-            'AUTOPLAY_ON_TOOLTIP': "\u81ea\u52d5\u518d\u751f\u3092\u30aa\u30d5\u306b\u3059\u308b",
-            'AUTOPLAY_OFF_TOOLTIP': "\u81ea\u52d5\u518d\u751f\u3092\u30aa\u30f3\u306b\u3059\u308b",
-            'SHUFFLE_ON_TOOLTIP': "\u30b7\u30e3\u30c3\u30d5\u30eb\u3092\u30aa\u30d5\u306b\u3059\u308b",
-            'SHUFFLE_OFF_TOOLTIP': "\u30b7\u30e3\u30c3\u30d5\u30eb\u3092\u30aa\u30f3\u306b\u3059\u308b",
-            'PLAYLIST_BAR_PLAYLIST_SAVED': "\u518d\u751f\u30ea\u30b9\u30c8\u304c\u4fdd\u5b58\u3055\u308c\u307e\u3057\u305f\u3002",
-            'PLAYLIST_BAR_ADDED_TO_FAVORITES': "\u304a\u6c17\u306b\u5165\u308a\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f",
-            'PLAYLIST_BAR_ADDED_TO_PLAYLIST': "\u518d\u751f\u30ea\u30b9\u30c8\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f",
-            'PLAYLIST_BAR_ADDED_TO_QUEUE': "\u30ad\u30e5\u30fc\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f",
-            'AUTOPLAY_WARNING1': "\u6b21\u306e\u52d5\u753b\u306f 1 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
-            'AUTOPLAY_WARNING2': "\u6b21\u306e\u52d5\u753b\u306f 2 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
-            'AUTOPLAY_WARNING3': "\u6b21\u306e\u52d5\u753b\u306f 3 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
-            'AUTOPLAY_WARNING4': "\u6b21\u306e\u52d5\u753b\u306f 4 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
-            'AUTOPLAY_WARNING5': "\u6b21\u306e\u52d5\u753b\u306f 5 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
-            'UNDO_LINK': "\u5143\u306b\u623b\u3059"
-        });
-
-
-        yt.setConfig({
-            'DRAGDROP_BINARY_URL': "\/\/web.archive.org\/web\/20111110192655\/http:\/\/s.ytimg.com\/yt\/jsbin\/www-dragdrop-vfl2-I9H_.js",
-            'PLAYLIST_BAR_PLAYING_INDEX': -1,
-            'LIST_COPY_ON_EDIT_ENABLED': false
-        });
-
-        yt.net.ajax.setToken('addto_ajax_logged_out', "YX03RLALVDZzxOf7MSWmgcOnAIp8MEAxMzIwOTUzMjE1");
-
-        yt.pubsub.subscribe('init', yt.www.lists.init);
+  <script>
 
 
 
+    yt.setMsg({
+      'LIST_CLEARED': "\u30ea\u30b9\u30c8\u3092\u6d88\u53bb\u3057\u307e\u3057\u305f",
+      'PLAYLIST_VIDEO_DELETED': "\u52d5\u753b\u3092\u524a\u9664\u3057\u307e\u3057\u305f\u3002",
+      'ERROR_OCCURRED': "\u30a8\u30e9\u30fc\u304c\u767a\u751f\u3057\u307e\u3057\u305f\u3002",
+      'NEXT_VIDEO_TOOLTIP': "\u6b21\u306e\u52d5\u753b:\u003cbr\u003e \u0026#8220;${next_video_title}\u0026#8221;",
+      'NEXT_VIDEO_NOTHUMB_TOOLTIP': "\u6b21\u306e\u52d5\u753b",
+      'SHOW_PLAYLIST_TOOLTIP': "\u518d\u751f\u30ea\u30b9\u30c8\u3092\u8868\u793a\u3057\u307e\u3059",
+      'HIDE_PLAYLIST_TOOLTIP': "\u518d\u751f\u30ea\u30b9\u30c8\u3092\u975e\u8868\u793a\u306b\u3057\u307e\u3059",
+      'AUTOPLAY_ON_TOOLTIP': "\u81ea\u52d5\u518d\u751f\u3092\u30aa\u30d5\u306b\u3059\u308b",
+      'AUTOPLAY_OFF_TOOLTIP': "\u81ea\u52d5\u518d\u751f\u3092\u30aa\u30f3\u306b\u3059\u308b",
+      'SHUFFLE_ON_TOOLTIP': "\u30b7\u30e3\u30c3\u30d5\u30eb\u3092\u30aa\u30d5\u306b\u3059\u308b",
+      'SHUFFLE_OFF_TOOLTIP': "\u30b7\u30e3\u30c3\u30d5\u30eb\u3092\u30aa\u30f3\u306b\u3059\u308b",
+      'PLAYLIST_BAR_PLAYLIST_SAVED': "\u518d\u751f\u30ea\u30b9\u30c8\u304c\u4fdd\u5b58\u3055\u308c\u307e\u3057\u305f\u3002",
+      'PLAYLIST_BAR_ADDED_TO_FAVORITES': "\u304a\u6c17\u306b\u5165\u308a\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f",
+      'PLAYLIST_BAR_ADDED_TO_PLAYLIST': "\u518d\u751f\u30ea\u30b9\u30c8\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f",
+      'PLAYLIST_BAR_ADDED_TO_QUEUE': "\u30ad\u30e5\u30fc\u306b\u8ffd\u52a0\u3057\u307e\u3057\u305f",
+      'AUTOPLAY_WARNING1': "\u6b21\u306e\u52d5\u753b\u306f 1 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+      'AUTOPLAY_WARNING2': "\u6b21\u306e\u52d5\u753b\u306f 2 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+      'AUTOPLAY_WARNING3': "\u6b21\u306e\u52d5\u753b\u306f 3 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+      'AUTOPLAY_WARNING4': "\u6b21\u306e\u52d5\u753b\u306f 4 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+      'AUTOPLAY_WARNING5': "\u6b21\u306e\u52d5\u753b\u306f 5 \u79d2\u5f8c\u306b\u59cb\u307e\u308a\u307e\u3059...",
+      'UNDO_LINK': "\u5143\u306b\u623b\u3059"
+    });
 
 
-        yt.www.thumbnaildelayload.init();
+    yt.setConfig({
+      'DRAGDROP_BINARY_URL': "\/\/web.archive.org\/web\/20111110192655\/http:\/\/s.ytimg.com\/yt\/jsbin\/www-dragdrop-vfl2-I9H_.js",
+      'PLAYLIST_BAR_PLAYING_INDEX': -1,
+      'LIST_COPY_ON_EDIT_ENABLED': false
+    });
+
+    yt.net.ajax.setToken('addto_ajax_logged_out', "YX03RLALVDZzxOf7MSWmgcOnAIp8MEAxMzIwOTUzMjE1");
+
+    yt.pubsub.subscribe('init', yt.www.lists.init);
 
 
 
 
-        yt.events.listen(_gel('masthead-search-term'), 'focus', yt.www.home.ads.workaroundReset);
+
+    yt.www.thumbnaildelayload.init();
 
 
 
-        if (_gel('masthead-search')) {
-            yt.setTimeout(function () {
-                window.yt.www.suggest.install(_gel('masthead-search'),
-                    _gel('masthead-search')['search_query'],
-                    'ja',
-                    '閉じる',
-                    '',
-                    'ウェブ検索',
-                    -1,
-                    null);
-            }, 100);
-        }
 
-    </script>
+    yt.events.listen(_gel('masthead-search-term'), 'focus', yt.www.home.ads.workaroundReset);
 
-    <table id="completeTable" class="yt-suggest-table" style="visibility: hidden; left: 247px; top: 43px; width: 309px;"
-        cellspacing="0" cellpadding="0"></table><iframe id="yt-suggest-iframe"
-        allow="autoplay 'self'; fullscreen 'self'"
-        style="left: 247px; top: 43px; width: 309px; height: 0px; visibility: hidden;"></iframe>
-    <script src="./js/videos.js"></script>
-    <script src="./js/nav-auth.js"></script>
+
+
+    if (_gel('masthead-search')) {
+      yt.setTimeout(function () {
+        window.yt.www.suggest.install(_gel('masthead-search'),
+          _gel('masthead-search')['search_query'],
+          'ja',
+          '閉じる',
+          '',
+          'ウェブ検索',
+          -1,
+          null);
+      }, 100);
+    }
+
+  </script>
+
+  <table id="completeTable" class="yt-suggest-table" style="visibility: hidden; left: 247px; top: 43px; width: 309px;"
+    cellspacing="0" cellpadding="0"></table><iframe id="yt-suggest-iframe" allow="autoplay 'self'; fullscreen 'self'"
+    style="left: 247px; top: 43px; width: 309px; height: 0px; visibility: hidden;"></iframe>
+  <script src="./js/videos.js"></script>
+  <script src="./js/nav-auth.js"></script>
 </body>
 
 </html>
