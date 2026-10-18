@@ -1,64 +1,214 @@
-(function(){
-'use strict';
-var params=new URLSearchParams(location.search);
-var username=params.get('user');
-var $=function(id){return document.getElementById(id);};
-var state=null;
-function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);});}
-function views(v){var n=Number(v);return (Number.isFinite(n)&&n>=0?n:0).toLocaleString('ja-JP');}
-function duration(v){var n=Number(v);if(!Number.isFinite(n)||n<0)return '';n=Math.floor(n);var h=Math.floor(n/3600),m=Math.floor(n%3600/60),s=n%60;return h?h+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0'):m+':'+String(s).padStart(2,'0');}
-function showMessage(text,isError){$('message').hidden=false;$('message').textContent=text;$('message').style.color=isError?'#900':'#444';}
-function render(){
- var c=state.channel;
- $('channel-name').textContent=c.username+' のチャンネル';
- $('subscriber-count').textContent=views(state.subscriberCount);
- $('video-count').textContent=views(state.videoCount);
- $('description').textContent=c.description||'このチャンネルにはまだ説明がありません。';
- $('channel-content').hidden=false;$('message').hidden=true;
- $('subscribe-button').hidden=state.isOwner;
- $('edit-button').hidden=!state.isOwner;
- $('action-note').textContent=state.isOwner?'自分のチャンネルです。':(!state.isLoggedIn?'チャンネル登録にはログインが必要です。':'');
- $('subscribe-button').textContent=state.isSubscribed?'チャンネル登録解除':'チャンネル登録';
- var list=$('videos');
- if(!state.videos.length){list.innerHTML='<div class="empty">このチャンネルにはまだ動画がありません。</div>';return;}
- list.innerHTML=state.videos.map(function(v){
-  var img=v.thumbnailUrl||'./img/default.jpg';
-  return '<article class="video-card"><a href="./watch.html?id='+encodeURIComponent(v.id)+'"><img src="'+esc(img)+'" alt="" loading="lazy" onerror="this.src=\\'./img/default.jpg\\'"></a><a class="v-title" href="./watch.html?id='+encodeURIComponent(v.id)+'">'+esc(v.title)+'</a><div class="v-meta">'+views(v.viewCount)+' 回再生'+(duration(v.duration)?' ・ '+esc(duration(v.duration)):'')+'</div></article>';
- }).join('');
-}
-async function load(){
- try{
-  if(!username){
-   var me=await fetch('/api/me',{cache:'no-store'}).then(function(r){return r.json();});
-   if(!me.user){location.href='./login.html?next='+encodeURIComponent('./channel.html');return;}
-   username=me.user.username;
-   history.replaceState(null,'','./channel.html?user='+encodeURIComponent(username));
+(() => {
+  const $ = (id) => document.getElementById(id);
+  const message = $('message');
+  const content = $('channel-content');
+
+  function showMessage(text, isError = false) {
+    if (!message) return;
+    message.hidden = false;
+    message.textContent = text;
+    message.style.color = isError ? '#b00020' : '#444';
   }
-  var r=await fetch('/api/channel?username='+encodeURIComponent(username),{cache:'no-store'});
-  var d=await r.json();if(!r.ok)throw new Error(d.error||'チャンネルを読み込めません。');
-  state=d;render();
- }catch(e){showMessage(e.message||'チャンネルを読み込めませんでした。',true);}
-}
-$('subscribe-button').addEventListener('click',async function(){
- if(!state)return;
- if(!state.isLoggedIn){location.href='./login.html?next='+encodeURIComponent(location.pathname+location.search);return;}
- var b=$('subscribe-button');b.disabled=true;
- try{
-  var r=await fetch('/api/subscribe',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({username:state.channel.username})});
-  var d=await r.json();if(r.status===401){location.href='./login.html?next='+encodeURIComponent(location.pathname+location.search);return;}
-  if(!r.ok)throw new Error(d.error||'チャンネル登録を変更できませんでした。');
-  state.isSubscribed=d.isSubscribed;state.subscriberCount=d.subscriberCount;render();
- }catch(e){$('action-note').textContent=e.message;}finally{b.disabled=false;}
-});
-$('edit-button').addEventListener('click',function(){$('description-editor').value=state.channel.description||'';$('editor-wrap').hidden=false;$('description').hidden=true;$('edit-button').hidden=true;});
-$('cancel-description').addEventListener('click',function(){$('editor-wrap').hidden=true;$('description').hidden=false;$('edit-button').hidden=false;});
-$('save-description').addEventListener('click',async function(){
- var b=$('save-description');b.disabled=true;
- try{
-  var r=await fetch('/api/channel-update',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({description:$('description-editor').value})});
-  var d=await r.json();if(!r.ok)throw new Error(d.error||'保存に失敗しました。');
-  state.channel.description=d.description;$('description').textContent=d.description||'このチャンネルにはまだ説明がありません。';$('editor-wrap').hidden=true;$('description').hidden=false;$('edit-button').hidden=false;$('action-note').textContent='チャンネル説明を保存しました。';
- }catch(e){$('action-note').textContent=e.message;}finally{b.disabled=false;}
-});
-load();
+
+  async function requestJSON(url, options = {}) {
+    const response = await fetch(url, {
+      credentials: 'same-origin',
+      ...options,
+      headers: {
+        ...(options.body ? { 'Content-Type': 'application/json' } : {}),
+        ...(options.headers || {})
+      }
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(data.error || `通信エラー (${response.status})`);
+    }
+    return data;
+  }
+
+  function makeVideoCard(video) {
+    const card = document.createElement('div');
+    card.className = 'video-card';
+
+    const link = document.createElement('a');
+    // Use the site's existing watch page if it exists.
+    link.href = `./watch.html?v=${encodeURIComponent(video.id)}`;
+
+    const img = document.createElement('img');
+    img.src = video.thumbnailUrl || './img/default-thumbnail.jpg';
+    img.alt = '';
+    img.loading = 'lazy';
+    img.onerror = () => { img.style.display = 'none'; };
+    link.appendChild(img);
+
+    const title = document.createElement('span');
+    title.className = 'v-title';
+    title.textContent = video.title || 'タイトルなし';
+    link.appendChild(title);
+    card.appendChild(link);
+
+    const meta = document.createElement('div');
+    meta.className = 'v-meta';
+    const views = Number(video.viewCount || 0).toLocaleString('ja-JP');
+    const date = video.createdAt ? new Date(video.createdAt) : null;
+    const dateText = date && !Number.isNaN(date.getTime())
+      ? ` ・ ${date.toLocaleDateString('ja-JP')}` : '';
+    meta.textContent = `再生回数 ${views} 回${dateText}`;
+    card.appendChild(meta);
+    return card;
+  }
+
+  function showEmpty(container, text) {
+    const el = document.createElement('div');
+    el.className = 'empty';
+    el.textContent = text;
+    container.replaceChildren(el);
+  }
+
+  async function main() {
+    try {
+      const params = new URLSearchParams(location.search);
+      let username = (params.get('user') || params.get('username') || '').trim();
+
+      // No username in the URL means "my channel".
+      if (!username) {
+        let me;
+        try {
+          me = await requestJSON('/api/me');
+        } catch (error) {
+          if (error.message) throw error;
+          throw new Error('ログイン状態を確認できませんでした。');
+        }
+        const currentUser = me.user || me;
+        username = String(currentUser.username || '').trim();
+        if (!username) {
+          location.href = './login.html';
+          return;
+        }
+        history.replaceState(null, '', `./channel.html?user=${encodeURIComponent(username)}`);
+      }
+
+      const data = await requestJSON(`/api/channel?username=${encodeURIComponent(username)}`);
+      const channel = data.channel;
+      if (!channel) throw new Error('チャンネル情報が見つかりませんでした。');
+
+      $('channel-name').textContent = channel.username || username;
+      document.title = `${channel.username || username} のチャンネル - NowTube`;
+      $('subscriber-count').textContent = Number(data.subscriberCount || 0).toLocaleString('ja-JP');
+      $('video-count').textContent = Number(data.videoCount || 0).toLocaleString('ja-JP');
+
+      const description = $('description');
+      description.textContent = channel.description || '';
+      if (!channel.description) {
+        description.textContent = data.isOwner
+          ? 'まだチャンネルの説明がありません。説明を追加してみよう！'
+          : 'このチャンネルにはまだ説明がありません。';
+      }
+
+      const editButton = $('edit-button');
+      const editorWrap = $('editor-wrap');
+      const editor = $('description-editor');
+      const saveButton = $('save-description');
+      const cancelButton = $('cancel-description');
+      const actionNote = $('action-note');
+
+      if (data.isOwner) {
+        editButton.hidden = false;
+        editButton.addEventListener('click', () => {
+          editor.value = channel.description || '';
+          editorWrap.hidden = false;
+          description.hidden = true;
+          editButton.hidden = true;
+          actionNote.textContent = '';
+          editor.focus();
+        });
+
+        cancelButton.addEventListener('click', () => {
+          editorWrap.hidden = true;
+          description.hidden = false;
+          editButton.hidden = false;
+          actionNote.textContent = '';
+        });
+
+        saveButton.addEventListener('click', async () => {
+          saveButton.disabled = true;
+          actionNote.textContent = '保存しています…';
+          try {
+            const updated = await requestJSON('/api/channel-update', {
+              method: 'POST',
+              body: JSON.stringify({ description: editor.value })
+            });
+            channel.description = updated.description ?? updated.channel?.description ?? editor.value;
+            description.textContent = channel.description || 'まだチャンネルの説明がありません。';
+            editorWrap.hidden = true;
+            description.hidden = false;
+            editButton.hidden = false;
+            actionNote.textContent = '説明を保存しました。';
+          } catch (error) {
+            actionNote.textContent = error.message || '保存できませんでした。';
+          } finally {
+            saveButton.disabled = false;
+          }
+        });
+      }
+
+      const subscribeButton = $('subscribe-button');
+      if (data.isLoggedIn && !data.isOwner) {
+        subscribeButton.hidden = false;
+        const updateSubscribeLabel = () => {
+          subscribeButton.textContent = data.isSubscribed ? 'チャンネル登録済み' : 'チャンネル登録';
+        };
+        updateSubscribeLabel();
+        subscribeButton.addEventListener('click', async () => {
+          subscribeButton.disabled = true;
+          try {
+            const result = await requestJSON('/api/subscribe', {
+              method: 'POST',
+              body: JSON.stringify({ channelId: channel.id })
+            });
+            data.isSubscribed = typeof result.isSubscribed === 'boolean'
+              ? result.isSubscribed
+              : !data.isSubscribed;
+            if (typeof result.subscriberCount === 'number') {
+              $('subscriber-count').textContent = result.subscriberCount.toLocaleString('ja-JP');
+            } else {
+              $('subscriber-count').textContent = Math.max(
+                0,
+                Number($('subscriber-count').textContent.replace(/,/g, '')) + (data.isSubscribed ? 1 : -1)
+              ).toLocaleString('ja-JP');
+            }
+            updateSubscribeLabel();
+          } catch (error) {
+            actionNote.textContent = error.message || 'チャンネル登録を更新できませんでした。';
+          } finally {
+            subscribeButton.disabled = false;
+          }
+        });
+      } else if (!data.isLoggedIn && !data.isOwner) {
+        actionNote.textContent = 'チャンネル登録するにはログインしてください。';
+      }
+
+      const videos = $('videos');
+      videos.replaceChildren();
+      if (Array.isArray(data.videos) && data.videos.length) {
+        data.videos.forEach((video) => videos.appendChild(makeVideoCard(video)));
+      } else {
+        showEmpty(videos, 'このチャンネルにはまだ動画がありません。');
+      }
+
+      content.hidden = false;
+      message.hidden = true;
+    } catch (error) {
+      console.error('NowTube channel page error:', error);
+      showMessage(`チャンネルを表示できませんでした。${error.message ? ` ${error.message}` : ''}`, true);
+      const retry = document.createElement('button');
+      retry.className = 'button secondary';
+      retry.textContent = '再読み込み';
+      retry.style.marginLeft = '8px';
+      retry.addEventListener('click', () => location.reload());
+      message.appendChild(retry);
+    }
+  }
+
+  main();
 })();
