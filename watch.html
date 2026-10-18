@@ -208,6 +208,15 @@
         }
     </script>
 
+    <style id="nowtube-watch-layout-fix">
+        /* Keep the video area within its own column so it cannot cover related-video links. */
+        #watch-video-container { position: relative; z-index: 1; min-width: 0; }
+        #watch-video { position: relative; z-index: 1 !important; }
+        #watch-wrap { position: relative; z-index: 1; width: 640px; max-width: 100%; }
+        #watch-wrap #video-player { display: block; max-width: 100%; }
+        #watch-sidebar { position: relative; z-index: 5; }
+        #watch-sidebar a, #watch-sidebar button { position: relative; z-index: 6; pointer-events: auto; }
+    </style>
 </head>
 
 <body id="" class="date-20111110 ja_JP ltr" dir="ltr">
@@ -426,6 +435,7 @@
 
                                             投稿者:
                                         <div id="video-uploader" style="color: #03c; text-decoration: none; margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent;">投稿者</div>
+                                            <div id="video-upload-date" style="margin-top:3px;color:#666;font-size:11px;">アップロード日を読み込んでいます…</div>
 
                                         </p>
                                         <div id="watch-description-text">
@@ -540,8 +550,8 @@
                                                 renderUploader(video.uploader || 'NowTubeユーザー');
                                                 var uploadDate = formatUploadDate(video);
                                                 var descriptionText = video.description || '概要欄はありません。';
-                                                if (uploadDate) descriptionText += '\n\nアップロード日: ' + uploadDate;
                                                 setAll('video-description', descriptionText);
+                                                setAll('video-upload-date', uploadDate ? 'アップロード日: ' + safe(uploadDate) : 'アップロード日: 不明');
                                                 setAll('video-views', fmtViews(video.viewCount));
 
                                                 var player = document.getElementById('video-player');
