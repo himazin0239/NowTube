@@ -489,13 +489,35 @@
                                                     player.poster = video.thumbnailUrl;
                                                 }
 
-                                                // 3. 再生回数
-                                                document.getElementById('video-views').textContent =
-                                                    Number(video.viewCount || 0).toLocaleString('ja-JP') + ' 回';
-
-                                                // 4. 投稿者名
+                                                // 3. 投稿者名
                                                 document.getElementById('video-uploader').textContent =
                                                     (video.uploader || 'NowTubeユーザー');
+
+                                                // 4. 現在の再生回数を表示してから、APIで1回分を加算する。
+                                                // ページを開いた時点でカウントし、再生開始イベントとの二重加算を避ける。
+                                                var viewsElement = document.getElementById('video-views');
+                                                viewsElement.textContent =
+                                                    Number(video.viewCount || 0).toLocaleString('ja-JP') + ' 回';
+
+                                                try {
+                                                    var viewResponse = await fetch('/api/view', {
+                                                        method: 'POST',
+                                                        headers: { 'Content-Type': 'application/json' },
+                                                        body: JSON.stringify({ id: video.id }),
+                                                        cache: 'no-store'
+                                                    });
+                                                    if (viewResponse.ok) {
+                                                        var viewData = await viewResponse.json();
+                                                        if (typeof viewData.viewCount === 'number') {
+                                                            viewsElement.textContent =
+                                                                viewData.viewCount.toLocaleString('ja-JP') + ' 回';
+                                                        }
+                                                    } else {
+                                                        console.warn('再生回数の更新に失敗しました:', viewResponse.status);
+                                                    }
+                                                } catch (viewError) {
+                                                    console.warn('再生回数の更新に失敗しました:', viewError);
+                                                }
 
                                             } catch (error) {
                                                 document.getElementById('watch-wrap').innerHTML = '<p class="error-msg">' + error.message + '</p>';
