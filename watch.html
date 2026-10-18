@@ -481,6 +481,21 @@
                                                 return n > 0 && n < 100000000000 ? n * 1000 : n;
                                             };
                                             var count = function (v) { var n = Number(v.viewCount); return Number.isFinite(n) && n > 0 ? n : 0; };
+                                            var channelHref = function (username) {
+                                                return './channel.html?user=' + encodeURIComponent(String(username || '').trim());
+                                            };
+                                            var renderUploader = function (username) {
+                                                var name = String(username || 'NowTubeユーザー');
+                                                var html = '<a href="' + channelHref(name) + '" style="color:#03c;text-decoration:none;">' + safe(name) + '</a>';
+                                                byId('video-uploader').forEach(function (node) { node.innerHTML = html; });
+                                            };
+                                            var formatUploadDate = function (v) {
+                                                var n = date(v);
+                                                if (!n) return '';
+                                                var d = new Date(n);
+                                                if (!Number.isFinite(d.getTime())) return '';
+                                                return d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日';
+                                            };
                                             var renderRelated = function (all, current) {
                                                 var list = document.getElementById('watch-related');
                                                 if (!list) return;
@@ -499,12 +514,14 @@
                                                     var href = './watch.html?id=' + encodeURIComponent(v.id);
                                                     var image = v.thumbnailUrl || v.thumbnail || './img/default.jpg';
                                                     var duration = fmtDuration(v.duration);
-                                                    return '<li class="video-list-item"><a class="video-list-item-link" href="' + href + '">' +
+                                                    var uploader = String(v.uploader || 'NowTubeユーザー');
+                                                    return '<li class="video-list-item">' +
+                                                        '<a class="video-list-item-link" href="' + href + '">' +
                                                         '<span class="ux-thumb-wrap"><span class="video-thumb ux-thumb-110"><span class="clip"><img src="' + safe(image) + '" alt="サムネイル"></span></span>' +
                                                         (duration ? '<span class="video-time">' + safe(duration) + '</span>' : '') + '</span>' +
-                                                        '<span class="title" title="' + safe(v.title) + '">' + safe(v.title || '無題の動画') + '</span>' +
-                                                        '<span class="stat">ユーザー: ' + safe(v.uploader || 'NowTubeユーザー') + '</span>' +
-                                                        '<span class="stat view-count">再生回数 ' + count(v).toLocaleString('ja-JP') + ' 回</span></a></li>';
+                                                        '<span class="title" title="' + safe(v.title) + '">' + safe(v.title || '無題の動画') + '</span></a>' +
+                                                        '<span class="stat">ユーザー: <a href="' + channelHref(uploader) + '" style="color:#03c;text-decoration:none;">' + safe(uploader) + '</a></span>' +
+                                                        '<span class="stat view-count">再生回数 ' + count(v).toLocaleString('ja-JP') + ' 回</span></li>';
                                                 }).join('');
                                             };
                                             if (!id) {
@@ -520,8 +537,11 @@
                                                 if (!video) throw new Error('動画が見つかりません。');
 
                                                 setAll('video-title', video.title || '無題の動画');
-                                                setAll('video-uploader', video.uploader || 'NowTubeユーザー');
-                                                setAll('video-description', video.description || '概要欄はありません。');
+                                                renderUploader(video.uploader || 'NowTubeユーザー');
+                                                var uploadDate = formatUploadDate(video);
+                                                var descriptionText = video.description || '概要欄はありません。';
+                                                if (uploadDate) descriptionText += '\n\nアップロード日: ' + uploadDate;
+                                                setAll('video-description', descriptionText);
                                                 setAll('video-views', fmtViews(video.viewCount));
 
                                                 var player = document.getElementById('video-player');
