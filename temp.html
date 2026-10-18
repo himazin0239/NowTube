@@ -279,37 +279,16 @@
                         </script>
 
                         <div id="watch-wrap">
-                            <style>
-                                .video-title {
-                                    margin: 0;
-                                    padding: 0;
-                                    border: 0;
-                                    font-size: 100%;
-                                    background: transparent;
-                                    font-weight: bold;
-                                    line-height: 1.1363em;
-                                    color: #333;
-                                }
-
-                                .video-uploader {
-                                    color: #03c;
-                                    text-decoration: none;
-                                    margin: 0;
-                                    padding: 0;
-                                    border: 0;
-                                    font-size: 100%;
-                                    background: transparent;
-                                }
-                            </style>
                             <h1>
                                 <strong>
-                                    <div id="video-title">タイトルを読み込んでいます…</div>
+                                    <div id="video-title" style="margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent; font-weight: bold; line-height: 1.1363em; color: #333;">タイトルを読み込んでいます…</div>
                                 </strong>
                             </h1>
 
-                            <div id="video-uploader">投稿者</div>
+                            <div id="video-uploader" style="color: #03c; text-decoration: none; margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent;">投稿者</div>
 
-                            <video id="video-player" controls playsinline preload="metadata"></video>
+                            <video id="video-player" controls playsinline preload="metadata"
+                                style="width: 640px; height: 385px;"></video>
 
                             <div id="video-views">再生回数</div>
                         </div>
@@ -452,7 +431,7 @@
                                         <p id="watch-uploader-info">
 
                                             投稿者:
-                                        <div id="video-uploader">投稿者</div>
+                                        <div id="video-uploader" style="color: #03c; text-decoration: none; margin: 0; padding: 0; border: 0; font-size: 100%; background: transparent;">投稿者</div>
 
                                         </p>
                                         <div id="watch-description-text">
