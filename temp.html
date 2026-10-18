@@ -377,52 +377,58 @@
                             }
                         </script>
 
-                        <div id="watch-content">
-                            <p>動画を読み込んでいます…</p>
+                        <div id="watch-wrap">
+                            <div id="video-title">タイトルを読み込んでいます…</div>
+
+                            <video id="video-player" controls playsinline preload="metadata"></video>
+
+                            <div id="video-views">再生回数: -</div>
+                            <div id="video-uploader">投稿者: -</div>
                         </div>
 
                         <script>
                             (async function () {
-                                var root = document.getElementById('watch-content');
-
-                                // 1. URLから ?id=xxx を取得する
+                                // URLから ?id=xxx を取得
                                 var id = new URLSearchParams(location.search).get('id');
                                 if (!id) {
-                                    root.innerHTML = '<p>動画IDが指定されていません。</p>';
+                                    document.getElementById('watch-wrap').innerHTML = '<p class="error-msg">動画IDが指定されていません。</p>';
                                     return;
                                 }
 
                                 try {
-                                    // 2. 動画一覧のAPIからデータを取得する
+                                    // APIから動画一覧データを取得
                                     var response = await fetch('/api/videos');
                                     if (!response.ok) throw new Error('APIに接続できません。');
-
                                     var data = await response.json();
 
-                                    // 3. 該当するIDの動画データを探す
+                                    // 該当する動画データを検索
                                     var video = (data.videos || []).find(function (item) {
                                         return item.id === id;
                                     });
-
                                     if (!video) throw new Error('動画が見つかりません。');
 
-                                    // 表示エリアを一旦きれいにリセット
-                                    root.innerHTML = '';
+                                    // 各要素の id を指定して、データを直接流し込む
 
-                                    // 4-1. 動画タイトルの表示 (<h1>)
-                                    var title = document.createElement('h1');
-                                    title.textContent = video.title;
-                                    root.appendChild(title);
+                                    // 1. タイトル
+                                    document.getElementById('video-title').textContent = video.title;
 
-                                    // 4-2. MP4動画プレイヤーの表示 (<video>)
-                                    var player = document.createElement('video');
-                                    player.controls = true;      // 再生・一時停止などのコントロールを表示
-                                    player.width = 640;          // 必要に応じてサイズ調整
-                                    player.src = video.url;      // mp4などの動画ファイルパスを指定
-                                    root.appendChild(player);
+                                    // 2. MP4動画プレイヤー
+                                    var player = document.getElementById('video-player');
+                                    player.src = video.url;
+                                    if (video.thumbnailUrl) {
+                                        player.poster = video.thumbnailUrl;
+                                    }
+
+                                    // 3. 再生回数
+                                    document.getElementById('video-views').textContent =
+                                        '再生回数: ' + Number(video.viewCount || 0).toLocaleString('ja-JP') + ' 回';
+
+                                    // 4. 投稿者名
+                                    document.getElementById('video-uploader').textContent =
+                                        '投稿者: ' + (video.uploader || 'NowTubeユーザー');
 
                                 } catch (error) {
-                                    root.innerHTML = '<p>' + error.message + '</p>';
+                                    document.getElementById('watch-wrap').innerHTML = '<p class="error-msg">' + error.message + '</p>';
                                 }
                             })();
                         </script>
