@@ -14,6 +14,7 @@ export async function ensureSchema(sql) {
     password_hash TEXT NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
   )`;
+  await sql`ALTER TABLE nowtube_users ADD COLUMN IF NOT EXISTS channel_description TEXT NOT NULL DEFAULT ''`;
   await sql`CREATE TABLE IF NOT EXISTS nowtube_videos (
     id TEXT PRIMARY KEY,
     user_id TEXT NOT NULL REFERENCES nowtube_users(id) ON DELETE CASCADE,
@@ -28,7 +29,13 @@ export async function ensureSchema(sql) {
     view_count BIGINT NOT NULL DEFAULT 0,
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
   )`;
-  // Add columns safely to databases created before duration/view counts were introduced.
   await sql`ALTER TABLE nowtube_videos ADD COLUMN IF NOT EXISTS duration DOUBLE PRECISION`;
   await sql`ALTER TABLE nowtube_videos ADD COLUMN IF NOT EXISTS view_count BIGINT NOT NULL DEFAULT 0`;
+  await sql`CREATE TABLE IF NOT EXISTS nowtube_subscriptions (
+    subscriber_id TEXT NOT NULL REFERENCES nowtube_users(id) ON DELETE CASCADE,
+    channel_id TEXT NOT NULL REFERENCES nowtube_users(id) ON DELETE CASCADE,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+    PRIMARY KEY (subscriber_id, channel_id),
+    CHECK (subscriber_id <> channel_id)
+  )`;
 }
