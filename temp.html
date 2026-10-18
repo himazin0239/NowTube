@@ -270,105 +270,6 @@
         <!-- begin content -->
         <div id="content" class="">
             <div id="watch-container">
-                <!-- begin watch-headline-container -->
-                <div id="watch-headline-container">
-                    <div id="watch-headline" class="watch-headline">
-
-
-
-                        <div id="watch-longform-ad" style="display:none;">
-                            <div id="watch-longform-text" style="visibility:hidden">Advertisement</div>
-                            <div id="watch-longform-ad-placeholder"><img
-                                    src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
-                                    width="300" height="60"></div>
-                            <div id="instream_google_companion_ad_div"></div>
-                        </div>
-
-
-                        <h1 id="watch-headline-title">
-
-
-                            <span id="eow-title" class="" dir="ltr" title="KICKED BY A HORSE">
-                                KICKED BY A HORSE
-                            </span>
-
-                        </h1>
-
-                        <div id="watch-headline-user-info">
-                            <a id="watch-userbanner" class="inline-block" rel="author"
-                                href="/web/20110813042442/http://www.youtube.com/user/RayWilliamJohnson"
-                                title="RayWilliamJohnson"><strong><img
-                                        src="https://web.archive.org/web/20110813042442im_/http://i4.ytimg.com/u/Gt7X90Au6BV8rf49BiM6Dg/watch_icon.jpg?v=4bbed2ac"
-                                        alt="RayWilliamJohnson" height="25"></strong></a>
-
-                            <span id="watch-video-count"
-                                class="watch-expander yt-uix-expander yt-uix-expander-collapsed"
-                                data-expander-action="yt.www.watch.watch5.handleToggleMoreFromUser">
-                                <span class="watch-expander-head yt-uix-expander-head yt-rounded">
-                                    <button class="yt-uix-expander-arrow" onclick="return false;"></button>
-                                    216 videos
-                                </span>
-                            </span>
-
-
-
-
-
-
-
-                            <span class="subscription-container"
-                                data-subscription-expandable-id="subscription-button-module-menu"
-                                data-subscription-value="RayWilliamJohnson" data-subscription-menu-type="expander"
-                                data-subscription-xsrf="" data-subscription-feature="" data-subscription-type="user">
-
-
-
-
-
-
-
-                                <button type="button" class="subscribe-button yt-uix-button yt-uix-tooltip"
-                                    onclick=";return false;"
-                                    title="Click to be notified of new videos from this channel" data-loaded="true"
-                                    data-button-action="yt.www.subscriptions.button.toggleMenu" role="button"
-                                    aria-pressed="false"><span class="yt-uix-button-content">Subscribe</span></button>
-
-                                <span class="subscription-subscribed-container hid"><span
-                                        class="subscription-options-button subscription-expander yt-uix-expander yt-uix-expander-collapsed"
-                                        data-expander-action="yt.www.subscriptions.button.toggleMenu"><span
-                                            class="yt-uix-expander-head yt-rounded"><button
-                                                class="yt-uix-expander-arrow" onclick="return false;"></button><span
-                                                class="yt-alert yt-alert-success yt-alert-small yt-alert-naked yt-rounded"><img
-                                                    src="//web.archive.org/web/20110813042442im_/http://s.ytimg.com/yt/img/pixel-vfl3z5WfW.gif"
-                                                    class="icon" alt="Alert icon"><span
-                                                    class="yt-alert-content">Subscribed</span></span></span></span></span>
-                            </span>
-
-                        </div>
-
-                        <div id="subscription-button-module-menu"
-                            class="hid subscription-menu-expandable subscription-menu">
-                            <div class="subscription-menu-not-logged-in">
-                                <strong><a
-                                        href="https://web.archive.org/web/20110813042442/https://www.google.com/accounts/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Den_US%26next%3Dhttp%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DZgS2mdBL3Rk%2526feature%253Dtopvideos_mp&amp;hl=en_US&amp;ltmpl=sso">Sign
-                                        In</a> or <a
-                                        href="/web/20110813042442/http://www.youtube.com/signup?next=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DZgS2mdBL3Rk%26feature%3Dtopvideos_mp">Sign
-                                        Up</a> now!
-                                </strong>
-
-                            </div>
-                        </div>
-
-
-                        <div id="watch-more-from-user" class="collapsed">
-                            <div id="watch-channel-discoverbox" class="yt-rounded">
-                                <span id="watch-channel-loading">Loading...</span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- end watch-headline-container -->
                 <div id="watch-video-container">
                     <div id="watch-video" style="z-index: 1000;">
                         <script>
@@ -378,12 +279,39 @@
                         </script>
 
                         <div id="watch-wrap">
-                            <div id="video-title">タイトルを読み込んでいます…</div>
+                            <style>
+                                .video-title {
+                                    margin: 0;
+                                    padding: 0;
+                                    border: 0;
+                                    font-size: 100%;
+                                    background: transparent;
+                                    font-weight: bold;
+                                    line-height: 1.1363em;
+                                    color: #333;
+                                }
+
+                                .video-uploader {
+                                    color: #03c;
+                                    text-decoration: none;
+                                    margin: 0;
+                                    padding: 0;
+                                    border: 0;
+                                    font-size: 100%;
+                                    background: transparent;
+                                }
+                            </style>
+                            <h1>
+                                <strong>
+                                    <div id="video-title">タイトルを読み込んでいます…</div>
+                                </strong>
+                            </h1>
+
+                            <div id="video-uploader">投稿者</div>
 
                             <video id="video-player" controls playsinline preload="metadata"></video>
 
-                            <div id="video-views">再生回数: -</div>
-                            <div id="video-uploader">投稿者: -</div>
+                            <div id="video-views">再生回数</div>
                         </div>
 
                         <script>
@@ -421,11 +349,11 @@
 
                                     // 3. 再生回数
                                     document.getElementById('video-views').textContent =
-                                        '再生回数: ' + Number(video.viewCount || 0).toLocaleString('ja-JP') + ' 回';
+                                        Number(video.viewCount || 0).toLocaleString('ja-JP') + ' 回';
 
                                     // 4. 投稿者名
                                     document.getElementById('video-uploader').textContent =
-                                        '投稿者: ' + (video.uploader || 'NowTubeユーザー');
+                                        (video.uploader || 'NowTubeユーザー');
 
                                 } catch (error) {
                                     document.getElementById('watch-wrap').innerHTML = '<p class="error-msg">' + error.message + '</p>';
@@ -464,7 +392,9 @@
                             <div id="watch-actions">
                                 <div id="watch-actions-right">
                                     <span class="watch-view-count">
-                                        <strong>6,038,220</strong>
+                                        <strong>
+                                            <div id="video-views">再生回数</div>
+                                        </strong>
                                     </span>
                                     <button onclick=";return false;" title="Show video statistics" type="button"
                                         id="watch-insight-button"
