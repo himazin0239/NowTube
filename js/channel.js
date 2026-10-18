@@ -164,7 +164,7 @@
           try {
             const result = await requestJSON('/api/subscribe', {
               method: 'POST',
-              body: JSON.stringify({ channelId: channel.id })
+              body: JSON.stringify({ username: channel.username || username })
             });
             data.isSubscribed = typeof result.isSubscribed === 'boolean'
               ? result.isSubscribed
