@@ -289,8 +289,6 @@
 
                             <video id="video-player" controls playsinline preload="metadata"
                                 style="width: 640px; height: 385px;"></video>
-
-                            <div id="video-views">再生回数</div>
                         </div>
 
                         <!-- begin watch-video-extra -->
@@ -395,11 +393,7 @@
                                     <div id="watch-actions-logged-out" class="watch-actions-panel hid">
                                         <div class="yt-alert yt-alert-warn yt-alert-small yt-alert-naked yt-rounded ">
                                             <img src="./img/pixel.gif" class="icon master-sprite" alt="Alert icon">
-                                            <div class="yt-alert-content"> <strong><a
-                                                        href="https://web.archive.org/web/20110813042442/https://www.google.com/accounts/ServiceLogin?uilel=3&amp;service=youtube&amp;passive=true&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26nomobiletemp%3D1%26hl%3Den_US%26next%3Dhttp%253A%252F%252Fwww.youtube.com%252Fwatch%253Fv%253DZgS2mdBL3Rk%2526feature%253Dtopvideos_mp&amp;hl=en_US&amp;ltmpl=sso">Sign
-                                                        In</a> or <a
-                                                        href="/web/20110813042442/http://www.youtube.com/signup?new=true&amp;next=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DZgS2mdBL3Rk%26feature%3Dtopvideos_mp">Sign
-                                                        Up</a> now!
+                                            <div class="yt-alert-content"> <strong>この機能は未実装です! また、不適切な動画があった場合、<a href="mailto:wdq.ewfjiow8402@gmail.com">wdq.ewfjiow8402@gmail.com</a>にご連絡ください!
                                                 </strong>
 
                                             </div>
@@ -458,136 +452,104 @@
 
                                     <script>
                                         (async function () {
-                                            // URLから ?id=xxx を取得
                                             var id = new URLSearchParams(location.search).get('id');
+                                            var byId = function (name) { return document.querySelectorAll('[id="' + name + '"]'); };
+                                            var setAll = function (name, value) {
+                                                byId(name).forEach(function (node) { node.textContent = value; });
+                                            };
+                                            var safe = function (value) {
+                                                return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+                                                    return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]);
+                                                });
+                                            };
+                                            var fmtViews = function (v) {
+                                                var n = Number(v);
+                                                return (Number.isFinite(n) && n >= 0 ? n : 0).toLocaleString('ja-JP') + ' 回';
+                                            };
+                                            var fmtDuration = function (v) {
+                                                var n = Number(v);
+                                                if (!Number.isFinite(n) || n < 0) return '';
+                                                n = Math.floor(n);
+                                                var h = Math.floor(n / 3600), m = Math.floor((n % 3600) / 60), sec = n % 60;
+                                                return h ? h + ':' + String(m).padStart(2, '0') + ':' + String(sec).padStart(2, '0') : m + ':' + String(sec).padStart(2, '0');
+                                            };
+                                            var date = function (v) {
+                                                var x = v.createdAt || v.created_at || v.uploadedAt || v.uploaded_at || v.timestamp || v.date;
+                                                if (x == null) return 0;
+                                                var n = typeof x === 'number' ? x : Date.parse(x);
+                                                if (!Number.isFinite(n)) return 0;
+                                                return n > 0 && n < 100000000000 ? n * 1000 : n;
+                                            };
+                                            var count = function (v) { var n = Number(v.viewCount); return Number.isFinite(n) && n > 0 ? n : 0; };
+                                            var renderRelated = function (all, current) {
+                                                var list = document.getElementById('watch-related');
+                                                if (!list) return;
+                                                var others = all.filter(function (v) { return v && String(v.id) !== String(current.id); });
+                                                others.sort(function (a, b) {
+                                                    var sameA = current.uploader && a.uploader === current.uploader ? 1 : 0;
+                                                    var sameB = current.uploader && b.uploader === current.uploader ? 1 : 0;
+                                                    return sameB - sameA || count(b) - count(a) || date(b) - date(a);
+                                                });
+                                                var chosen = others.slice(0, 8);
+                                                if (!chosen.length) {
+                                                    list.innerHTML = '<li class="video-list-item"><span class="stat">関連動画はまだありません。</span></li>';
+                                                    return;
+                                                }
+                                                list.innerHTML = chosen.map(function (v) {
+                                                    var href = './watch.html?id=' + encodeURIComponent(v.id);
+                                                    var image = v.thumbnailUrl || v.thumbnail || './img/default.jpg';
+                                                    var duration = fmtDuration(v.duration);
+                                                    return '<li class="video-list-item"><a class="video-list-item-link" href="' + href + '">' +
+                                                        '<span class="ux-thumb-wrap"><span class="video-thumb ux-thumb-110"><span class="clip"><img src="' + safe(image) + '" alt="サムネイル"></span></span>' +
+                                                        (duration ? '<span class="video-time">' + safe(duration) + '</span>' : '') + '</span>' +
+                                                        '<span class="title" title="' + safe(v.title) + '">' + safe(v.title || '無題の動画') + '</span>' +
+                                                        '<span class="stat">ユーザー: ' + safe(v.uploader || 'NowTubeユーザー') + '</span>' +
+                                                        '<span class="stat view-count">再生回数 ' + count(v).toLocaleString('ja-JP') + ' 回</span></a></li>';
+                                                }).join('');
+                                            };
                                             if (!id) {
                                                 document.getElementById('watch-wrap').innerHTML = '<p class="error-msg">動画IDが指定されていません。</p>';
                                                 return;
                                             }
-
                                             try {
-                                                // APIから動画一覧データを取得
-                                                var response = await fetch('/api/videos');
+                                                var response = await fetch('/api/videos', { cache: 'no-store' });
                                                 if (!response.ok) throw new Error('APIに接続できません。');
                                                 var data = await response.json();
-
-                                                // 該当する動画データを検索
-                                                var video = (data.videos || []).find(function (item) {
-                                                    return item.id === id;
-                                                });
+                                                var videos = Array.isArray(data.videos) ? data.videos : [];
+                                                var video = videos.find(function (item) { return String(item.id) === String(id); });
                                                 if (!video) throw new Error('動画が見つかりません。');
 
-                                                // 各要素の id を指定して、データを直接流し込む
+                                                setAll('video-title', video.title || '無題の動画');
+                                                setAll('video-uploader', video.uploader || 'NowTubeユーザー');
+                                                setAll('video-description', video.description || '概要欄はありません。');
+                                                setAll('video-views', fmtViews(video.viewCount));
 
-                                                // 1. タイトル
-                                                document.getElementById('video-title').textContent = video.title;
-
-                                                // 2. MP4動画プレイヤー
                                                 var player = document.getElementById('video-player');
-                                                player.src = video.url;
-                                                if (video.thumbnailUrl) {
-                                                    player.poster = video.thumbnailUrl;
+                                                if (player) {
+                                                    player.src = video.url;
+                                                    if (video.thumbnailUrl) player.poster = video.thumbnailUrl;
+                                                    player.load();
                                                 }
 
-                                                // 3. 投稿者名
-                                                document.getElementById('video-uploader').textContent =
-                                                    (video.uploader || 'NowTubeユーザー');
-
-                                                // 3.5 概要欄の先頭にアップロード日を表示
-                                                var description = document.getElementById('video-description');
-                                                var uploaded = video.createdAt ? new Date(video.createdAt) : null;
-                                                if (description && uploaded && !isNaN(uploaded.getTime())) {
-                                                    var dateLine = document.createElement('div');
-                                                    dateLine.className = 'video-upload-date';
-                                                    dateLine.style.cssText = 'color:#666;font-size:11px;margin-bottom:8px;';
-                                                    dateLine.textContent = 'アップロード日: ' + uploaded.toLocaleDateString('ja-JP', {year:'numeric', month:'long', day:'numeric'});
-                                                    description.parentNode.insertBefore(dateLine, description);
-                                                }
-                                                if (description) description.textContent = video.description || '概要欄はありません。';
-
-                                                // 3.6 関連動画をNowTube内の動画リンクとして表示
-                                                var relatedList = document.getElementById('watch-related');
-                                                var moreList = document.getElementById('watch-more-related');
-                                                var moreButton = document.getElementById('watch-more-related-button');
-                                                var allRelated = (data.videos || []).filter(function (item) {
-                                                    return item && item.id != null && String(item.id) !== String(video.id);
-                                                });
-                                                function relatedItem(item) {
-                                                    var li = document.createElement('li');
-                                                    li.className = 'video-list-item';
-                                                    var a = document.createElement('a');
-                                                    a.className = 'video-list-item-link';
-                                                    a.href = './watch.html?id=' + encodeURIComponent(item.id);
-                                                    var thumbWrap = document.createElement('span');
-                                                    thumbWrap.className = 'ux-thumb-wrap';
-                                                    var thumb = document.createElement('span');
-                                                    thumb.className = 'video-thumb ux-thumb-110';
-                                                    var clip = document.createElement('span');
-                                                    clip.className = 'clip';
-                                                    var img = document.createElement('img');
-                                                    img.alt = 'サムネイル';
-                                                    img.src = item.thumbnailUrl || './img/default.jpg';
-                                                    clip.appendChild(img); thumb.appendChild(clip); thumbWrap.appendChild(thumb);
-                                                    a.appendChild(thumbWrap);
-                                                    var title = document.createElement('span');
-                                                    title.className = 'title'; title.textContent = item.title || 'タイトルなし';
-                                                    a.appendChild(title);
-                                                    var stat = document.createElement('span');
-                                                    stat.className = 'stat'; stat.textContent = 'ユーザー: ' + (item.uploader || 'NowTubeユーザー');
-                                                    a.appendChild(stat);
-                                                    li.appendChild(a);
-                                                    return li;
-                                                }
-                                                if (relatedList) {
-                                                    relatedList.innerHTML = '';
-                                                    allRelated.slice(0, 5).forEach(function (item) { relatedList.appendChild(relatedItem(item)); });
-                                                    if (!allRelated.length) {
-                                                        var empty = document.createElement('li');
-                                                        empty.className = 'video-list-item'; empty.textContent = '関連動画はまだありません。';
-                                                        relatedList.appendChild(empty);
-                                                    }
-                                                }
-                                                if (moreList) {
-                                                    moreList.innerHTML = '';
-                                                    allRelated.slice(5, 10).forEach(function (item) { moreList.appendChild(relatedItem(item)); });
-                                                    if (allRelated.length > 5) moreList.classList.remove('hid');
-                                                }
-                                                if (moreButton) {
-                                                    if (allRelated.length <= 5) moreButton.style.display = 'none';
-                                                    else moreButton.onclick = function () {
-                                                        if (moreList) moreList.classList.toggle('hid');
-                                                        this.querySelector('.yt-uix-button-content').textContent = moreList && !moreList.classList.contains('hid') ? '関連動画を隠す' : 'もっと見る';
-                                                    };
-                                                }
-
-                                                // 4. 現在の再生回数を表示してから、APIで1回分を加算する。
-                                                // ページを開いた時点でカウントし、再生開始イベントとの二重加算を避ける。
-                                                var viewsElement = document.getElementById('video-views');
-                                                viewsElement.textContent =
-                                                    Number(video.viewCount || 0).toLocaleString('ja-JP') + ' 回';
-
+                                                // Count a visit once per page load; update all duplicated display elements.
                                                 try {
                                                     var viewResponse = await fetch('/api/view', {
                                                         method: 'POST',
                                                         headers: { 'Content-Type': 'application/json' },
-                                                        body: JSON.stringify({ id: video.id }),
-                                                        cache: 'no-store'
+                                                        body: JSON.stringify({ id: video.id })
                                                     });
                                                     if (viewResponse.ok) {
                                                         var viewData = await viewResponse.json();
-                                                        if (typeof viewData.viewCount === 'number') {
-                                                            viewsElement.textContent =
-                                                                viewData.viewCount.toLocaleString('ja-JP') + ' 回';
-                                                        }
-                                                    } else {
-                                                        console.warn('再生回数の更新に失敗しました:', viewResponse.status);
+                                                        setAll('video-views', fmtViews(viewData.viewCount));
+                                                        video.viewCount = viewData.viewCount;
                                                     }
                                                 } catch (viewError) {
-                                                    console.warn('再生回数の更新に失敗しました:', viewError);
+                                                    console.warn('再生回数を更新できませんでした', viewError);
                                                 }
-
+                                                renderRelated(videos, video);
                                             } catch (error) {
-                                                document.getElementById('watch-wrap').innerHTML = '<p class="error-msg">' + error.message + '</p>';
+                                                var wrap = document.getElementById('watch-wrap');
+                                                if (wrap) wrap.innerHTML = '<p class="error-msg">' + safe(error.message || '動画を読み込めませんでした。') + '</p>';
                                             }
                                         })();
                                     </script>
@@ -649,7 +611,7 @@
                             <div class="watch-module">
                                 <div class="watch-module-body">
 
-                                    <h4 class="first">Suggestions</h4>
+                                    <h4 class="first">関連動画</h4>
                                     <ul id="watch-related" class="video-list">
                                         <div id="ppv-container" class="hid">
                                             <li class="video-list-item "><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
