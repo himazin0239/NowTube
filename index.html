@@ -208,6 +208,12 @@
         }
     </script>
 
+<style>
+#nowtube-promo-area{margin-bottom:18px}
+#nowtube-ad-slot{display:none;position:relative;box-sizing:border-box;width:100%;min-height:125px;padding:8px 10px;background:#fff;border:1px solid #ddd;color:#777}
+#nowtube-ad-slot .nowtube-ad-label{font-size:10px;color:#777}
+#nowtube-ad-slot .nowtube-ad-inner{min-height:88px;display:flex;align-items:center;justify-content:center;color:#aaa;font-size:12px}
+</style>
 </head>
 
 <body id="" class="date-20111110 ja_JP ltr" dir="ltr">
@@ -315,7 +321,9 @@
                         })();
                     </script>
                     <div id="login-promo">
-                        <div id="iyt-login-suggest-box">
+                        <div id="nowtube-promo-area">
+                <div id="nowtube-logged-out-promo">
+              <div id="iyt-login-suggest-box">
                             <div class="yt-alert yt-alert-promo yt-rounded ">
                                 <div class="yt-alert-content">
                                     <div id="signup-promo-message">
@@ -336,6 +344,12 @@
                             </div>
 
                         </div>
+                </div>
+                <div id="nowtube-ad-slot" aria-label="広告スペース">
+                    <span class="nowtube-ad-label">広告</span>
+                    <div class="nowtube-ad-inner">広告スペース</div>
+                </div>
+              </div>
                     </div>
 
 
@@ -348,6 +362,59 @@
                                     <h2>
                                         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">おすすめの動画</a>
                                     </h2>
+                                </div>
+                            </div>
+
+                            <div class="ytg-4col grid-view">
+
+                                <div class="ytg-box ytg-1col ">
+                                    <div class="video-cell" style="width:99.5%">
+                                        <div class="video-entry">
+                                            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                                                class="ux-thumb-wrap contains-addto"><span
+                                                    class="video-thumb ux-thumb-128 "><span class="clip"><img onload=""
+                                                            title="Test1" alt="サムネイル" src="./img/default.jpg" class=""
+                                                            click="" onmousedown=""></span></span><span
+                                                    class="video-time">00:00</span><button type="button"
+                                                    class="addto-button short video-actions yt-uix-button yt-uix-button-short"
+                                                    onclick=";return false;"
+                                                    data-button-menu-action="yt.www.lists.addto.toggleMenu"
+                                                    data-button-menu-id="shared-addto-menu" data-video-ids="nvfejaHz-o0"
+                                                    data-feature="thumbnail" role="button"><img
+                                                        class="yt-uix-button-icon yt-uix-button-icon-addto"
+                                                        src="./img/pixel.gif" alt=""><span
+                                                        class="yt-uix-button-content"><span
+                                                            class="addto-label">追加先</span>
+                                                    </span><img class="yt-uix-button-arrow" src="./img/pixel.gif"
+                                                        alt=""></button></a>
+                                            <div class="video-main-content video-title-one-line"
+                                                id="video-main-content-nvfejaHz-o0">
+                                                <div dir="ltr" class="video-title">
+                                                    <div class="video-short-title">
+                                                        <a class="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                                                            id="video-short-title-nvfejaHz-o0" rel="nofollow"
+                                                            title="Test1" dir="ltr">Test1</a>
+                                                    </div>
+                                                    <div class="video-long-title">
+                                                        <a class="" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                                                            id="video-long-title-nvfejaHz-o0" rel="nofollow"
+                                                            title="Test1" dir="ltr">Test1</a>
+                                                    </div>
+                                                </div>
+                                                <div id="video-description-nvfejaHz-o0" dir="ltr"
+                                                    class="video-description">
+                                                    qwertyuiop
+                                                </div>
+                                                <div class="video-facets">
+                                                    <span class="video-username">
+                                                        作成者: <a title="User1"
+                                                            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">User1</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <div class="video-clear-list-left"></div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -1015,6 +1082,7 @@
         style="left: 247px; top: 43px; width: 309px; height: 0px; visibility: hidden;"></iframe>
     <script src="./js/videos.js"></script>
     <script src="./js/nav-auth.js"></script>
+<script src="./js/promo-toggle.js"></script>
 </body>
 
 </html>
