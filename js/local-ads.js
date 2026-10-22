@@ -6,6 +6,11 @@
       image: './img/ads/miiverse.png',
       link: 'https://miiverse.projectrose.cafe/',
       alt: 'Miiverse'
+    },
+    {
+      image: './img/ads/Crazy_Error_Community.png',
+      link: 'https://discord.gg/E6gDxFq6yy',
+      alt: 'Crazy Error Community'
     }
   ];
 
